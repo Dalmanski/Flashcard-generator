@@ -1,0 +1,23 @@
+> Comprises mechanisms (a system of parts working together in a machine) for processes out carrying out cooperative work, usually by means of communication (pipes, sockets, shared memory, etc.)
+[Process Coordination]
+
+> is the task of coordinating the execution of processes in a way that no two processes can have access to the same shared data and resources.
+[Process synchronization]
+
+> So, if the execution of one process can affect other processes and vice versa, then we say that they are
+[Coorperating process]
+
+> is the one that can affect or be affected by other processes executing in the system.
+[Cooperating process]
+
+> produces information that is consumed by a consumer process.
+[Producer process]
+
+> is the one that is producing information
+[Producer process]
+
+> process is the one that is consuming the information.
+[Consumer process]
+
+> is a place where a producer will produce information and keep it is also the place from which the consumer will consume the information.
+[Buffer]
