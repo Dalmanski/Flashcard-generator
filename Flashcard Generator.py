@@ -4,41 +4,36 @@ import random
 def clrScr():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+# ANSI escape codes for formatting
+BOLD = "\033[1m"
+RESET = "\033[0m"
+YELLOW = "\033[93m"
+
 # Read from the text file
 with open("questionnaire.txt", "r") as file:
-    questionnaire = file.read()
+    lines = file.readlines()
 
-# questionnaire = input("Enter your questionnaire: \n")
 clrScr()
 questionArr = []
 answerArr = []
-questionSymb = '>'
-openAnsSymb = '['
-closeAnsSymb = ']'
-pos = 0
-while pos < len(questionnaire) - 1:
-    question = ""
-    # Find until >
-    while questionnaire[pos] != questionSymb:
-        pos += 1
-    pos += 1
-    # Find until [
-    while questionnaire[pos] != openAnsSymb:
-        question += questionnaire[pos]
-        pos += 1
+question = ""
+answer = ""
+for line in lines:
+    line = line.strip()
+    if line.startswith('>'):
+        if question:  # If we have a previous question, add it
+            questionArr.append(question)
+            question = ""
+        question += line[1:]  # Append the question without '>'
+    elif line.startswith('['):
+        answer += line[1:-1]  # Append the answer without '[' and ']'
+        answerArr.append(answer.lower())  # Add the answer to the answer array
+        answer = ""  # Reset the answer for the next question
+if question:  # If there's a pending question at the end
     questionArr.append(question)
-    pos += 1
-    # Skip the spaces
-    while questionnaire[pos] == ' ':
-        pos += 1
-    answer = ""
-    # Find until ]
-    while questionnaire[pos] != closeAnsSymb:
-        answer += questionnaire[pos]
-        pos += 1
-    pos += 1
-    answer = answer.lower()
-    answerArr.append(answer)
+
+# Flush file buffer
+file.close()
 
 # Shuffle the questions and answers
 indexes = list(range(len(questionArr)))
@@ -47,13 +42,11 @@ random.shuffle(indexes)
 questionSize = len(questionArr)
 for i in range(questionSize):
     randIndex = indexes[i]
-    print(f"{i + 1}/{questionSize}) {questionArr[randIndex]}")
+    print(f"{BOLD}{i + 1}/{questionSize}) {questionArr[randIndex]}{RESET}")
     input_answer = input("Answer: ").lower()
     print()
     if answerArr[randIndex] == input_answer:
-        print("Your answer is correct!")
+        print(f"{YELLOW}Your answer is correct!{RESET}")
     else:
-        print("Your answer is wrong, the correct answer is:")
-        print(answerArr[randIndex])
+        print(f"Eto... the correct answer is: {YELLOW}{answerArr[randIndex]}{RESET}")
     print()
-
