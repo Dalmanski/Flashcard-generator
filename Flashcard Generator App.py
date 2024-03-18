@@ -89,10 +89,15 @@ def try_again():
 def show_question_and_answer():
     global current_question, questionArr, answerArr, question_and_answer_visible
     if not question_and_answer_visible:
-        question = questionArr[current_question]
-        answer = answerArr[current_question]
+        previous_question_index = max(0, current_question - 1)
+        previous_question = questionArr[previous_question_index]
+        previous_answer = answerArr[previous_question_index]
+
+        current_question_text = questionArr[current_question]
+        current_answer_text = answerArr[current_question]
+
         question_and_answer_text.delete("1.0", tk.END)
-        question_and_answer_text.insert(tk.END, f"Question:\n{question}\n\nAnswer:\n{answer}")
+        question_and_answer_text.insert(tk.END, f"Previous Question:\n{previous_question}\n\nPrevious Answer:\n{previous_answer}\n\nCurrent Question:\n{current_question_text}\n\nCurrent Answer:\n{current_answer_text}")
         question_and_answer_text.pack()
         question_and_answer_visible = True
     else:
