@@ -24,9 +24,9 @@ def load_questions():
             if question:  
                 questions.append(question)
                 question = ""
-            question += line[1:]
+            question += line[1:].strip()
         elif line.startswith(answerSymb):
-            answer += line[1:]  
+            answer += line[1:].strip()
             answers.append(answer.lower())  
             answer = "" 
         elif line != "":
@@ -148,7 +148,7 @@ entry.bind("<Return>", lambda event=None: submit_choice())
 submit_button = tk.Button(root, text="Submit Answer", command=submit_choice, bg=button_color, fg=button_fg_color, font=button_font)
 submit_button.pack(pady=5)
 
-result_label = tk.Label(root, text="", fg="green", bg=bg_color, font = ("Arial", 15))
+result_label = tk.Label(root, text="", fg="green", bg=bg_color, font=("Arial", 15))
 result_label.pack(pady=10)
 
 choices_buttons = []
