@@ -1,21 +1,143 @@
-[Process Coordination]
-> Comprises mechanisms (a system of parts working together in a machine) for processes out carrying out cooperative work, usually by means of communication (pipes, sockets, shared memory, etc.)
+~Forest
+> is an area of land dominated by trees.
 
-[Process synchronization]
-> is the task of coordinating the execution of processes in a way that no two processes can have access to the same shared data and resources.
+~Forest
+> is defined as land spanning more than 0.5 hectares with trees higher than 5 meters and a canopy cover of more than 10 percent, or trees able to reach these thresholds in situ.
 
-[Coorperating process] 
-> So, if the execution of one process can affect other processes and vice versa, then we say that they are
+~Tree
+> is a woody perennial plant with one stem or trunk which develops many branches. Trees can live for many years.
 
-[Cooperating process]
-> is the one that can affect or be affected by other processes executing in the system.
+~Forest cover
+> includes all forested areas without limitation in size or tree species. Aside from natural forest, forest cover also includes man-made forest and small wooded areas.
 
-[Producer process] 
-> produces information that is consumed by a consumer process.
+~Commercial Forest
+> is that in which is commercially important. This means that a sizable amount of forest resources are ready to be in the wood based industries.
 
-> is the one that is producing information
-[Producer process]
+~Reforestation
+> is the natural or intentional restocking of existing forests and woodlands (forestation) that have been depleted, usually through deforestation, but also after clearcutting.
 
-[Buffer]
-> is a place where a producer will produce information and keep it is also the place from which the consumer will consume the information.
+~Afforestation
+> is the act or process of establishing a forest especially on land not previously forested.
 
+~Natural forest
+> is forest composed of indigenous trees, not planted by man
+
+~Plantation forest
+> forest stands established by planting or seeding in the process of afforestation or reforestation
+
+~Native Tree species
+> tree species that is normally found as part of a particular ecosystem. Sometimes referred to as Indigenous species.
+
+~Indigenous species
+> are secies or genotypes that have evolved in the same area, region or biotope and are adapted to the specific predominant ecological conditions at the time of establishment
+
+~Introduced-Tree species
+> are species that have been transported by human activity, intentional or accidental, into a region where it does not naturally occur. Also called Alien or exotic, or non-native species
+
+~forest
+> is community of tress, shrubs, herbs, and associated plants and organisms that cover a considerable area that use oxygen, water and soil nutrients as the community attains maturity and reproduces itself.
+
+~Foris
+> The word forest is derived from a Latin word _____ means Outside.
+
+~MANGROVE FOREST
+> This forest have trees thathave special root formations. The fruits and the seeds of the mangrove trees can survive; can germinate and can float in the sea water. This type of forest is found on tidal mudflats and it can be found along the clayed seashore as well as in the tidal zones in the river estuaries.
+
+~Beach forest
+> This forest can be found along the beach; this kind of forest forms a narrow strip along the sandy coast of the beach.
+
+~MOLAVE FOREST
+> is a tree that grows with a crooked trunk. It reaches heights of up to 82 to 89 feet (25 to 30 meters) tall. The wood of this tree is valuable because it is a hard, yellow wood that is durable.
+
+~DIPTEROCARP FOREST
+> This tropical rainforest covers the largest forest areas in the Philippines. It is situated from the coastal flats going up to approximately 800 meters in the altitude.
+
+~PINE FOREST
+> is usually developed in the country’s high plateau regions. This is found in the altitude ranging from seven to eight meters above the sea level.
+
+~MOSSY FOREST
+> Also referred to as Mountain or cloud forest, and can be found principally on high and very rough mountainous regions in about 1200 altitude high Most of the mountainous areas have moist climate in which mossy forest mostly developed.
+
+~Forest resources
+> play an important role in the economy of any country. It is highly complex, changing environment made up of a living and non living things.
+
+~Intangible values
+> cannot be quantified in material terms but are essential for maintaining life support systems and for sustaining environmental stability
+
+~Tangible values
+> can be realized either through extractive use or non-extractive use. harvesting forest products can be profitable for the local communities
+
+~Flora
+> the plant life occurring in a particular region or time, or geological period
+
+~Fauna
+> the animal life occurring in a particular region or time, or geological period
+
+~Wildlife
+> traditionally refers to undomesticated animal species, but has come to include all plants, fungi, and other organisms that grow or live wild in an area.
+
+~critically endangered
+> species or subspecies that is facing extremely high risk of extinction in the wild in the immediate future
+
+~Endangered
+> species which are in danger of extinction and which may not survive if the adverse factors continue to rotate.
+
+~Vulnerable
+> refers to species or subspecies that is neither critically endangered nor endangered but is under threat from adverse factors. It is facing high risk of extinction in the wild.
+
+~Extinct
+> A species when there is no reasonable doubt that the last individual has died.
+
+~Extinct in the wild
+> A species is extinct in the wild when it is known only to survive in cultivation, in captivity or as a naturalised population/s outside the range they once lived in..
+
+~Near threatened
+> A species when it is not classified in one of the above threatened categories, but it is close to being or is likely to be in a threatened category soon.
+
+~Least concern
+> A species when there is sufficient information available to make an assessment and it is not classified as critically endangered, endangered, vulnerable or near threatened.
+
+~Data deficient
+> A species when there is not enough information to make a direct, or indirect, assessment of its risk of extinction based on distribution and/or population.
+
+~Not evaluated
+> A species is when it is has not been assessed against the criteria. This may be because the species is a rare visitor to the Territory or that the taxonomy of the species has recently changed or is unclear.
+
+~Ecological Importance
+> Wildlife helps in maintaining the ecological balance of nature
+
+~Economic Importance
+> Wildlife can be used to earn money
+
+~Investigatory Importance
+> Some organisms are used for scientific eperiments such as to test effect of medicine
+
+~Conservation of biological diversities
+> Diversity in the environment can be conserved by lso conserving wildlife.
+
+~Importance in Agriculture
+> Wild organisms are very important for modern agriculture
+
+~FOREST MANAGEMENT BUREAU
+> is a *Staff Bureau under the Department of nvironment and Natural Resources
+
+~BIODIVERSITY MANAGEMENT BUREAU
+> is a *Staff Bureau under the DENR
+
+~Philippine Sustainable Forest Management Strategy
+> provides framework for all forestry rograms, projects and activities.
+
+~RA 7586
+> This law provides for the establishment and anagement of protected areas in the Philippines
+
+~RA 9147
+> An act providing for the conservation and protection f wildlife resources and their habitats, ppropriating funds there for and for other urposes.
+
+~Presidential Proclamation No.643
+> Amending Proclamation No.396 dated June 2, 2003, ntitled “Enjoining the active participation of all overnment agencies, including government-owned nd controlled corporations, private sector, schools, ivil society groups and the citizenry in tree planting ctivity and declaring June 25, 2003 as Philippine Arbor Day"
+
+~DENR-LGU-Community Partnership
+> are currently implemented in some areas of the country.
+
+~Biodiversity hotspot
+> Due to the loss of the country’s forest cover, the habitat of the wild flora and fauna has likewise been lost. According to the IUCN, the Philippines continue to face biodiversity crisis unparalleled in magnitude. Thus making the country being considered as a ________
