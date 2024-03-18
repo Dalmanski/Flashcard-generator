@@ -49,8 +49,10 @@ def submit_choice(choice=None):
         input_answer = choice.lower()
     else:
         input_answer = entry.get().lower()
-    if answerArr[current_question] == input_answer or is_answer_close(input_answer, answerArr[current_question]):
+    if answerArr[current_question] == input_answer:
         result_label.config(text="Your answer is correct!", fg="green")
+    elif is_answer_close(input_answer, answerArr[current_question]):
+        result_label.config(text=f"So close but the accurate answer is: {answerArr[current_question]}", fg="yellow")
     else:
         result_label.config(text=f"Your answer is wrong. The correct answer is: {answerArr[current_question]}", fg="red")
     current_question += 1
