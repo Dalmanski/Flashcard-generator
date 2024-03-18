@@ -13,30 +13,37 @@ def load_questions():
     with open("questionnaire.txt", "r") as file:
         lines = file.readlines()
 
+    questions = []
+    answers = []
+
     question = ""
     answer = ""
     for line in lines:
         line = line.strip()
         if line.startswith(questionSymb):
             if question:  
-                questionArr.append(question)
+                questions.append(question)
                 question = ""
             question += line[1:]  
         elif line.startswith(answerSymb):
             answer += line[1:]  
-            answerArr.append(answer.lower())  
+            answers.append(answer.lower())  
             answer = "" 
         elif line != "":
             print(f"found abnormally contains: {line}") 
     if question:  
-        questionArr.append(question)
-    random.shuffle(questionArr)  # Shuffle the questions
-    return questionArr, answerArr
-    
+        questions.append(question)
+    combined = list(zip(questions, answers))
+    random.shuffle(combined)
+    questions[:], answers[:] = zip(*combined)
+    return questions, answers
 
-def submit_choice(choice):
+def submit_choice(choice=None):
     global answerArr, current_question
-    input_answer = choice.lower()
+    if choice:
+        input_answer = choice.lower()
+    else:
+        input_answer = entry.get().lower()
     if answerArr[current_question] == input_answer:
         result_label.config(text="Your answer is correct!", fg="green")
     else:
@@ -131,8 +138,9 @@ question_label.pack(pady=(50, 10))
 
 entry = tk.Entry(root, width=40, bg=highlight_color, fg=fg_color, justify="center", font=("Arial", 20))
 entry.pack(pady=5)
+entry.bind("<Return>", lambda event=None: submit_choice())
 
-submit_button = tk.Button(root, text="Submit Answer", command=lambda: submit_choice(entry.get()), bg=button_color, fg=button_fg_color, font=button_font)
+submit_button = tk.Button(root, text="Submit Answer", command=submit_choice, bg=button_color, fg=button_fg_color, font=button_font)
 submit_button.pack(pady=5)
 
 result_label = tk.Label(root, text="", fg="green", bg=bg_color)
