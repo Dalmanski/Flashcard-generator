@@ -1,10 +1,10 @@
-~Forest
+~ Forest
 > is an area of land dominated by trees.
 
-~Forest
+~ Forest
 > is defined as land spanning more than 0.5 hectares with trees higher than 5 meters and a canopy cover of more than 10 percent, or trees able to reach these thresholds in situ.
 
-~Tree
+~ Tree
 > is a woody perennial plant with one stem or trunk which develops many branches. Trees can live for many years.
 
 ~Forest cover
