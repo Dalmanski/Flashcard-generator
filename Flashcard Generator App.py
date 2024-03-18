@@ -1,6 +1,7 @@
 import tkinter as tk
 import os
 import random
+from difflib import SequenceMatcher
 
 def clrScr():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -38,16 +39,20 @@ def load_questions():
     questions[:], answers[:] = zip(*combined)
     return questions, answers
 
+def is_answer_close(input_answer, actual_answer):
+    similarity_ratio = SequenceMatcher(None, input_answer, actual_answer).ratio()
+    return similarity_ratio >= 0.8
+
 def submit_choice(choice=None):
     global answerArr, current_question
     if choice:
         input_answer = choice.lower()
     else:
         input_answer = entry.get().lower()
-    if answerArr[current_question] == input_answer:
+    if answerArr[current_question] == input_answer or is_answer_close(input_answer, answerArr[current_question]):
         result_label.config(text="Your answer is correct!", fg="green")
     else:
-        result_label.config(text=f"Your answer is wrong, the correct answer is: {answerArr[current_question]}", fg="red")
+        result_label.config(text=f"Your answer is wrong. The correct answer is: {answerArr[current_question]}", fg="red")
     current_question += 1
     if current_question < len(questionArr):
         question_label.config(text=f"{current_question + 1}/{len(questionArr)}) {questionArr[current_question]}")
@@ -172,3 +177,4 @@ question_and_answer_text = tk.Text(root, bg=highlight_color, fg=fg_color, height
 question_and_answer_text.pack_forget()
 
 root.mainloop()
+
