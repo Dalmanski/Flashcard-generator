@@ -28,7 +28,7 @@ def load_questions():
             question += line[1:].strip()
         elif line.startswith(answerSymb):
             answer += line[1:].strip()
-            answers.append(answer.lower())  
+            answers.append(answer)  
             answer = "" 
         elif line != "":
             print(f"found abnormally contains: {line}") 
@@ -46,9 +46,9 @@ def is_answer_close(input_answer, actual_answer):
 def submit_choice(choice=None):
     global answerArr, current_question
     if choice:
-        input_answer = choice.lower()
+        input_answer = choice
     else:
-        input_answer = entry.get().lower()
+        input_answer = entry.get()
     if answerArr[current_question] == input_answer:
         result_label.config(text="Your answer is correct!", fg="green")
     elif is_answer_close(input_answer, answerArr[current_question]):

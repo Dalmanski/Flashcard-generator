@@ -1,0 +1,11 @@
+> Simple Interest:
+~ I = P(i)(n)
+
+> Bank Discount:
+~ D = A(d)(n)
+
+> Discount rate:
+~ d = i/(1+i)
+
+> Effective Rate:
+~ F = P(1+r/m)^m(n)
