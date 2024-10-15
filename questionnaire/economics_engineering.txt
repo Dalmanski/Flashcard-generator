@@ -1,11 +1,89 @@
-> Simple Interest:
+
+! answerSet = choices, switchQuesAns = True, removeEndAns = 1
+
+> Simple Interest (Present):
 ~ I = P(i)(n)
 
-> Bank Discount:
+> Simple Interest (Future):
+~ I = P[ 1 + (i)(n) ]
+
+> Compound Interest:
+~ F_n = P[1 + i*n]^n
+
+> Compound Interest (Effective rate):
+~ F_n = P[1 + r/m]^m(n)
+
+> Discount (present):
+~ D = F(d)(n)
+
+> Discount (future):
+~ F = P( 1 + i*n )
+
+> Discount (rate):
+~ d = 1 - ( 1/(1 + i)^n )
+
+> interest rate of Discount:
+~ i = d/(1 - d)
+
+> Bank discount:
 ~ D = A(d)(n)
 
-> Discount rate:
-~ d = i/(1+i)
+> Equation value:
+~ payment / ( 1 + i )^n + ... + x / ( 1 + i )^n
 
-> Effective Rate:
-~ F = P(1+r/m)^m(n)
+> Ordinary Annuity (Present):
+~ P = A[(1 + i)^n - 1] / (1 + i)^n (i)
+
+> Ordinary Annuity (Future):
+~ F = A[(1 + i)^n - 1] / i
+
+> Deffered Annuity (Present):
+~ P = A[(1 + i)^(n-d) - 1] / (1 + i)^n (i)
+
+> Deffered Annuity (Future):
+~ F = A[(1 + i)^(n-d) - 1] / i
+
+> Due Annuity (Present):
+~ P = ( A[(1 + i)^(n-1) - 1] / (1 + i)^n ) + A
+
+> Due Annuity (Future):
+~ P = [ ( A[(1 + i)^(n-1) - 1] / (1 + i)^n ) + A ] (1 + i)^n
+
+> Perpetuity:
+~ P = A / i
+
+> Straight line method:
+~ d = (FC - SV) / n
+
+> Book value of Straight line method & Sinking fund method:
+~ BV = FC - dm
+
+> Sinking fund method:
+~ d = (FC - SV)*i / (1 + i)^n - 1
+
+> dm (total dep at m years) in Sinking fund method:
+~ dm = d[(1 + i)^n - 1] / i
+
+> Declining balance method:
+~ k = 1 - ∛SV/FC
+
+> dm (total dep at m years) in Declining balance method:
+~ dm = FC(K)(1 - K)^(m-1)
+
+> Book value of Declining balance method:
+~ BV = FC(1 - k)^m
+
+> Double declining Balance Method:
+~ k = 2 / n
+
+> dm (total dep at m years) in Double declining Balance Method:
+~ dm = FC(2/n)(1 - (2/n))^(m-1)
+
+> Book value of Declining balance method:
+~ BV = FC(1 - (2/n))^m
+
+> Sum of the years:
+~ dm = (reverse digit / sum of all) * (FC - SV)
+
+> Book value of Sum of the years:
+` BV = FC - dm

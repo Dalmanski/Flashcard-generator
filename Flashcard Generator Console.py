@@ -2,17 +2,41 @@ import os
 import random
 from difflib import SequenceMatcher
 
+# Global variables
+answerSet = "choices"
+switchQuesAns = False 
+removeEndAns = 0
+
 def clrScr():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def load_questions():
+def processConfigLine(line):
+    global answerSet, switchQuesAns, removeEndAns
+    line = line[1:].strip()
+    assignments = line.split(",")
+
+    for assignment in assignments:
+        var, value = assignment.split("=")
+        var = var.strip()
+        value = value.strip()
+
+        if var == "answerSet":
+            answerSet = str(value)
+        elif var == "switchQuesAns":
+            switchQuesAns = eval(value)
+        elif var == "removeEndAns":
+            removeEndAns = int(value)
+
+def loadQuestions():
+    global switchQuesAns
     questionSymb = '>'
     answerSymb = '~'
+    globalSetSymb = '!'
     questionArr = []
     answerArr = []
 
-    folder_path = "questionnaire"
-    files = [f for f in os.listdir(folder_path) if f.endswith('.txt')]
+    folderPath = "questionnaire"
+    files = [f for f in os.listdir(folderPath) if f.endswith('.txt')]
 
     print("Available files:\n")
     for idx, file in enumerate(files):
@@ -21,16 +45,16 @@ def load_questions():
 
     while True:
         try:
-            file_choice = int(input(f"Select a file to load (1-{len(files)}): ")) - 1
-            if 0 <= file_choice < len(files):
-                selected_file = os.path.join(folder_path, files[file_choice])
+            fileChoice = int(input(f"\nSelect a file to load (1-{len(files)}): ")) - 1
+            if 0 <= fileChoice < len(files):
+                selectedFile = os.path.join(folderPath, files[fileChoice])
                 break
             else:
                 print("Invalid choice. Please try again.")
         except ValueError:
             print("Please enter a valid number.")
 
-    with open(selected_file, "r") as file:
+    with open(selectedFile, "r") as file:
         lines = file.readlines()
 
     questions = []
@@ -38,8 +62,14 @@ def load_questions():
 
     question = ""
     answer = ""
+
     for line in lines:
         line = line.strip()
+        
+        if line.startswith(globalSetSymb):
+            processConfigLine(line)
+            continue
+        
         if line.startswith(questionSymb):
             if question:  
                 questions.append(question)
@@ -50,75 +80,91 @@ def load_questions():
             answers.append(answer)  
             answer = "" 
         elif line != "":
-            print(f"found abnormally contains: {line}") 
-    if question:  
-        questions.append(question)
+            print(f"Found abnormally contains: {line}") 
+
+    if switchQuesAns:
+        questions, answers = answers, questions
 
     combined = list(zip(questions, answers))
     random.shuffle(combined)
     questions[:], answers[:] = zip(*combined)
+    clrScr()
     return questions, answers
 
-def is_answer_close(input_answer, actual_answer):
-    similarity_ratio = SequenceMatcher(None, input_answer, actual_answer).ratio()
-    return similarity_ratio >= 0.8
+def isAnswerClose(inputAnswer, actualAnswer):
+    similarityRatio = SequenceMatcher(None, inputAnswer, actualAnswer).ratio()
+    return similarityRatio >= 0.8
 
-def submit_choice(input_answer, correct_answer):
-    if correct_answer == input_answer:
-        print("Your answer is correct!\n")
-    elif is_answer_close(input_answer, correct_answer):
-        print(f"So close but the accurate answer is: {correct_answer}\n")
+def submitChoice(inputAnswer, correctAnswer):
+    global removeEndAns
+    length = len(correctAnswer)
+    correctAnswer = correctAnswer[:length-removeEndAns]
+    inputAnswer = inputAnswer[:length-removeEndAns]
+    if correctAnswer == inputAnswer:
+        print("\nYour answer is correct!")
+    elif isAnswerClose(inputAnswer, correctAnswer):
+        print(f"\nSo close but the accurate answer is:\n{correctAnswer}")
     else:
-        print(f"Your answer is wrong. The correct answer is: {correct_answer}\n")
+        print(f"\nYour answer is wrong. The correct answer is:\n{correctAnswer}")
 
-def present_choices(correct_answer, all_answers):
-    all_answers_copy = all_answers[:]  
-    all_answers_copy.remove(correct_answer)  
-    incorrect_choices = random.sample(all_answers_copy, 3) 
-    choices = [correct_answer] + incorrect_choices 
+def presentChoices(correctAnswer, allAnswers):
+    global removeEndAns
+    allAnswersCopy = allAnswers[:]  
+    allAnswersCopy.remove(correctAnswer)  
+    incorrectChoices = random.sample(allAnswersCopy, 3) 
+    choices = [correctAnswer] + incorrectChoices 
     random.shuffle(choices)  
 
-    print("\nChoices:")
-    choice_labels = ['a', 'b', 'c', 'd']
-    for i, choice in enumerate(choices):
-        print(f"{choice_labels[i]}) {choice}")  
+    if answerSet == "choices":
+        print("\nChoices:")
+        choiceLabels = ['a', 'b', 'c', 'd']
+        for i, choice in enumerate(choices):
+            length = len(choice)
+            print(f"{choiceLabels[i]}) {choice[:length-removeEndAns]}")
+        return choices, choiceLabels
+    elif answerSet == "input":
+        userInput = input("\nType your answer: ").strip()
+        return [userInput], []
 
-    return choices, choice_labels
-
-def play_quiz():
+def playQuiz():
     clrScr()
-    questionArr, answerArr = load_questions()
-    clrScr()
-    current_question = 0
-    while current_question < len(questionArr):
-        print(f"Question {current_question + 1}/{len(questionArr)}:")
-        print(f"{questionArr[current_question]}")
+    questionArr, answerArr = loadQuestions()
+    currentQuestion = 0
+    while currentQuestion < len(questionArr):
+        print(f"\nQuestion {currentQuestion + 1}/{len(questionArr)}:\n")
+        print(f"{questionArr[currentQuestion]}")
 
-        choices, choice_labels = present_choices(answerArr[current_question], answerArr)
+        choices, choiceLabels = presentChoices(answerArr[currentQuestion], answerArr)
 
-        while True: 
-            input_answer = input("\nChoose the correct answer (a-d): ").lower().strip()
-            if input_answer in choice_labels:
-                choice_index = choice_labels.index(input_answer)
-                submit_choice(choices[choice_index], answerArr[current_question])
-                print()  
-                break  
-            else:
-                print("Invalid choice. Please enter a letter between a and d.")
+        if answerSet == "choices":
+            while True: 
+                inputAnswer = input("\nChoose the correct answer (a-d): ").lower().strip()
+                if inputAnswer in choiceLabels:
+                    choiceIndex = choiceLabels.index(inputAnswer)
+                    submitChoice(choices[choiceIndex], answerArr[currentQuestion])
+                    print()  
+                    break  
+                else:
+                    print("Invalid choice. Please enter a letter between a and d.")
+        elif answerSet == "input":
+            inputAnswer = choices[0]
+            submitChoice(inputAnswer, answerArr[currentQuestion])
+            print()
 
-        user_input = input("Enter anything to go to the next question, or type 'e' to quit: ").strip().lower()
-        if user_input == 'e':  # Check if the user wants to quit
+        userInput = input("Enter anything to go to the next question, or type 'e' to quit: ").strip().lower()
+        if userInput == 'e': 
             print("Thank you for playing!")
-            return  # Exit the current play_quiz function and stop the quiz
+            return 
 
-        clrScr()  # Clear the screen for the next question
-        current_question += 1
+        clrScr()
+        currentQuestion += 1
 
     print("End of questions!")
 
-# Main loop to allow for restarting the quiz
+
+# Main
 while True:
-    play_quiz()
+    playQuiz()
     restart = input("Do you want to play again? (y/n): ").strip().lower()
     if restart != 'y':
         break
