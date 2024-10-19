@@ -7,3 +7,12 @@ $ Simple Interest (Present):
 
 $ Simple Interest (Future):
 ? I = P[ 1 + (i)(n) ]
+
+$ Who are the incorporate Apple and show the Apple II at the first West Coast Computer Faire. 
+? Jobs and Wozniak
+
+$ It offers color graphics and incorporates an audio cassette drive for storage.
+? Apple II 
+
+$ When does Accountants rejoice at the introduction of VisiCalc, the first computerized spreadsheet program.
+? 1978

@@ -1,10 +1,13 @@
 import os
 import random
 from difflib import SequenceMatcher
+import ast # For use ast.literal_eval(), safer method than eval(). Convert string to boolean
 
 # Global variables
 answerSet = "choices"
 switchQuesAns = False 
+sameTypeChoices = False
+capitalize = False
 removeEndAns = 0
 questionSymb = '>'
 answerSymb = '~'
@@ -15,7 +18,7 @@ def clrScr():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def processConfigLine(line):
-    global answerSet, switchQuesAns, removeEndAns
+    global answerSet, switchQuesAns, removeEndAns, sameTypeChoices, capitalize
     global questionSymb, answerSymb, globalSetSymb, commentSymb
 
     line = line[1:].strip()
@@ -30,13 +33,17 @@ def processConfigLine(line):
             if var == "answerSet":
                 answerSet = str(value)
             elif var == "switchQuesAns":
-                switchQuesAns = eval(value)
+                switchQuesAns = ast.literal_eval(value)
             elif var == "removeEndAns":
                 removeEndAns = int(value)
             elif var == "questionSymb":
                 questionSymb = str(value)
             elif var == "answerSymb":
                 answerSymb = str(value)
+            elif var == "sameTypeChoices":
+                sameTypeChoices = ast.literal_eval(value)
+            elif var == "capitalize":
+                capitalize = ast.literal_eval(value)
             else:
                 print(f"Warning: Unknown configuration variable -> {var}")
 
@@ -46,10 +53,8 @@ def processConfigLine(line):
             print(f"Error processing assignment '{assignment}': {e}")
 
 def loadQuestions():
-    global switchQuesAns
+    global switchQuesAns, capitalize
     global questionSymb, answerSymb, globalSetSymb, commentSymb
-    questionArr = []
-    answerArr = []
     folderPath = "questionnaire"
     files = [f for f in os.listdir(folderPath) if f.endswith('.txt')]
     print("Available files:\n")
@@ -83,8 +88,6 @@ def loadQuestions():
     answers = []
     question = ""
     answer = ""
-    questionLineNumbers = []
-    answerLineNumbers = []
 
     for lineNumber, line in enumerate(lines, start=1):
         line = line.strip()
@@ -101,17 +104,19 @@ def loadQuestions():
 
         if line.startswith(questionSymb):
             if question:
+                if capitalize:
+                    question = question.capitalize()
                 questions.append(question)
-                questionLineNumbers.append(lineNumber)
             question = line[1:].strip()
         elif line.startswith(answerSymb):
             answer = line[1:].strip()
             if question: 
+                if capitalize:
+                    question = question.capitalize()
+                    answer = answer.capitalize()
                 questions.append(question)
                 answers.append(answer)
-                questionLineNumbers.append(lineNumber - 1)
-                answerLineNumbers.append(lineNumber)
-                question = "" 
+                question = ""
             else:
                 print(f"Error: Answer found at line {lineNumber} without a matching question.")
 
@@ -122,8 +127,7 @@ def loadQuestions():
     
     if len(questions) != len(answers):
         print(f"Error: Uneven number of questions and answers.")
-        print(f"Questions found at lines: {questionLineNumbers}")
-        print(f"Answers found at lines: {answerLineNumbers}")
+        print(f"Please check if there's question and answer at the same time")
         return [], []
     
     if switchQuesAns:
@@ -139,8 +143,6 @@ def loadQuestions():
     questions[:], answers[:] = zip(*combined)
     clrScr()
     return questions, answers
-
-
 
 def isAnswerClose(inputAnswer, actualAnswer):
     similarityRatio = SequenceMatcher(None, inputAnswer, actualAnswer).ratio()
@@ -159,17 +161,29 @@ def submitChoice(inputAnswer, correctAnswer):
         print(f"\nYour answer is wrong. The correct answer is:\n{correctAnswer}")
 
 def presentChoices(correctAnswer, allAnswers):
-    global removeEndAns
+    global removeEndAns, sameTypeChoices
     allAnswersCopy = allAnswers[:]  
     allAnswersCopy.remove(correctAnswer)  
+    
+    if sameTypeChoices:
+        if correctAnswer.isdigit():
+            allAnswersCopy = [ans for ans in allAnswersCopy if ans.isdigit()]
+        elif not correctAnswer.isdigit(): 
+            allAnswersCopy = [ans for ans in allAnswersCopy if not ans.isdigit()]
+
+    uniqueChoices = {correctAnswer}
     numIncorrectChoices = min(len(allAnswersCopy), 3)
-    incorrectChoices = random.sample(allAnswersCopy, numIncorrectChoices)
-    choices = [correctAnswer] + incorrectChoices
+
+    while len(uniqueChoices) < 4:
+        incorrectChoice = random.choice(allAnswersCopy)
+        uniqueChoices.add(incorrectChoice) 
+
+    choices = list(uniqueChoices)
+    random.shuffle(choices)
 
     while len(choices) < 4:
         choices.append("No more options") 
-    random.shuffle(choices)
-
+    
     if answerSet == "choices":
         print("\nChoices:")
         choiceLabels = ['a', 'b', 'c', 'd']
@@ -185,39 +199,53 @@ def playQuiz():
     clrScr()
     questionArr, answerArr = loadQuestions()
     if not questionArr:
-        print("Unable to start the quiz due to syntax errors.")
+        print("Unable to start the quiz due to syntax errors.\n")
         return
     
     currentQuestion = 0
+    score = 0
+    labelMap = {'1': 'a', '2': 'b', '3': 'c', '4': 'd'}
 
     while currentQuestion < len(questionArr):
-        print(f"\nQuestion {currentQuestion + 1}/{len(questionArr)}:\n")
-        print(f"{questionArr[currentQuestion]}")
+        print(f"Score: {score}/{len(questionArr)}\n")
+        print(f"{currentQuestion + 1}) {questionArr[currentQuestion]}")
         choices, choiceLabels = presentChoices(answerArr[currentQuestion], answerArr)
 
         if answerSet == "choices":
             while True: 
-                inputAnswer = input("\nChoose the correct answer (a-d): ").lower().strip()
+                inputAnswer = input("\nChoose the correct answer (1-4 or a-d): ").lower().strip()
+
+                if inputAnswer in labelMap:
+                    inputAnswer = labelMap[inputAnswer]
+
                 if inputAnswer in choiceLabels:
                     choiceIndex = choiceLabels.index(inputAnswer)
+                    if choices[choiceIndex] == answerArr[currentQuestion]:
+                        score += 1
                     submitChoice(choices[choiceIndex], answerArr[currentQuestion])
                     print()  
                     break  
                 else:
-                    print("Invalid choice. Please enter a letter between a and d.")
+                    print("Invalid choice. Please enter a number between 1 and 4 or a letter between a and d.")
+        
         elif answerSet == "input":
             inputAnswer = choices[0]
+            if inputAnswer == answerArr[currentQuestion]:
+                score += 1
             submitChoice(inputAnswer, answerArr[currentQuestion])
             print()
+        
         userInput = input("Enter anything to go to the next question, or type 'e' to quit: ").strip().lower()
 
         if userInput == 'e': 
-            print("Thank you for playing!")
+            clrScr()
+            print("\nThank you for playing!\n")
             return 
         
         clrScr()
         currentQuestion += 1
-    print("End of questions!")
+
+    print(f"End of questions! Your final score is {score}/{len(questionArr)}.\n")
 
 
 # Main

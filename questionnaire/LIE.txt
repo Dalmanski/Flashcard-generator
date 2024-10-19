@@ -1,5 +1,5 @@
 
-! answerSymb = ?
+! answerSymb = ?, sameTypeChoices = True, capitalize = True
 
 # Lesson 1
 
@@ -231,7 +231,7 @@
 > when does Jobs and Wozniak incorporate Apple and show the Apple II at the first West Coast Computer Faire. 
 ? 1977
 
-> incorporate Apple and show the Apple II at the first West Coast Computer Faire. 
+> Who are the incorporate Apple and show the Apple II at the first West Coast Computer Faire. 
 ? Jobs and Wozniak
 
 > It offers color graphics and incorporates an audio cassette drive for storage.
@@ -248,3 +248,228 @@
 
 > it becomes a reality as MicroPro International releases WordStar. 
 ? word processing
+
+> when does The first IBM personal computer, code-named "Acorn," is introduced.
+? 1981
+
+> The first IBM personal computer
+? Acorn
+
+> It uses Microsoft's MS-DOS operating system. 
+? Acorn
+
+> when does Apple's Lisa is the first personal computer with a GUI.
+? 1983
+
+> is the first personal computer with a GUI. 
+? Apple's Lisa 
+
+> is the first portable computer with the familiar flip form factor and the first to be marketed as a "laptop.“
+? Gavilan SC
+
+> when does Microsoft announces Windows, according to Encyclopedia Britannica. 
+? 1985
+
+> This was the company's response to Apple's GUI. Commodore unveils the ___, which features advanced audio and video capabilities.
+? amiga 1000
+
+> when does the first dot-com domain name is registered on March 15, years before the World Wide Web would mark the formal beginning of Internet history. 
+? 1985
+
+> when does Compaq brings the Deskpro 386 to market. Its 32-bit architecture provides as speed comparable to mainframes.
+? 1986
+
+> It brings the Deskpro 386 to market. 
+? Compaq
+
+> it announced in September 1986, was a landmark IBM PC compatible computer. The first fully 32-bit PC based on the Intel 386, its release took the leadership of the PC ecosystem away from IBM, and Compaq became the leader.
+? Compaq Deskpro 386
+
+> when does Tim Berners-Lee, a researcher at CERN(Conseil Européen pour la Recherche Nucléaire or European Council for Nuclear Research) , the high-energy physics laboratory in Geneva, develops HyperText Markup Language (HTML), giving rise to the World Wide Web. 
+? 1990
+
+> who's the researcher at CERN(Conseil Européen pour la Recherche Nucléaire or European Council for Nuclear Research) , the high-energy physics laboratory in Geneva, develops HyperText Markup Language (HTML), giving rise to the World Wide Web. 
+? Tim Berners-Lee
+
+> when does The Pentium microprocessor advances the use of graphics and music on PCs.
+? 1993
+
+
+# gilaktaw nako kay kapoya anang subjecta uy more on memorization
+
+> it advances the use of graphics and music on PCs.
+? Pentium microprocessor
+
+> is a controlling unit of a micro-computer, fabricated on a small chip capable of performing ALU (Arithmetic Logical Unit) operations and communicating with the other devices connected to it.
+? Microprocessor
+
+> consists of an ALU, register array, and a control unit.
+? Microprocessor
+
+> performs arithmetical and logical operations on the data received from the memory or an input device. 
+? ALU
+
+> consists of registers identified by letters like B, C, D, E, H, L and accumulator. 
+? Register array 
+
+# Lesson 1A
+
+> an electronic device that manipulates information or data. It has the ability to store, retrieve, and process data.
+? computer
+
+> When does the evolution of this complex system started around 1940 with the first Generation of Computer and evolving ever since
+? 1940
+
+
+# Gi laktaw nako kay kapoy panita
+
+> is a small, single-user computer based on a microprocessor. 
+? Personal Computer
+
+> is a powerful, single-user computer
+? Workstation
+
+> it is a mid size computer that is less powerful and cheaper than a mainframe
+? Minicomputer
+
+> It is a multi-user computer capable of supporting from 10 to hundreds of users simultaneously
+? Minicomputer
+
+> referred to as mid range server
+? Minicomputer
+
+> it is used in factories for process control, inventory and manufacturing control
+? Minicomputer
+
+> is a powerful multi-user computer capable of supporting hundreds or thousands of users simultaneously.
+? Mainframe
+
+> is an extremely fast computer that can perform millions of instructions per second.
+? Supercomputer
+
+> are computers designed to be placed on a desk, and are normally made up of a few different parts, including the computer case, central processing unit (CPU), monitor, keyboard, and mouse.
+? Desktop computers
+
+> are battery-powered computer devices whose portability makes then possible to use almost anytime, anywhere.
+? Laptop Computers
+
+> are hand-held computers with touch-sensitive screen for typing and navigation.
+? Tablets computers
+
+> are hand-held telephones which can do things that computers can do, including browsing and searching the internet and even playing console games.
+? Smartphones
+
+> include fitness trackers and smartwatches that can be worn throughout the day.
+? Wearables
+
+> are the latest television sets that include applications present in computers. For example, videos can be used as a computer monitor and gaming monitor.
+? Smart TVs
+
+# Lesson 2
+
+> The evolution of IT began in 
+? 1970
+
+> can help us understand how we can use these emerging technologies. 
+? cognition enhancers
+
+> combines the complementary strengths of a person and an information technology. 
+? cognition enhancers
+
+> the machine handles the routine mechanics of a task, while the person is immersed in its higher-order meanings.
+? Empowering Environments
+
+> is a framework for creating an interconnected, web-like representation of symbols (text, graphics, images, software codes) in the computer. \
+? Hypermedia
+
+> the first generation software application included compilers, device drivers etc., which were mainly command line programs.
+? Command Line Programs 
+
+> When does Command Line Programs?
+? 1980
+
+> with the popularity of graphical interface, GUI based desktop applications of multiple types and forms were released: office application, audio and video players, utility programs, browsers, etc.
+? Desktop Application 
+
+> When does Desktop Application?
+? 1990
+
+> with web’s availability, the next generation applications were developed keeping world wide web in mind. 
+? Web application
+
+> were developed keeping in mind that they can be accessed from any location over internet.
+? Web application
+
+> advent of computer technology has resulted into smart phones being affordable. 
+? Mobile application 
+
+> early programming was done in machine language.
+? 1st generation programming language (1GL)
+
+> what is the first generation programming language.
+? machine language 
+
+> also called as the assembly language programming which is easier for computer to understand but difficult for programmers.
+? 2nd generation programming language (2GL)
+
+> 2nd generation programming language
+? assembly language 
+
+> more normal English language like and hence easier for programmers to understand. 
+? 3rd generation programming language 
+
+> 3rd generation programming language 
+? High level languages
+
+> closer to natural language than 3GLs
+? 4th generation programming language (4GL)
+
+> used mainly in artificial intelligence research.
+? 5th generation programming language (5GL)
+
+> when does Johannes Gutenberg started working on a printing press which used relief printing and a molding system. 
+? 1436
+
+> Who started working on a printing press which used relief printing and a molding system. 
+? Johannes Gutenberg
+
+> When does telegraph was developed followed by the telephone which made the two-way communication possible. 
+? 1800
+
+> was developed followed by the telephone which made the two-way communication possible. 
+? telegraph
+
+> broadcasting and recorded media were introduced.
+? 1900
+
+> were used to send sound and video to homes and offices through electromagnetic spectrum or radio waves.
+? Radio and television
+
+> Who's the author from The Telegraph, one good example of this happened on January 15, 2009, when dozens of New Yorkers sent ‘tweets’ about a plane crash in the city.
+? Claudine Beaumont
+
+# ako gi laktaw kay kapoy
+
+> normally refers to the means of communication that uses unique tools to interconnect among people. 
+? media
+
+> is considered to be the message itself for those who create and own the rights of content. 
+? media
+
+> is a form of content created and owned by the users of a system. 
+? User-generated content (UGC) 
+
+> it has grown exponentially especially with the wide internet coverage or easy WIFI access, increased social media participation, and affordable smart devices.
+? User-generated content (UGC) 
+
+> Keep a diary or a journal is a traditional method of recording one’s thoughts or expressing one’s emotions through writing. 
+? blog
+
+> is a combination of two words- web ad log. 
+? blog
+
+> it refers to the tool or tools used in sending a message from the source to the destination. 
+? medium
+
+> is the one who delivers the message. 
+? messenger
