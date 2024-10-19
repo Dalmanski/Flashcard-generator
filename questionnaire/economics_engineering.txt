@@ -86,4 +86,4 @@
 ~ dm = (reverse digit / sum of all) * (FC - SV)
 
 > Book value of Sum of the years:
-` BV = FC - dm
+~ BV = FC - dm

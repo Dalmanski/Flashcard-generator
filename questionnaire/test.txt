@@ -1,0 +1,9 @@
+! switchQuesAns = True, questionSymb = $, answerSymb = ?
+
+# This is comment
+
+$ Simple Interest (Present):
+? I = P(i)(n)
+
+$ Simple Interest (Future):
+? I = P[ 1 + (i)(n) ]

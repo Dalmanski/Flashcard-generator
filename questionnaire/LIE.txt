@@ -1,0 +1,250 @@
+
+! answerSymb = ?
+
+# Lesson 1
+
+> was used to compile health information and was adopted to tabulate the 1890 Census.
+? card punch design
+
+> when does the U.S. population had grown so large that it took more than seven years to tabulate the U.S. Census results. 
+? 1880
+
+> was designed as early as in 1830s. This was done by the great Charles Babbage, and the name of the machine is Analytical Engine. 
+? first modern digital computer 
+
+> the modern digital computer, was designed as early as in 
+? 1830
+
+> who created "first modern digital computer"?
+? Charles Babbage
+
+> Who created a machine to calculate the numerical value or values of any formula or function of which the mathematician can indicate the method of solution. 
+? Henry Babbage
+
+> When does In France, Joseph Marie Jacquard invents a loom that uses punched wooden cards to automatically weave fabric designs.
+? 1801
+
+> Who invents a loom that uses punched wooden cards to automatically weave fabric designs.
+? Joseph Marie Jacquard 
+
+> When does Herman Hollerith designs a punch card system to calculate the 1880 census, accomplishing the task in just three years and saving the government $5 million. 
+? 1890
+
+> Who designs a punch card system to calculate the 1880 census, accomplishing the task in just three years and saving the government $5 million. 
+? Herman Hollerith 
+
+> who establishes a company that would ultimately become IBM.
+? Herman Hollerith 
+
+> When does Alan Turing presents the notion of a universal machine, later called the Turing machine, capable of computing anything that is computable. 
+? 1936
+
+> Who presents the notion of a universal machine, later called the Turing machine, capable of computing anything that is computable.
+? Alan Turing
+
+> when does Atanasoff and his graduate student, Clifford Berry, design a computer that can solve 29 equations simultaneously.
+? 1941
+
+> who design a computer that can solve 29 equations simultaneously.
+? Atanasoff and Clifford Berry
+
+> when does Two University of Pennsylvania professors, John Mauchly and J. Presper Eckert, build the Electronic Numerical Integrator and Calculator (ENIAC). 
+? 1943-1944
+
+> who build the Electronic Numerical Integrator and Calculator (ENIAC). 
+? John Mauchly and J. Presper Eckert
+
+> Considered the grandfather of digital computers, it fills a 20-foot by 40-foot room and has 18,000 vacuum tubes.
+? Electronic Numerical Integrator and Calculator (ENIAC)
+
+> when does Mauchly and Presper leave the University of Pennsylvania and receive funding from the Census Bureau to build the UNIVAC, the first commercial computer for business and government applications.
+? 1946
+
+> who build the UNIVAC, the first commercial computer for business and government applications.
+? Mauchly and Presper 
+
+> when does William Shockley, John Bardeen and Walter Brattain of Bell Laboratories invent the transistor. 
+? 1947
+
+> who invent the transistor?
+? William Shockley, John Bardeen and Walter Brattain
+
+> are REALLY big and get VERY hot. They use a LOT of electricity. 
+? Vacuum tubes 
+
+> are “VERY” small and generate almost no heat. They use very little electricity. 
+? transistor
+
+> when does Grace Hopper develops the first computer language, which eventually becomes known as COBOL.
+? 1953
+
+> who develops the first computer language, which eventually becomes known as COBOL.
+? Grace Hopper
+
+> is a high-level programming language for business applications. 
+? COBOL (Common Business-Oriented Language) 
+
+> It was the first popular language designed to be operating system-agnostic and is still in use in many financial and business applications today. 
+? COBOL (Common Business-Oriented Language) 
+
+> was designed for business computer programs in industries such as finance and human resources. 
+? COBOL (Common Business-Oriented Language) 
+
+> when does the FORTRAN programming language, an acronym for FORmula TRANslation, is developed by a team of programmers at IBM led by John Backus, according to the University of Michigan.
+? 1954
+
+> is a programming language that is developed by a team of programmers at IBM led by John Backus, according to the University of Michigan.
+? FORTRAN
+
+> the FORTRAN programming language, an acronym for FORmula TRANslation, is developed by a team of programmers at IBM led by
+? John Backus
+
+> when was the first important algorithmic language designed by an IBM team led by John Backus. 
+? 1957
+
+> It was the first important algorithmic language designed in 1957 by an IBM team led by John Backus. 
+? FORTRAN
+
+> It was intended for scientific computations with real numbers and collections of them organized as one- or multidimensional arrays
+? FORTRAN
+
+> when does Jack Kilby and Robert Noyce unveil the integrated circuit, known as the computer chip. 
+? 1958
+
+> who unveil the integrated circuit, known as the computer chip. 
+? Jack Kilby and Robert Noyce 
+
+> who was awarded the Nobel Prize in Physics in 2000 for his work.
+? Jack Kilby
+
+> when does Kilby was awarded the Nobel Prize in Physics for his work.
+? 2000
+
+> is a small chip that can function as an amplifier, oscillator, timer, microprocessor, or even computer memory. 
+? integrated circuit, or IC
+
+> is a small wafer, usually made of silicon, that can hold anywhere from hundreds to millions of transistors, resistors, and capacitors. 
+? integrated circuit, or IC
+
+> These extremely small electronics can perform calculations and store data using either digital or analog technology.
+? integrated circuit, or IC
+
+> when does Douglas Engelbart shows a prototype of the modern computer, with a mouse and a graphical user interface (GUI).
+? 1964 
+
+> who shows a prototype of the modern computer, with a mouse and a graphical user interface (GUI). 
+? Douglas Engelbart
+
+> This marks the evolution of the computer from a specialized machine for scientists and mathematicians to technology that is more accessible to the general public.
+? graphical user interface (GUI). 
+
+> when does A group of developers at Bell Labs produce UNIX, an operating system that addressed compatibility issues. 
+? 1969
+
+> what did a group of developers at Bell Labs produce an operating system that addressed compatibility issues. 
+? UNIX
+
+> what programming language is created in UNIX?
+? C programming language
+
+> was portable across multiple platforms and became the operating system of choice among mainframes at large companies and government entities.
+? UNIX
+
+> is a general-purpose programming language that is extremely popular, simple and flexible. 
+? C programming language
+
+> It is machine-independent, structured programming language which is used extensively in various applications.
+? C programming language
+
+> was the basics language to write everything from operating systems (Windows and many others) to complex programs like the Oracle database, Git, Python interpreter and more.
+? C programming language
+
+> when does The newly formed Intel unveils the Intel 1103, the first Dynamic Access Memory (DRAM) chip.
+? 1970
+
+> the first Dynamic Access Memory (DRAM) chip.
+? Intel 1103
+
+> the world’s first metal oxide semiconductor
+? Intel 1101
+
+> a one-kilobit dynamic random-access memory (DRAM) chip, was successful and the first chip to store a significant amount of information.
+? Intel 1103
+
+> It was purchased first by the American technology company Honeywell Incorporated in 1970 to replace the core memory technology in its computers.
+? Intel
+
+> when does Alan Shugart leads a team of IBM engineers who invent the "floppy disk," allowing data to be shared among computers.\
+? 1971
+
+> who invent the "floppy disk,"?
+? Alan Shugart
+
+> is a magnetic storage medium for computer systems.
+? floppy disk 
+
+> is composed of a thin, flexible magnetic disk sealed in a square plastic carrier. 
+? floppy disk 
+
+> were widely used to distribute software, transfer files, and create back-up copies of data
+? floppy disk 
+
+> when does Robert Metcalfe, a member of the research staff for Xerox, develops Ethernet for connecting multiple computers and other hardware.
+? 1973
+
+> who develops Ethernet for connecting multiple computers and other hardware.
+? Robert Metcalfe
+
+> when does , A number of personal computers hit the market, including Scelbi & Mark-8 Altair, IBM 5100, Radio Shack's TRS-80 — affectionately known as the "Trash 80" — and the Commodore PET.
+? 1974 - 1977
+
+> when does The January issue of Popular Electronics magazine features the Altair 8080, described as the "world's first minicomputer kit to rival commercial models." 
+? 1975
+
+> described as the "world's first minicomputer kit to rival commercial models.
+? Altair 8080
+
+> who write software for the Altair, using the new BASIC language.
+? Paul Allen and Bill Gates
+
+> was one of the first computers available for personal use.
+? Altair 8800 
+
+> revolutionized the computing world by allowing common people to have their own personal computer to use as they pleased
+? Altair 8800 
+
+> was responsible for the rise of Microsoft as a computing industry giant.
+? Altair 8800 
+
+> when does Steve Jobs and Steve Wozniak start Apple Computers on April Fool's Day and roll out the Apple I, the first computer with a single-circuit board, according to Stanford University.
+? 1976
+
+> who start Apple Computers on April Fool's Day and roll out the Apple I, the first computer with a single-circuit board, according to Stanford University.
+? Steve Jobs and Steve Wozniak 
+
+> the first computer with a single-circuit board, according to Stanford University.
+? Apple I
+
+> when does Radio Shack's initial production run of the TRS-80 was just 3,000. It sold like crazy. For the first time, non-geeks could write programs and make a computer do what they wished.
+? 1977
+
+> when does Jobs and Wozniak incorporate Apple and show the Apple II at the first West Coast Computer Faire. 
+? 1977
+
+> incorporate Apple and show the Apple II at the first West Coast Computer Faire. 
+? Jobs and Wozniak
+
+> It offers color graphics and incorporates an audio cassette drive for storage.
+? Apple II 
+
+> When does Accountants rejoice at the introduction of VisiCalc, the first computerized spreadsheet program.
+? 1978
+
+> the first computerized spreadsheet program
+? VisiCalc
+
+> when does Word processing becomes a reality as MicroPro International releases WordStar. 
+? 1979
+
+> it becomes a reality as MicroPro International releases WordStar. 
+? word processing
