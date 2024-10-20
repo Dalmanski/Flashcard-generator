@@ -1,0 +1,137 @@
+
+! answerSymb = ?, capitalize = True, theme = amber_text_on_black
+
+> Process of exploring and analyzing large data sets to find hidden patterns, trends, correlation, and insights that can inform decision-making.
+? Data Analytics
+
+> Is the process of gathering information on targeted variables such as databases, sensors, or external datasets.
+? Data Collection
+
+> Two types of Data:
+? Structured and Unstructured Data
+
+> Is a numerical information that is easily organized, objective, and generally stored in a database.
+? Structured Data
+
+> Two types of Structured Data
+? Machine Learning, Statistical, Semantics
+
+> Is a data in which it has no definite structure or a data model.
+? Unstructured Data
+
+> Examples of Unstructured Data:
+? Text, Audio, Video, and Social Media
+
+> Is used to clean the unwanted redundant data to make it ready for analysis in order to generate accurate results.
+? Data Cleaning
+
+> Various statistical and computational techniques are applied to the prepared data to uncover patterns, correlations, or trends.
+? Data Exploration and Analysis
+
+> This part is important because this is where we will gain actual value from the other components. It will help you find unseen trends and patterns in the data to gain insights.
+? Interpret the Results
+
+> Types of Data Analytics
+? Descriptive, Diagnostic, Predictive, Prescriptive
+
+> A simple, surface level type of analysis that looks at what happened in the past (What happened?)
+? Descriptive Analytics
+
+> A technique in descriptive analytics where the data analyst first gathers the data and presents it in a summarized format.
+? Data Aggregation
+
+> A technique in descriptive analytics where a data analyst “mines” the data to discover patterns.
+? Data Mining
+
+> Goes beyond descriptive analytics to explore the reasons behind past events. It identifies causes and correlations by drilling down into data, often using techniques like data mining and correlation analysis. (Why did it happen?)
+? Diagnostic Analytics
+
+> The science of using data to make predictions about the future. It helps organizations anticipate events, behaviors, and trends, enabling proactive decision-making. (What is likely to happen in the future?)
+? Predictive Analytics
+
+> A model used to make predictions where it uses a collection of statistical models to investigate the connections between variables and uncover patterns in data.
+? Statistical Modeling
+
+> A model used to make predictions where it analyzes and examines large chunks of data automatically. It automates the data analysis process and makes predictions in real-time without any human involvement.
+? Machine Learning Algorithms
+
+> Advises on the actions and decisions that should be taken. It uses optimization algorithms and simulation models to recommend the best course of action among various alternatives. (What’s the best course of action?)
+? Prescriptive Analytics
+
+> Is a professional who collects business data from various sources, interprets it and uses various statistical tools and techniques to extract insights and useful information from it.
+? Data Analyst
+
+> Is original and first-hand data collected directly by the researcher for a specific purpose or study.
+? Primary Data Source
+
+> Is data that has already been collected, processed, and published by others.
+? Secondary Data Source1
+
+> is an interdisciplinary field that combines various techniques, tools, and methodologies from statistics, computer science, and domain expertise to extract meaningful insights and knowledge from data.
+? Data Science
+
+> Also known as Knowledge Discovery in Data (KDD). The process of extracting patterns and other useful information from large datasets.
+? Data Mining
+
+> Is defined as the presentation of a summary/report of generated data in a comprehensible and informative manner.
+? Data Summarization
+
+> Is a subset of AI that focuses on the development of computer algorithms that improve automatically through experience and by the use of data.
+? Machine Learning
+
+> Are the outcomes or the observations which occur in scientific experiments or observations.
+? Statistical Structured Data
+
+> Statistical measures by which we find the different characteristics of the data:
+? Measures of Central Tendency and Measures of Dispersion
+
+> Categories of Statistical Data
+? Qualitative and Quantitative
+
+> is a high-level data model that represents data and its relationships in a way that is closer to human understanding and interpretation, rather than just focusing on the technical aspects of how the data is stored or processed.
+? Semantic Data Model
+
+> is a data stored in its native format and not processed until used, which is known as schema-on-read. 
+? Unstructured Data
+
+> Is a column chart that displays the frequency of a variable in a given range. Is similar to a bar chart except it groups data together in user-specific intervals called ___.
+? Histogram, Bins
+
+> Permits identification of any peculiarities of the shape of the sample distribution, which might be symmetrical or skewed to higher or lower values.
+? Quantile Plot
+
+> Are values that split sorted data or a probability distribution into equal parts.
+? Quantile
+
+> Is a graphical tool to help us assess if a set of data plausibly came from some theoretical distribution such as a normal or exponential.
+? Quantile-Quantile Plot(Q-Q Plot)
+
+> Uses dots to represent values of two different numeric variables. The position of each dot on the horizontal and vertical axis indicates values for an individual data point.
+? Scatter Plot
+
+> Common issue when using scatter plots is the case where data points overlap to a degree where we have difficulty seeing relationships between points and variables.
+? Overplotting
+
+> Common issue when using scatter plots is simply because we observe a relationship between two variables in a scatter plot, it does not mean that changes in one variable are responsible for changes in the other.
+? Interpreting correlation as causation.
+
+> is a standardized way of displaying the distribution of a data set based on its five-number summary of data points: the “minimum,” first quartile [Q1], median, third quartile [Q3] and “maximum.”
+? Box Plot
+
+> Is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data. 
+? Data Visualization
+
+> Ensure that your data is properly organized in rows and columns within the Excel sheet. Clearly label each row and column to make it easy to identify the data you want to visualize.
+? Organize the Data
+
+> Click and drag your mouse to highlight the data you want to include in your visualization, including the row and column headers.
+? Choose a chart type
+
+> Excel will automatically create the selected chart type based on your chosen data and insert it into your worksheet. You can click and drag the chart to reposition it or use the sizing handles at the corners to resize it.
+? Insert the chart
+
+> To further edit your data visualization, click on the chart to select it. Excel will display the "Chart Tools" with two additional tabs: "Design" and "Format".
+? Customize the chart
+
+> If you need to make changes to your data after creating the chart, simply edit the data in the worksheet. Excel will automatically update the chart to reflect the changes.
+? Edit the Data

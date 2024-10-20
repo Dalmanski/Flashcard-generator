@@ -5,6 +5,7 @@ import ast # For use ast.literal_eval(), safer method than eval(). Convert strin
 
 # Global variables
 answerSet = "choices"
+theme = "white_text_on_black"
 switchQuesAns = False 
 sameTypeChoices = False
 capitalize = False
@@ -17,8 +18,17 @@ commentSymb = '#'
 def clrScr():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+def setTheme():
+    global theme
+    if theme == "amber_text_on_black":
+        print(end="\033[38;2;255;165;0m") # orange amber text
+        print(end="\033[40m") # black bg
+    elif theme == "white_text_on_black":
+        print(end="\033[37m") # white text
+        print(end="\033[40m") # black bg
+
 def processConfigLine(line):
-    global answerSet, switchQuesAns, removeEndAns, sameTypeChoices, capitalize
+    global answerSet, theme, switchQuesAns, removeEndAns, sameTypeChoices, capitalize
     global questionSymb, answerSymb, globalSetSymb, commentSymb
 
     line = line[1:].strip()
@@ -44,6 +54,8 @@ def processConfigLine(line):
                 sameTypeChoices = ast.literal_eval(value)
             elif var == "capitalize":
                 capitalize = ast.literal_eval(value)
+            elif var == "theme":
+                theme = str(value)
             else:
                 print(f"Warning: Unknown configuration variable -> {var}")
 
@@ -198,6 +210,8 @@ def presentChoices(correctAnswer, allAnswers):
 def playQuiz():
     clrScr()
     questionArr, answerArr = loadQuestions()
+    setTheme()
+
     if not questionArr:
         print("Unable to start the quiz due to syntax errors.\n")
         return
