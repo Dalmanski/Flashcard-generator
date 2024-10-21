@@ -1,4 +1,5 @@
 import os
+import re
 import random
 from difflib import SequenceMatcher
 import ast # For use ast.literal_eval(), safer method than eval(). Convert string to boolean
@@ -176,6 +177,8 @@ def submitChoice(inputAnswer, correctAnswer):
         correctAnswer = correctAnswer.lower()
         inputAnswer = inputAnswer.lower()
 
+    correctAnswer = re.sub(r'\{.*?\}', '', correctAnswer).strip()
+
     if correctAnswer == inputAnswer:
         print("\nYour answer is correct!")
         score += 1
@@ -189,7 +192,17 @@ def presentChoices(correctAnswer, allAnswers):
     global removeEndAns, sameTypeChoices
     allAnswersCopy = allAnswers[:]  
     allAnswersCopy.remove(correctAnswer)  
-    
+
+    if '{' in correctAnswer and '}' in correctAnswer:
+        categoryChoices = re.findall(r'\{(.*?)\}', correctAnswer)
+        allAnswersCopy = [ans for ans in allAnswersCopy if '{' + categoryChoices[0] + '}' in ans]
+        correctAnswer = correctAnswer.replace('{' + categoryChoices[0] + '}', "").strip()
+        allAnswersCopy = [ans.replace('{' + categoryChoices[0] + '}', "").strip() for ans in allAnswersCopy]
+    else:
+        allAnswersCopy = [ans for ans in allAnswersCopy if not re.search(r'\{.*?\}', ans)]
+
+    allAnswersCopy = [re.sub(r'\{.*?\}', '', ans).strip() for ans in allAnswersCopy]
+
     if sameTypeChoices:
         if correctAnswer.isdigit():
             allAnswersCopy = [ans for ans in allAnswersCopy if ans.isdigit()]
@@ -197,7 +210,6 @@ def presentChoices(correctAnswer, allAnswers):
             allAnswersCopy = [ans for ans in allAnswersCopy if not ans.isdigit()]
 
     uniqueChoices = {correctAnswer}
-    numIncorrectChoices = min(len(allAnswersCopy), 3)
 
     while len(uniqueChoices) < 4:
         incorrectChoice = random.choice(allAnswersCopy)
