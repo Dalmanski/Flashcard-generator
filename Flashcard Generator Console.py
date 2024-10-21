@@ -5,15 +5,18 @@ import ast # For use ast.literal_eval(), safer method than eval(). Convert strin
 
 # Global variables
 answerSet = "choices"
-theme = "white_text_on_black"
+theme = ""
 switchQuesAns = False 
 sameTypeChoices = False
 capitalize = False
+caseSenseAns = False
 removeEndAns = 0
 questionSymb = '>'
 answerSymb = '~'
 globalSetSymb = '!'
 commentSymb = '#'
+
+score = 0
 
 def clrScr():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -28,7 +31,8 @@ def setTheme():
         print(end="\033[40m") # black bg
 
 def processConfigLine(line):
-    global answerSet, theme, switchQuesAns, removeEndAns, sameTypeChoices, capitalize
+    global answerSet, theme, switchQuesAns, removeEndAns, sameTypeChoices
+    global capitalize, caseSenseAns
     global questionSymb, answerSymb, globalSetSymb, commentSymb
 
     line = line[1:].strip()
@@ -56,6 +60,8 @@ def processConfigLine(line):
                 capitalize = ast.literal_eval(value)
             elif var == "theme":
                 theme = str(value)
+            elif var == "caseSenseAns":
+                caseSenseAns = ast.literal_eval(value)
             else:
                 print(f"Warning: Unknown configuration variable -> {var}")
 
@@ -161,14 +167,21 @@ def isAnswerClose(inputAnswer, actualAnswer):
     return similarityRatio >= 0.8
 
 def submitChoice(inputAnswer, correctAnswer):
-    global removeEndAns
+    global removeEndAns, score
     length = len(correctAnswer)
     correctAnswer = correctAnswer[:length-removeEndAns]
     inputAnswer = inputAnswer[:length-removeEndAns]
+
+    if caseSenseAns:
+        correctAnswer = correctAnswer.lower()
+        inputAnswer = inputAnswer.lower()
+
     if correctAnswer == inputAnswer:
         print("\nYour answer is correct!")
+        score += 1
     elif isAnswerClose(inputAnswer, correctAnswer):
         print(f"\nSo close but the accurate answer is:\n{correctAnswer}")
+        score += 1
     else:
         print(f"\nYour answer is wrong. The correct answer is:\n{correctAnswer}")
 
@@ -217,7 +230,6 @@ def playQuiz():
         return
     
     currentQuestion = 0
-    score = 0
     labelMap = {'1': 'a', '2': 'b', '3': 'c', '4': 'd'}
 
     while currentQuestion < len(questionArr):
@@ -234,8 +246,6 @@ def playQuiz():
 
                 if inputAnswer in choiceLabels:
                     choiceIndex = choiceLabels.index(inputAnswer)
-                    if choices[choiceIndex] == answerArr[currentQuestion]:
-                        score += 1
                     submitChoice(choices[choiceIndex], answerArr[currentQuestion])
                     print()  
                     break  
@@ -244,8 +254,6 @@ def playQuiz():
         
         elif answerSet == "input":
             inputAnswer = choices[0]
-            if inputAnswer == answerArr[currentQuestion]:
-                score += 1
             submitChoice(inputAnswer, answerArr[currentQuestion])
             print()
         

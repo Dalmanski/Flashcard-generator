@@ -1,7 +1,14 @@
-# Example array
-questionArr = ["Question 1", "Question 2", "Question 3"]
-currentQuestion = 1
+import re
 
-remove = "3"
-# Print the array element minus one character at the end
-print(f"{questionArr[currentQuestion][:len(questionArr[currentQuestion])-0]}")
+# Example string
+string = "asidjasoidjasoid {nakit-an na} oisahdoiashjd"
+
+# Regular expression to find text inside curly braces
+matches = re.findall(r'\{(.*?)\}', string)
+
+# Output the result
+print("Output inside {}:", matches[0])
+
+# Input strings
+string = "hello world"
+print(string.replace("llo w", ""))

@@ -1,0 +1,253 @@
+! answerSymb = ?, capitalize = True, theme = amber_text_in_black
+
+>Refers to any piece of information that can be stored, processed, and transmitted.
+
+?Data
+
+>Involves the electronic exchange of data between devices or systems. It uses digital signals, which are discrete, rather than analog signals, which are continuous.
+
+?Digital Communication
+
+>Is the process of varying one or more parameters of a carrier signal in accordance with the instantaneous values of the message signal.
+
+?Modulation
+
+>The amplitude of the sound wave is sampled at regular intervals and translated into a binary number.
+
+?Pulse Code Modulation (PCM)
+
+>The difference between the original analog signal and the translated digital signal is called _____
+
+?Quantizing error
+
+>Is a process of reducing the excessive bits and confining the data.
+
+?Quantizing
+
+>This is the technique which helps to collect the sample data at instantaneous values of the message signal, so as to reconstruct the original signal.
+
+?Sampler
+
+>This filter eliminates the high frequency components present in the input analog signal which is greater than the highest frequency of the message signal, to avoid aliasing of the message signal.
+
+?Low Pass Filter
+
+>It designates each quantized level by a binary code.
+
+?Encoder
+
+>This section increases the signal strength.
+
+?Regenerative Repeater
+
+>Decodes the pulse coded waveform to reproduce the original signal. This circuit acts as the demodulator.
+
+?Decoder
+
+>After the digital-to-analog conversion is done by the regenerative circuit and the decoder, a low-pass filter is employed, called as the ________ to get back the original signal.
+
+?Reconstruction Filter
+
+>What are the three sampling methods:
+
+?Ideal, Natural, Flattop
+
+>It is an impulse at each sampling instant.
+
+?Ideal
+
+>A pulse of short width with varying amplitude.
+
+?Natural
+
+>Sample and hold, like natural but with single amplitude value.
+
+?Flattop
+
+>The process of measuring the numerical values of the samples and giving them a table value in a suitable scale.
+
+?Quantizing
+
+>The finite number of amplitude intervals is called the ____
+
+?Quantizing Interval
+
+_____  is where the quantizing intervals are of the same size.
+
+?Linear Quantizing
+
+>The quantization intervals will be in powers of ____
+
+?2
+
+>In PCM, __ bit code is used and so we have ___ intervals for quantizing.
+
+?8, 256
+
+>What are the two standards of PCM
+
+?The European and American Standard
+
+>How many channels in European PCM?
+
+?30 Channels
+
+>How many channels in North American PCM?
+
+?24 Channels
+
+>How many channels are there in Japanese PCM?
+
+?24 Channels
+
+>How many channels in Indian PCM?
+
+?30 Channels
+
+# (Group 3)
+
+>Is adding information to a carrier signal.
+
+?Modulation
+
+>The sine wave on which the characteristics of the information signal are modulated is called a ______.
+
+?Carrier Signal
+
+>Converting digital or analog information to a waveform suitable for transmission over a given medium
+
+?Modulation
+
+>The variation in the parameter of the carrier is continuous in accordance with the input analog signal.
+
+?Analog Modulation
+
+>The variation in the parameter of the carrier is discrete.
+
+?Digital Modulation
+
+>The amplitude of the signal is changed in response to information and all else is kept fixed.
+
+?Amplitude Shift Keying
+
+>the frequency is changed in response to information.
+
+?Frequency Shift Keying
+
+>The phase of the sinusoidal carrier is changed to indicate information. Phase in this context is the starting angle at which the sinusoidal starts
+
+?Phase Shift Keying
+
+>If differential encoding and phase shift keying are made together at the transmitter
+
+?Differential Phase Shift Keying
+
+>Both the amplitude and the phase are varied proportional to the information signal
+
+?Quadrature Amplitude Modulation
+
+# (Group 4)
+
+>Refers to the reduction of uncertainty. When you receive a message, it reduces the uncertainty about something.
+
+?Information
+
+>Is a measure of the uncertainty or randomness in a system. In Information Theory, it quantifies the amount of information in a message.
+
+?Entropy
+
+>This refers to the repetition or predictability in a message.
+
+?Redundancy
+
+>This is the maximum rate at which information can be reliably transmitted over a communication channel. It depends on factors like the bandwidth of the channel and the noise present.
+
+?Channel Capacity
+
+>Refers to anything that interferes with the transmission and reception of the message, leading to errors.
+
+?Noise
+
+>It relates the channel capacity to bandwidth and signal-to-noise ratio
+
+?Shannon-Hartley Theorem
+
+>It states that reliable communication is possible up to a certain rate, known as the channel capacity, even in the presence of noise.
+
+?Noisy Channel Coding Theorem
+
+#(Group 5)
+
+>is the process of transferring digital information (usually in binary form) between two or more points.
+
+?Data Communication
+
+>Who invented the telegraph and when?
+
+?Samuel F.B. Morse, 1837
+
+>Who patented a printing telegraph service and when?
+
+?Alexander Bain, 1843
+
+>Who introduced the telephone and when?
+
+?Alexander Graham Bell, 1876
+
+>Who developed the first radio, and when?
+
+?Guglielmo Marconi, 1895
+
+>Who introduced the Transistor and when?
+
+?Bell Labs, 1947
+
+>When was the Internet Protocol invented?
+
+?1969
+
+#(Group 6)
+
+>Refers to the physical pathway through which data is transmitted from one device to another
+
+?Transmission Media
+
+>Two categories of Transmission Media:
+
+?Guided and Unguided
+
+>Consists of pairs of insulated copper wires twisted together to reduce electromagnetic interference.
+
+?Twisted Pair Cable
+
+>Types of Twisted Pair Cables:
+
+?Unshielded Twisted Pair, Shielded Twisted Pair
+
+>Composed of a central conductor, insulating layer, metallic shield, and outer insulating layer.
+
+?Coaxial Cable
+
+>Uses light to transmit data through glass or plastic fibers
+
+?Fiber Optic Cable
+
+>Electromagnetic waves transmitted through the air over various frequencies
+
+?Radio Waves
+
+>Electromagnetic radiation with wavelengths shorter than visible light but longer than microwaves
+
+?Infrared
+
+>Is crucial for enabling seamless connectivity in our increasingly digital world
+
+?Transmission Technology
+
+>Is a critical factor in transmission media, determining how much data can be sent over a medium at one time.
+
+?Bandwidth
+
+>Challenges in Transmission Media:
+
+?Signal degradation, Interference and Latency
