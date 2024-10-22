@@ -1,4 +1,8 @@
-str = "ns"
+num = 5
 
-if str == "okay" or str == "none":
-    print("what")
+def ind(num, num1):
+    num += num1
+    print(num)
+
+ind(num, 3)
+ind(num, 4)

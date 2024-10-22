@@ -1,5 +1,5 @@
 
-! answerSymb = ?, capitalize = True, theme = amber_text_on_black, answerSet = input, caseSenseAns = True
+! answerSymb = ?, capitalize = True, theme = amber_text_on_black
 
 > Process of exploring and analyzing large data sets to find hidden patterns, trends, correlation, and insights that can inform decision-making.
 ? Data Analytics
