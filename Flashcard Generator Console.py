@@ -30,6 +30,8 @@ def setTheme():
     elif theme == "white_text_on_black":
         print(end="\033[37m") # white text
         print(end="\033[40m") # black bg
+    elif theme == "default" or theme == "none":
+        print(end="\033[0m")
 
 def processConfigLine(line):
     global answerSet, theme, switchQuesAns, removeEndAns, sameTypeChoices
@@ -74,24 +76,41 @@ def processConfigLine(line):
 def loadQuestions():
     global switchQuesAns, capitalize
     global questionSymb, answerSymb, globalSetSymb, commentSymb
+    
+    def find_txt_files(folder):
+        txt_files = []
+        for entry in os.listdir(folder):
+            full_path = os.path.join(folder, entry)
+            if os.path.isdir(full_path):
+                txt_files.extend(find_txt_files(full_path))
+            elif entry.endswith('.txt'):
+                txt_files.append(full_path)
+        return txt_files
+
     folderPath = "questionnaire"
-    files = [f for f in os.listdir(folderPath) if f.endswith('.txt')]
-    print("Available files:\n")
+    files = find_txt_files(folderPath) 
+    print("\nAvailable files:\n")
+
+    if not files:
+        print("No .txt files found in the directory.")
+        return [], []
 
     for idx, file in enumerate(files):
-        print(f"{idx + 1}: {file}")
-    print()
+        relative_path = os.path.relpath(file, folderPath)
+        print(f"{idx + 1}) {relative_path}")
 
     while True:
+        user_input = input(f"\nSelect a file to load (1-{len(files)}): ").strip().lower()
+     
         try:
-            fileChoice = int(input(f"\nSelect a file to load (1-{len(files)}): ")) - 1
+            fileChoice = int(user_input) - 1
             if 0 <= fileChoice < len(files):
-                selectedFile = os.path.join(folderPath, files[fileChoice])
+                selectedFile = files[fileChoice]
                 break
             else:
                 print("Invalid choice. Please try again.")
         except ValueError:
-            print("Please enter a valid number.")
+            print("Please enter a valid number or 'back'.")
 
     try:
         with open(selectedFile, "r", encoding='utf-8', errors='replace') as file:
@@ -132,7 +151,8 @@ def loadQuestions():
             if question: 
                 if capitalize:
                     question = question.capitalize()
-                    answer = answer.capitalize()
+                    if not answerSet == "input":
+                        answer = answer.capitalize()
                 questions.append(question)
                 answers.append(answer)
                 question = ""
@@ -163,6 +183,7 @@ def loadQuestions():
     clrScr()
     return questions, answers
 
+
 def isAnswerClose(inputAnswer, actualAnswer):
     similarityRatio = SequenceMatcher(None, inputAnswer, actualAnswer).ratio()
     return similarityRatio >= 0.8
@@ -180,24 +201,24 @@ def submitChoice(inputAnswer, correctAnswer):
     correctAnswer = re.sub(r'\{.*?\}', '', correctAnswer).strip()
 
     if correctAnswer == inputAnswer:
-        print("\nYour answer is correct!")
+        print("\nYour answer is correct!\n")
         score += 1
     elif isAnswerClose(inputAnswer, correctAnswer):
-        print(f"\nSo close but the accurate answer is:\n{correctAnswer}")
+        print(f"\nSo close but the accurate answer is:\n{correctAnswer}\n")
         score += 1
     else:
-        print(f"\nYour answer is wrong. The correct answer is:\n{correctAnswer}")
+        print(f"\nYour answer is wrong. The correct answer is:\n{correctAnswer}\n")
 
 def presentChoices(correctAnswer, allAnswers):
     global removeEndAns, sameTypeChoices
     allAnswersCopy = allAnswers[:]  
     allAnswersCopy.remove(correctAnswer)  
 
-    if '{' in correctAnswer and '}' in correctAnswer:
+    if re.search(r'\{.*?\}', correctAnswer):
         categoryChoices = re.findall(r'\{(.*?)\}', correctAnswer)
-        allAnswersCopy = [ans for ans in allAnswersCopy if '{' + categoryChoices[0] + '}' in ans]
-        correctAnswer = correctAnswer.replace('{' + categoryChoices[0] + '}', "").strip()
-        allAnswersCopy = [ans.replace('{' + categoryChoices[0] + '}', "").strip() for ans in allAnswersCopy]
+        allAnswersCopy = [ans for ans in allAnswersCopy if f'{{{categoryChoices[0]}}}' in ans]
+        correctAnswer = correctAnswer.replace(f'{{{categoryChoices[0]}}}', "").strip()
+        allAnswersCopy = [ans.replace(f'{{{categoryChoices[0]}}}', "").strip() for ans in allAnswersCopy]
     else:
         allAnswersCopy = [ans for ans in allAnswersCopy if not re.search(r'\{.*?\}', ans)]
 
@@ -233,7 +254,6 @@ def presentChoices(correctAnswer, allAnswers):
         return [userInput], []
 
 def playQuiz():
-    clrScr()
     questionArr, answerArr = loadQuestions()
     setTheme()
 
@@ -251,7 +271,7 @@ def playQuiz():
 
         if answerSet == "choices":
             while True: 
-                inputAnswer = input("\nChoose the correct answer (1-4 or a-d): ").lower().strip()
+                inputAnswer = input("\nChoose the correct answer\n(1-4 or a-d): ").lower().strip()
 
                 if inputAnswer in labelMap:
                     inputAnswer = labelMap[inputAnswer]
@@ -259,7 +279,6 @@ def playQuiz():
                 if inputAnswer in choiceLabels:
                     choiceIndex = choiceLabels.index(inputAnswer)
                     submitChoice(choices[choiceIndex], answerArr[currentQuestion])
-                    print()  
                     break  
                 else:
                     print("Invalid choice. Please enter a number between 1 and 4 or a letter between a and d.")
@@ -267,23 +286,23 @@ def playQuiz():
         elif answerSet == "input":
             inputAnswer = choices[0]
             submitChoice(inputAnswer, answerArr[currentQuestion])
-            print()
         
-        userInput = input("Enter anything to go to the next question, or type 'e' to quit: ").strip().lower()
+        userInput = input("Enter anything to go to the next question,\nor type 'e' to quit: ").strip().lower()
 
         if userInput == 'e': 
-            clrScr()
             print("\nThank you for playing!\n")
             return 
         
         clrScr()
         currentQuestion += 1
 
-    print(f"End of questions! Your final score is {score}/{len(questionArr)}.\n")
+    print(f"\nEnd of questions!")
+    print(f"Your final score is {score}/{len(questionArr)}!\n")
 
 
 # Main
 while True:
+    clrScr()
     playQuiz()
     restart = input("Do you want to play again? (y/n): ").strip().lower()
     if restart != 'y':
