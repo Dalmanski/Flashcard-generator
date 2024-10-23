@@ -11,7 +11,7 @@ switchQuesAns = False
 sameTypeChoices = False
 capitalize = False
 caseSenseAns = False
-removeEndAns = 0
+trimEndAns = 0
 questionSymb = '>'
 answerSymb = '~'
 globalSetSymb = '!'
@@ -34,7 +34,7 @@ def setTheme():
         print(end="\033[0m")
 
 def processConfigLine(line):
-    global answerSet, theme, switchQuesAns, removeEndAns, sameTypeChoices
+    global answerSet, theme, switchQuesAns, trimEndAns, sameTypeChoices
     global capitalize, caseSenseAns
     global questionSymb, answerSymb, globalSetSymb, commentSymb
 
@@ -51,8 +51,8 @@ def processConfigLine(line):
                 answerSet = str(value)
             elif var == "switchQuesAns":
                 switchQuesAns = ast.literal_eval(value)
-            elif var == "removeEndAns":
-                removeEndAns = int(value)
+            elif var == "trimEndAns":
+                trimEndAns = int(value)
             elif var == "questionSymb":
                 questionSymb = str(value)
             elif var == "answerSymb":
@@ -189,10 +189,10 @@ def isAnswerClose(inputAnswer, actualAnswer):
     return similarityRatio >= 0.8
 
 def submitChoice(inputAnswer, correctAnswer):
-    global removeEndAns, score
+    global trimEndAns, score
     length = len(correctAnswer)
-    correctAnswer = correctAnswer[:length-removeEndAns]
-    inputAnswer = inputAnswer[:length-removeEndAns]
+    correctAnswer = correctAnswer[:length-trimEndAns]
+    inputAnswer = inputAnswer[:length-trimEndAns]
 
     if caseSenseAns:
         correctAnswer = correctAnswer.lower()
@@ -210,7 +210,7 @@ def submitChoice(inputAnswer, correctAnswer):
         print(f"\nYour answer is wrong.\nThe correct answer is: {correctAnswer}\n")
 
 def presentChoices(correctAnswer, allAnswers):
-    global removeEndAns, sameTypeChoices
+    global trimEndAns, sameTypeChoices
     allAnswersCopy = allAnswers[:]  
     allAnswersCopy.remove(correctAnswer)  
 
@@ -247,7 +247,7 @@ def presentChoices(correctAnswer, allAnswers):
         choiceLabels = ['a', 'b', 'c', 'd']
         for i, choice in enumerate(choices):
             length = len(choice)
-            print(f"{choiceLabels[i]}) {choice[:length-removeEndAns]}")
+            print(f"{choiceLabels[i]}) {choice[:length-trimEndAns]}")
         return choices, choiceLabels
     elif answerSet == "input":
         userInput = input("\nType your answer: ").strip()

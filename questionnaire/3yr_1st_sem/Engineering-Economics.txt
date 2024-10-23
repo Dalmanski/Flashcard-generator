@@ -1,5 +1,5 @@
 
-! answerSet = choices, switchQuesAns = True, removeEndAns = 1
+! answerSet = choices, switchQuesAns = True, trimEndAns = 1
 
 > Simple Interest (Present):
 ~ I = P(i)(n)
