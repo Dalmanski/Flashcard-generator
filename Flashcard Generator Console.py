@@ -207,7 +207,7 @@ def submitChoice(inputAnswer, correctAnswer):
         print(f"\nSo close...\nThe accurate answer is:\n{correctAnswer}\n")
         score += 1
     else:
-        print(f"\nYour answer is wrong.\nThe correct answer is: {correctAnswer}\n")
+        print(f"\nYour answer is wrong.\nThe correct answer is:\n{correctAnswer}\n")
 
 def presentChoices(correctAnswer, allAnswers):
     global trimEndAns, sameTypeChoices

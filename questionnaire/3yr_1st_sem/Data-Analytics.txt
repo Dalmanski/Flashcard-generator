@@ -15,14 +15,8 @@
 > is a technology that manages marketing processes and multifunctional campaigns, across multiple channels, automatically.
 ? Marketing Automation Tools
 
-> is a numerical information that is easily organized, objective, and generally stored in a database.\
-? Structured Data {datatypes}
-
 > Some types of structured data:
 ? Machine-generated, Human-generated data {dataex}
-
-> is a data in which it has no definite structure or a data model.
-? Unstructured Data {datatypes}
 
 > Example of unstructured data:
 ? Text data, Audio, Video, Social Media {dataex}
@@ -60,13 +54,13 @@
 ? {enum} Structured and Unstructured Data
 
 > Is a numerical information that is easily organized, objective, and generally stored in a database.
-? Structured Data
+? Structured Data {datatypes}
 
 > Two types of Structured Data
 ? {enum} Machine Learning, Statistical, Semantics
 
 > Is a data in which it has no definite structure or a data model.
-? Unstructured Data
+? Unstructured Data {datatypes}
 
 > Examples of Unstructured Data:
 ? {enum} Text, Audio, Video, and Social Media
@@ -144,7 +138,7 @@
 ? Semantic Data Model
 
 > is a data stored in its native format and not processed until used, which is known as schema-on-read. 
-? Unstructured Data
+? Unstructured Data {datatypes}
 
 > Is a column chart that displays the frequency of a variable in a given range. Is similar to a bar chart except it groups data together in user-specific intervals called ___.
 ? Histogram, Bins
