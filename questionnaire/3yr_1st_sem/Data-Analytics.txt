@@ -138,7 +138,7 @@
 ? Semantic Data Model
 
 > is a data stored in its native format and not processed until used, which is known as schema-on-read. 
-? Unstructured Data {datatypes}
+? Unstructured Data
 
 > Is a column chart that displays the frequency of a variable in a given range. Is similar to a bar chart except it groups data together in user-specific intervals called ___.
 ? Histogram, Bins
