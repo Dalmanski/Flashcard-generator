@@ -214,37 +214,36 @@ def presentChoices(correctAnswer, allAnswers):
     allAnswersCopy = allAnswers[:]  
     allAnswersCopy.remove(correctAnswer)  
 
-    if re.search(r'\{.*?\}', correctAnswer):
-        categoryChoices = re.findall(r'\{(.*?)\}', correctAnswer)
-        allAnswersCopy = [ans for ans in allAnswersCopy if f'{{{categoryChoices[0]}}}' in ans]
-        correctAnswer = correctAnswer.replace(f'{{{categoryChoices[0]}}}', "").strip()
-        allAnswersCopy = [ans.replace(f'{{{categoryChoices[0]}}}', "").strip() for ans in allAnswersCopy]
+    categoryChoices = re.findall(r'\{(.*?)\}', correctAnswer)
+    if categoryChoices:
+        category = categoryChoices[0]
+        allAnswersCopy = [ans for ans in allAnswersCopy if f'{{{category}}}' in ans]
+        correctAnswer = correctAnswer.replace(f'{{{category}}}', "").strip()
+        allAnswersCopy = [ans.replace(f'{{{category}}}', "").strip() for ans in allAnswersCopy]
     else:
         allAnswersCopy = [ans for ans in allAnswersCopy if not re.search(r'\{.*?\}', ans)]
-
+    
     allAnswersCopy = [re.sub(r'\{.*?\}', '', ans).strip() for ans in allAnswersCopy]
 
     if sameTypeChoices:
         if correctAnswer.isdigit():
             allAnswersCopy = [ans for ans in allAnswersCopy if ans.isdigit()]
-        elif not correctAnswer.isdigit(): 
+        else:
             allAnswersCopy = [ans for ans in allAnswersCopy if not ans.isdigit()]
 
     uniqueChoices = {correctAnswer}
+    max_choices = min(4, len(allAnswersCopy) + 1)
 
-    while len(uniqueChoices) < 4:
+    while len(uniqueChoices) < max_choices:
         incorrectChoice = random.choice(allAnswersCopy)
         uniqueChoices.add(incorrectChoice) 
 
     choices = list(uniqueChoices)
     random.shuffle(choices)
 
-    while len(choices) < 4:
-        choices.append("No more options") 
-    
     if answerSet == "choices":
         print("\nChoices:")
-        choiceLabels = ['a', 'b', 'c', 'd']
+        choiceLabels = ['a', 'b', 'c', 'd'][:len(choices)]
         for i, choice in enumerate(choices):
             length = len(choice)
             print(f"{choiceLabels[i]}) {choice[:length-trimEndAns]}")

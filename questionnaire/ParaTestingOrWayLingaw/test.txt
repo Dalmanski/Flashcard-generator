@@ -1,4 +1,4 @@
-! questionSymb = $, answerSymb = ?, capitalize = True, answerSet = input
+! questionSymb = $, answerSymb = ?, capitalize = True, answerSet = choices
 
 # This is comment
 

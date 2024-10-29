@@ -1,5 +1,54 @@
 
-! answerSymb = ?, capitalize = True, theme = amber_text_on_black
+! answerSymb = ?, capitalize = True
+
+# Lesson 1
+
+> is a unit of measurement used by technology professionals and the general public to describe a computer or other device's storage capacity.
+? zettabyte
+
+> is a technology for managing all your company's relationships and interactions with customers and potential customers.
+? Customer Relationship Management (CRM)
+
+> is a software system that helps the companies to manage and integrate the important parts of their businesses, often via software to connect planning, purchasing, inventory, sales, marketing, finance, human resources, and more.
+? Enterprise Resource Planning (ERP)
+
+> is a technology that manages marketing processes and multifunctional campaigns, across multiple channels, automatically.
+? Marketing Automation Tools
+
+> is a numerical information that is easily organized, objective, and generally stored in a database.\
+? Structured Data {datatypes}
+
+> Some types of structured data:
+? Machine-generated, Human-generated data {dataex}
+
+> is a data in which it has no definite structure or a data model.
+? Unstructured Data {datatypes}
+
+> Example of unstructured data:
+? Text data, Audio, Video, Social Media {dataex}
+
+> It must identify duplicate and anomalous data and other inconsistencies that could skew the analysis.
+? Data Analysts
+
+> is a supervised learning algorithm that compares input (X) and output (Y) variables based on labeled data.
+? Linear regression
+
+> is applied to predict the categorical dependent variable. In other words, it's used when the prediction is categorical, for example, yes or no, true or false, 0 or 1.
+? Logistic regression
+
+> is the process of drawing a decision tree, which is a graphic representation of various alternative solutions that are available to solve a given problem, in order to determine the most effective courses of action.
+? Decision Tree analysis
+
+> is a non-parametric, supervised learning classifier, which uses proximity to make classifications or predictions about the grouping of an individual data point.
+? K-Nearest Neighbors (K-NN) Algorithm
+
+> is the fastest unsupervised machine learning algorithm to break down data points into groups even when very little information is available.
+? K-means
+
+> is basically a collection of objects on the basis of similarity and dissimilarity between them.
+? Clustering
+
+# kang chan2 notes
 
 > Process of exploring and analyzing large data sets to find hidden patterns, trends, correlation, and insights that can inform decision-making.
 ? Data Analytics
@@ -8,19 +57,19 @@
 ? Data Collection
 
 > Two types of Data:
-? Structured and Unstructured Data
+? {enum} Structured and Unstructured Data
 
 > Is a numerical information that is easily organized, objective, and generally stored in a database.
 ? Structured Data
 
 > Two types of Structured Data
-? Machine Learning, Statistical, Semantics
+? {enum} Machine Learning, Statistical, Semantics
 
 > Is a data in which it has no definite structure or a data model.
 ? Unstructured Data
 
 > Examples of Unstructured Data:
-? Text, Audio, Video, and Social Media
+? {enum} Text, Audio, Video, and Social Media
 
 > Is used to clean the unwanted redundant data to make it ready for analysis in order to generate accurate results.
 ? Data Cleaning
@@ -32,7 +81,7 @@
 ? Interpret the Results
 
 > Types of Data Analytics
-? Descriptive, Diagnostic, Predictive, Prescriptive
+? {enum} Descriptive, Diagnostic, Predictive, Prescriptive
 
 > A simple, surface level type of analysis that looks at what happened in the past (What happened?)
 ? Descriptive Analytics
@@ -65,7 +114,7 @@
 ? Primary Data Source
 
 > Is data that has already been collected, processed, and published by others.
-? Secondary Data Source1
+? Secondary Data Source
 
 > is an interdisciplinary field that combines various techniques, tools, and methodologies from statistics, computer science, and domain expertise to extract meaningful insights and knowledge from data.
 ? Data Science
@@ -79,6 +128,9 @@
 > Is a subset of AI that focuses on the development of computer algorithms that improve automatically through experience and by the use of data.
 ? Machine Learning
 
+> Two types of Machine Learning
+? {enum} Frequent Itemset, Clustering
+
 > Are the outcomes or the observations which occur in scientific experiments or observations.
 ? Statistical Structured Data
 
@@ -86,7 +138,7 @@
 ? Measures of Central Tendency and Measures of Dispersion
 
 > Categories of Statistical Data
-? Qualitative and Quantitative
+? {enum} Qualitative and Quantitative
 
 > is a high-level data model that represents data and its relationships in a way that is closer to human understanding and interpretation, rather than just focusing on the technical aspects of how the data is stored or processed.
 ? Semantic Data Model
