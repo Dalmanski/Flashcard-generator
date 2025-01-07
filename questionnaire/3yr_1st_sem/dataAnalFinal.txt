@@ -1,0 +1,178 @@
+! answerSymb = ?, capitalize = True
+
+# Lesson 5
+
+?Model selection
+>is a key ingredient in data analysis for reliable and reproducible statistical inference or prediction.
+
+?Variable selection
+>is the process of selecting the best subset of predictors for a given problem and predictive model, while model selection is done to select one specific model from the list of available predictive models for a given business problem.
+
+?Model selection techniques
+>can be widely classified as probabilistic measures and resampling methods. 
+
+?Probabilistic
+>measures involve statistically scoring candidate models using performance on training dataset. 
+
+?Resampling methods
+>estimate the performance of a model using hold out or test dataset.
+
+?Random train/test split
+>This is a resampling method. In this method the model is evaluated on the skill of generalization and predictive efficiency in an unseen set of data.
+
+?Cross validation
+>It is a very popular resampling method for model selection. In this method candidate models are trained and evaluated on multiple resampled train and test sets that are exclusive of each other. 
+
+?Bootstrap
+>This is also a resampling method, and can be performed like random train/test split or cross validation. 
+
+?AIC (Akaike Information Criterion)
+>It is a probabilistic measure to estimate model performance on unseen data. 
+
+
+# Lesson 6
+
+?Classification
+>is a task in data mining that involves assigning a class label to each instance in a dataset based on its features. 
+
+?Binary classification
+>involves classifying instances into two classes, such as “spam” or “not spam”, while multi-class classification involves classifying instances into more than two classes.
+
+?Data collection
+>In this first step, the data relevant to the problem at hand is collected. The data should be representative of the problem and should contain all the necessary attributes and labels needed for classification. The data can be collected from various sources, such as surveys, questionnaires, websites, and databases.
+
+?Data Preprocessing
+>The second step in building a classification model. The collected data needs to be preprocessed to ensure its quality. This involves handling missing values, dealing with outliers, and transforming the data into a format suitable for analysis. 
+
+?Handling Missing Values
+>Missing values in the dataset can be handled by replacing them with the mean, median, or mode of the corresponding feature or by removing the entire record.
+
+?Dealing with Outliers
+>It can be detected using various statistical techniques such as z-score analysis, boxplots, and scatterplots. Outliers can be removed from the dataset or replaced with the mean, median, or mode of the corresponding feature.
+
+?Data transformation
+>involves scaling or normalizing the data to bring it into a common scale. 
+
+?Feature selection
+>involves the most relevant attributes in the dataset for classification. 
+
+?Correlation analysis
+>involves identifying the correlation between the features in the dataset. 
+
+?Information gain
+>is a measure of the amount of information that a feature provides for classification
+
+?Principal Component Analysis (PCA)
+>is a technique used to reduce the dimensionality of the dataset. 
+
+?Model selection
+>involves selecting the appropriate classification algorithm for the problem at hand. 
+
+?Decision trees
+>are a simple yet powerful classification algorithm. They divide the dataset into smaller subsets based on the values of the features and construct a tree-like model that can be used for classification.
+
+?Support Vector Machines (SVMs)
+>are a popular classification algorithm used for both linear and nonlinear classification problems. 
+
+?SVMs
+>are based on the concept of maximum margin, which involves finding the hyperplane that maximizes the distance between the two classes.
+
+?Neural Networks
+>are a powerful classification algorithm that can learn complex patterns in the data. 
+
+?Model training
+>involves using the selected classification algorithm to learn the patterns in the data. 
+
+?Model evaluation
+>involves assessing the performance of the trained model on a test set. This is done to ensure that the model generalizes well.
+
+?Classification
+>is a widely used technique in data mining and is applied in a variety of domains, such as email filtering, sentiment analysis, and medical diagnosis
+
+?Classification
+>It is a data analysis task, i.e. the process of finding a model that describes and distinguishes data classes and concepts. 
+
+?Classification
+>is the problem of identifying to which of a set of categories (subpopulations), a new observation belongs to, on the basis of a training set of data containing observations and whose categories membership is known. 
+
+?Learning Step (Training Phase)
+>Construction of Classification Model Different Algorithms are used to build a classifier by making the model learn using the training set available. The model has to be trained for the prediction of accurate results.
+
+?Classification Step
+>Model used to predict class labels and testing the constructed model on test data and hence estimate the accuracy of the classification rules.
+
+?Attributes
+>Represents different features of an object. 
+
+?Binary {attr}
+>Possesses only two values i.e. True or False. Example: Suppose there is a survey evaluating some products. We need to check whether it’s useful or not. So, the Customer has to answer it in Yes or No. 
+
+?Nominal {attr}
+>When more than two outcomes are possible. It is in Alphabet form rather than being in Integer form. Example: One needs to choose some material but of different colors. So, the color might be Yellow, Green, Black, Red. Different Colors: Red, Green, Black, Yellow
+
+?Ordinal {attr}
+>Values that must have some meaningful order. Example: Suppose there are grade sheets of few students which might contain different grades as per their performance such as A, B, C, D. Grades: A, B, C, D
+
+?Continuous {attr}
+>May have an infinite number of values, it is in float type. Example: Measuring the weight of few Students in a sequence or orderly manner i.e. 50, 51, 52, 53 
+
+?Discrete {attr}
+>Finite number of values. Example: Marks of a Student in a few subjects: 65, 70, 75, 80, 90. Marks: 65, 70, 75, 80, 90
+
+?Discriminative
+>It is a very basic classifier and determines just one class for each row of data. It tries to model just by depending on the observed data, depends heavily on the quality of data rather than on distributions.
+
+?Generative
+>It models the distribution of individual classes and tries to learn the model that generates the data behind the scenes by estimating assumptions and distributions of the model. Used to predict the unseen data.
+
+
+# Lesson 7
+
+?Clustering
+>is a machine learning technique, which groups the unlabelled dataset. 
+
+?Clustering
+>is somewhere similar to the classification algorithm, but the difference is the type of dataset that we are using. 
+
+?Classification {g1}
+>They work with the labeled data set
+
+?Clustering {g1}
+>They work in unlabelled dataset.
+
+?Partitioning Clustering {clus}
+>It is a type of clustering that divides the data into non-hierarchical groups. 
+
+?Density-based clustering method {clus}
+>connects the highly-dense areas into clusters, and the arbitrarily shaped distributions are formed as long as the dense region can be connected. 
+
+?distribution model-based clustering method {clus}
+>the data is divided based on the probability of how a dataset belongs to a particular distribution. 
+
+?Hierarchical clustering {clus}
+>can be used as an alternative for the partitioned clustering as there is no requirement of pre-specifying the number of clusters to be created. 
+
+?Fuzzy clustering {clus}
+>is a type of soft method in which a data object may belong to more than one group or cluster. Each dataset has a set of membership coefficients, which depend on the degree of membership to be in a cluster.
+
+?Fuzzy C-means algorithm {algo}
+>is the example of this type of clustering; 
+
+?k-means algorithm {algo}
+>is one of the most popular clustering algorithms. It classifies the dataset by dividing the samples into different clusters of equal variances. 
+
+?Mean-shift algorithm {algo}
+>tries to find the dense areas in the smooth density of data points. 
+
+?DBSCAN Algorithm {algo}
+>It is an example of a density-based model similar to the mean-shift, but with some remarkable advantages. 
+
+?Expectation-Maximization Clustering using GMM {algo}
+>This algorithm can be used as an alternative for the k-means algorithm or for those cases where K-means can be failed. 
+
+?Agglomerative Hierarchical algorithm: {algo}
+>It performs the bottom-up hierarchical clustering. In this, each data point is treated as a single cluster at the outset and then successively merged. The cluster hierarchy can be represented as a tree-structure.
+
+?Affinity Propagation {algo}
+>It is different from other clustering algorithms as it does not require to specify the number of clusters. In this, each data point sends a message between the pair of data points until convergence. It has O(N2T) time complexity, which is the main drawback of this algorithm.
+

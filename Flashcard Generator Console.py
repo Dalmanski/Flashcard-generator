@@ -30,8 +30,13 @@ def setTheme():
     elif theme == "white_text_on_black":
         print(end="\033[37m") # white text
         print(end="\033[40m") # black bg
-    elif theme == "default" or theme == "none":
+    elif theme == "default" or theme == "none" or theme == "":
         print(end="\033[0m")
+
+def textColor(color):
+    if color == "red": print(end="\033[31m")
+    elif color == "yellow": print(end="\033[33m")
+    elif color == "orange": print(end="\033[38;2;255;165;0m")
 
 def processConfigLine(line):
     global answerSet, theme, switchQuesAns, trimEndAns, sameTypeChoices
@@ -160,7 +165,7 @@ def loadQuestions():
                 print(f"Error: Answer found at line {lineNumber} without a matching question.")
 
     if not (line.startswith(questionSymb) or line.startswith(answerSymb) or 
-        line.startswith(globalSetSymb) or line.startswith(commentSymb)):
+        line.startswith(globalSetSymb) or line.startswith(commentSymb)) and line != '':
         print(f"Syntax error: Invalid symbol at line {lineNumber}: {line}")
         return [], [] 
     
@@ -183,7 +188,6 @@ def loadQuestions():
     clrScr()
     return questions, answers
 
-
 def isAnswerClose(inputAnswer, actualAnswer):
     similarityRatio = SequenceMatcher(None, inputAnswer, actualAnswer).ratio()
     return similarityRatio >= 0.8
@@ -201,13 +205,21 @@ def submitChoice(inputAnswer, correctAnswer):
     correctAnswer = re.sub(r'\{.*?\}', '', correctAnswer).strip()
 
     if correctAnswer == inputAnswer:
+        textColor("yellow")
         print("\nYour answer is correct!\n")
+        setTheme()
         score += 1
     elif isAnswerClose(inputAnswer, correctAnswer):
-        print(f"\nSo close...\nThe accurate answer is:\n{correctAnswer}\n")
+        textColor("orange")
+        print(f"\nSo close...")
+        setTheme()
+        print(f"The accurate answer is:\n{correctAnswer}\n") 
         score += 1
     else:
-        print(f"\nYour answer is wrong.\nThe correct answer is:\n{correctAnswer}\n")
+        textColor("red")
+        print(f"\nYour answer is wrong.")
+        setTheme()
+        print(f"The correct answer is:\n{correctAnswer}\n")
 
 def presentChoices(correctAnswer, allAnswers):
     global trimEndAns, sameTypeChoices
@@ -270,7 +282,7 @@ def playQuiz():
 
         if answerSet == "choices":
             while True: 
-                inputAnswer = input("\nChoose the correct answer\n(1-4 or a-d): ").lower().strip()
+                inputAnswer = input("\nChoose the correct answer\n(a-d or 1-4): ").lower().strip()
 
                 if inputAnswer in labelMap:
                     inputAnswer = labelMap[inputAnswer]

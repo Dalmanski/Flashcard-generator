@@ -11,7 +11,7 @@ def load_questions():
     answerSymb = '~'
     questionArr = []
     answerArr = []
-    with open("questionnaire.txt", "r") as file:
+    with open("questionnaire\3yr_1st_sem\Data-Analytics.txt", "r") as file:
         lines = file.readlines()
 
     questions = []
