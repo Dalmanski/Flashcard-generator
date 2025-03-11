@@ -7,13 +7,13 @@ import ast # For use ast.literal_eval(), safer method than eval(). Convert strin
 # Global variables
 answerSet = "choices"
 theme = ""
-switchQuesAns = False 
+switchItems = False 
 sameTypeChoices = False
 capitalize = False
 caseSenseAns = False
-trimEndAns = 0
-questionSymb = '>'
-answerSymb = '~'
+trimEndLastItem = 0
+firstItemSymb = '>'
+lastItemSymb = '~'
 globalSetSymb = '!'
 commentSymb = '#'
 
@@ -37,11 +37,12 @@ def textColor(color):
     if color == "red": print(end="\033[31m")
     elif color == "yellow": print(end="\033[33m")
     elif color == "orange": print(end="\033[38;2;255;165;0m")
+    elif color == "green": print(end="\033[32m")
 
 def processConfigLine(line):
-    global answerSet, theme, switchQuesAns, trimEndAns, sameTypeChoices
+    global answerSet, theme, switchItems, trimEndLastItem, sameTypeChoices
     global capitalize, caseSenseAns
-    global questionSymb, answerSymb, globalSetSymb, commentSymb
+    global firstItemSymb, lastItemSymb, globalSetSymb, commentSymb
 
     line = line[1:].strip()
     assignments = line.split(",")
@@ -54,14 +55,14 @@ def processConfigLine(line):
 
             if var == "answerSet":
                 answerSet = str(value)
-            elif var == "switchQuesAns":
-                switchQuesAns = ast.literal_eval(value)
-            elif var == "trimEndAns":
-                trimEndAns = int(value)
-            elif var == "questionSymb":
-                questionSymb = str(value)
-            elif var == "answerSymb":
-                answerSymb = str(value)
+            elif var == "switchItems":
+                switchItems = ast.literal_eval(value)
+            elif var == "trimEndLastItem":
+                trimEndLastItem = int(value)
+            elif var == "firstItemSymb":
+                firstItemSymb = str(value)
+            elif var == "lastItemSymb":
+                lastItemSymb = str(value)
             elif var == "sameTypeChoices":
                 sameTypeChoices = ast.literal_eval(value)
             elif var == "capitalize":
@@ -79,8 +80,8 @@ def processConfigLine(line):
             print(f"Error processing assignment '{assignment}': {e}")
 
 def loadQuestions():
-    global switchQuesAns, capitalize
-    global questionSymb, answerSymb, globalSetSymb, commentSymb
+    global switchItems, capitalize
+    global firstItemSymb, lastItemSymb, globalSetSymb, commentSymb
     
     def find_txt_files(folder):
         txt_files = []
@@ -145,13 +146,13 @@ def loadQuestions():
                 print(f"Error: {e}")
             continue
 
-        if line.startswith(questionSymb):
+        if line.startswith(firstItemSymb):
             if question:
                 if capitalize:
                     question = question.capitalize()
                 questions.append(question)
             question = line[1:].strip()
-        elif line.startswith(answerSymb):
+        elif line.startswith(lastItemSymb):
             answer = line[1:].strip()
             if question: 
                 if capitalize:
@@ -164,7 +165,7 @@ def loadQuestions():
             else:
                 print(f"Error: Answer found at line {lineNumber} without a matching question.")
 
-    if not (line.startswith(questionSymb) or line.startswith(answerSymb) or 
+    if not (line.startswith(firstItemSymb) or line.startswith(lastItemSymb) or 
         line.startswith(globalSetSymb) or line.startswith(commentSymb)) and line != '':
         print(f"Syntax error: Invalid symbol at line {lineNumber}: {line}")
         return [], [] 
@@ -174,7 +175,7 @@ def loadQuestions():
         print(f"Please check if there's question and answer at the same time")
         return [], []
     
-    if switchQuesAns:
+    if switchItems:
         questions, answers = answers, questions
     
     combined = list(zip(questions, answers))
@@ -193,10 +194,10 @@ def isAnswerClose(inputAnswer, actualAnswer):
     return similarityRatio >= 0.8
 
 def submitChoice(inputAnswer, correctAnswer):
-    global trimEndAns, score
+    global trimEndLastItem, score
     length = len(correctAnswer)
-    correctAnswer = correctAnswer[:length-trimEndAns]
-    inputAnswer = inputAnswer[:length-trimEndAns]
+    correctAnswer = correctAnswer[:length-trimEndLastItem]
+    inputAnswer = inputAnswer[:length-trimEndLastItem]
 
     if caseSenseAns:
         correctAnswer = correctAnswer.lower()
@@ -217,12 +218,15 @@ def submitChoice(inputAnswer, correctAnswer):
         score += 1
     else:
         textColor("red")
-        print(f"\nYour answer is wrong.")
+        print(end="\nWrong. ")
         setTheme()
-        print(f"The correct answer is:\n{correctAnswer}\n")
+        print("The correct answer is:")
+        textColor("green")
+        print(f"{correctAnswer}\n")
+        setTheme()
 
 def presentChoices(correctAnswer, allAnswers):
-    global trimEndAns, sameTypeChoices
+    global trimEndLastItem, sameTypeChoices
     allAnswersCopy = allAnswers[:]  
     allAnswersCopy.remove(correctAnswer)  
 
@@ -258,7 +262,7 @@ def presentChoices(correctAnswer, allAnswers):
         choiceLabels = ['a', 'b', 'c', 'd'][:len(choices)]
         for i, choice in enumerate(choices):
             length = len(choice)
-            print(f"{choiceLabels[i]}) {choice[:length-trimEndAns]}")
+            print(f"{choiceLabels[i]}) {choice[:length-trimEndLastItem]}")
         return choices, choiceLabels
     elif answerSet == "input":
         userInput = input("\nType your answer: ").strip()

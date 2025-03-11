@@ -1,0 +1,381 @@
+! firstItemSymb = ?, lastItemSymb = >, capitalize = True, switchItems = True
+
+# SCAFFOLDS & BARRICADES -----------------------------------------------------------------------------------------------------------------------------
+
+? SCAFFOLDS
+> An elevated temporary work platform and its supporting structure used for supporting materials or employees or both.
+
+? SUPPORTED {scaffoldtype}
+> Scaffold is hung with cord from the ceiling or top of a construction or structure.
+
+? SUSPENDED {scaffoldtype}
+> A mobile scaffold that is suspended from ropes or cables. Also known as swinging scaffold.
+
+? AERIAL LIFTS/SCISSOR LIFTS {scaffoldtype}
+> Are essentially elevated.
+
+? barricades
+> An improvised barrier erected across a street orother thoroughfare to prevent or delay the movement of opposing forces.
+
+# Hazard Analysis ------------------------------------------------------------------------------------------------------------------------------------
+
+? hazard  
+> is the potential for harm.  
+
+? hazard  
+> is often associated with a condition or activity that can cause undesired consequences such as injury or illness if left uncontrolled.  
+
+? hazard  
+> can cause harm or adverse health effects to individuals or to organizations as property or equipment losses.  
+
+? Chemical hazards  
+> It can affect skin by contact.  
+
+? Chemical hazards  
+> It can enter the body through inhalation or the digestive system if air is contaminated with chemicals, vapor, mist, or dust.  
+
+? Chemical hazards  
+> The accumulation of chemicals in or on the body can cause acute (immediate) or chronic (long-term) effects.  
+
+? Physical hazards  
+> It will cause injury risks to the body.  
+
+? Physical hazards  
+> It includes hazards from working in confined spaces, being hit by flying objects, caught in explosions, hurt by collapsing machinery, falling from heights, and tripping on obstacles.  
+
+? Biological hazards (biohazards)  
+> It refers to biological substances that pose harm to the health of living organisms.  
+
+? Biological hazards  
+> Sources may include insects, bacteria, fungi, plants, worms, animals, and viruses.  
+
+? Biological hazards  
+> These sources can cause a variety of health effects, ranging from skin irritation and allergies to infections, cancer, and more.  
+
+? Ergonomic hazards  
+> It refers to workplace conditions that pose a risk of injury to the musculoskeletal system of the worker.  
+
+? Ergonomic hazards  
+> These injuries can be caused by performing repetitive and forceful movements and awkward postures due to improper work methods and improperly designed workstations, tools, and equipment.  
+
+? Noise hazards  
+> Excessive noise can disrupt concentration, interfere with communication, and result in hearing loss.  
+
+? Noise hazards  
+> High-impact noises are particularly damaging.  
+
+? Noise hazards  
+> Noise can also mask out signals, affecting communication with others.  
+
+? Hazard Analysis  
+> It is a systematic approach to identifying and assessing hazards in the workplace.  
+
+? Hazard Analysis  
+> OSHA 1926 standard requires that "the process hazard analysis methodology selected must be appropriate to the complexity of the process and must identify, evaluate, and control the hazards involved in the process."  
+
+? Hazard Analysis Process  
+> It involves analyzing potential causes of hazards.  
+
+? Hazard Analysis Process  
+> It is the first step in assessing risks.  
+
+? Hazard Analysis Process  
+> The result of a hazard analysis is the identification of different types of hazards.  
+
+? Hazard Analysis Process  
+> It is the process of recognizing hazards that may arise from a system or its environment.  
+
+? Job Hazard Analysis  
+> It is a technique that focuses on job tasks to identify hazards before they occur.  
+
+? Job Hazard Analysis  
+> It identifies hazards potentially created by a product, process, or application.  
+
+? Job Hazard Analysis  
+> It focuses on the relationship between the worker, the task, the tools, and the work environment.    
+
+? Engineering Controls  
+> It includes elimination or minimization of the hazard.  
+
+? Engineering Controls  
+> It includes substitution of equipment or processes to decrease hazard.  
+
+? Engineering Controls  
+> It includes isolation of the hazard with interlocks, machine guards, or blast shields.  
+
+? Engineering Controls  
+> It includes removal or redirection of the hazard using ventilation.  
+
+? Administrative Controls  
+> It includes written operating procedures, work permits, and safe work practices.  
+
+? Administrative Controls  
+> It includes exposure time limitations.  
+
+? Administrative Controls  
+> It includes monitoring the use of highly hazardous materials.  
+
+? Administrative Controls  
+> It includes alarms, signs, and warnings.  
+
+? Administrative Controls  
+> It includes the buddy system and training.  
+
+? Personal Protective Equipment (PPE)  
+> It is used when engineering controls are not feasible or do not totally eliminate the hazard.  
+
+? Personal Protective Equipment (PPE)  
+> It is used while engineering controls are being developed.  
+
+? Personal Protective Equipment (PPE)  
+> It is used when safe work practices do not provide sufficient additional protection.  
+
+? Personal Protective Equipment (PPE)  
+> It is used during emergencies when engineering controls may not be feasible.  
+
+# Basic Safety Terminologies ----------------------------------------------------------------------------------------------------------------------
+
+? Safety  
+> Describes policies and procedures in place to ensure the safety and health of employees within a workplace.  
+
+? Safety  
+> Involves hazard identification and control according to government standards and ongoing safety training and education for employees.  
+
+? Safety  
+> All workers have a right to work in places where risks to their health and safety are properly controlled.  
+
+? Safety  
+> Health and safety is about stopping you from getting hurt at work or ill through work.  
+
+? Safety  
+> Your employer is responsible for health and safety, but you must help.  
+
+? Accident  
+> Is an undesired event that results in harm to people, damage to property, or loss to process.  
+
+? Accident  
+> Usually a contact with a source of energy above the threshold limit of the body or structure.  
+
+? Incident  
+> Is an undesired event which, under slightly different circumstances, could have resulted in harm to people, damage to property, or loss to process.  
+
+? First Aid Case (FAC)  
+> Any one-time treatment and subsequent observation of minor work-related injuries which do not ordinarily require medical care.  
+
+? Lost Day Case (LDC)  
+> Case which involves days away from work or days of restricted work activity.  
+
+? Lost Day Case (LDC)  
+> The start of a Lost Day Case does not include the day of injury.  
+
+? Lost Workdays - Away from Work  
+> The number of workdays an employee would have worked but could not, due to occupational injury or illness.  
+
+? Lost Workdays - Restricted Work Activity  
+> The number of days an employee was assigned to another job temporarily, worked at a permanent job less than full-time, or worked a permanently assigned job but could not perform all normal duties associated with it, due to occupational injury or illness.  
+
+? Workplace  
+> The workplace may be described as any place where people are at work.  
+
+? Control  
+> To regulate or restrain.  
+
+? Control  
+> To put on track.  
+
+? Hazards  
+> Are unsafe practices or conditions that, if not controlled, may result in the occurrence of an accident or an incident.  
+
+? Risk  
+> Defined as the measure of the probability and severity of a loss event taking place.  
+
+? Unsafe Practices  
+> Are behaviors which could permit the occurrence of an accident or incident.  
+
+? Unsafe Practices  
+> Deviation from standard procedures or practices.  
+
+? Unsafe Conditions  
+> Are circumstances which could permit the occurrence of an accident or incident.  
+
+? Unsafe Conditions  
+> Deviation from standard conditions (equipment, materials, or environment).  
+
+? Hazard Analysis  
+> A process of identifying risks and job hazards, basically beginning with a thorough analysis of accident causes, aiming to arrive at improved/new standards.  
+
+? Safety Inspection  
+> A process of revealing hazards and following through on necessary corrective actions, resulting in a safer workplace.  
+
+? Safety Committee  
+> A committee presentation of a safety policy by subjecting each area of an activity to a systematic critical examination with the purpose of minimizing loss and providing a quantified assessment of performance.  
+
+? Fire Safety  
+> At its most basic, is based upon the principle of keeping fuel sources and ignition sources SEPARATE.  
+
+? Safety Program  
+> A plan or outline of activities conducted to promote safety consciousness among management and workers in workplaces, in order that accidents and/or illnesses can be eliminated or minimized to the lowest reducible level.  
+
+? Safety Audit  
+> A critical examination of the safety and health management programs to determine their effectiveness and compliance with regulatory standards.  
+
+? Danger  
+> A state or condition in which personal injury and/or asset damage is reasonably foreseeable.  
+
+? Danger  
+> The presence of a hazard.  
+
+? Confined Space  
+> A space that is large enough and so configured that an employee can bodily enter and perform assigned work.  
+
+? Confined Space  
+> Has limited or restricted means for entry or exit (e.g., tanks, vessels, silos, storage bins, hoppers, vaults, and pits).  
+
+? Confined Space  
+> Is not designed for continuous employee occupancy.  
+
+? Chemical Protective Clothing (CPC)  
+> Special clothing that may be resistant to permeation, penetration, or degradation by a chemical.  
+
+? Chemical Protective Clothing (CPC)  
+> Rubber boots, gloves, aprons, and suits are commonly used to protect workers from exposure to hazardous chemicals.  
+
+? Carcinogen  
+> A substance or physical agent that causes cancer.  
+
+? Compliance  
+> The state of meeting all the requirements of the law.  
+
+? Compliance  
+> The best way to be assured of being in compliance with OSHA is to be familiar with OSHA’s expectations.  
+
+? Occupational Safety and Health Administration (OSHA)  
+> A government agency in the Department of Labor to maintain a safe and healthy work environment.  
+
+? Injury  
+> Physical harm or damage to someone’s body caused by an accident or an attack.  
+
+? Safety Engineer  
+> A person who inspects all possible danger spots in a factory, mine, or other industrial building or plant.  
+
+? Safety Manager  
+> Provides cost savings and staffing flexibility while ensuring compliance with safety regulations.  
+
+# Confined Space ---------------------------------------------------------------------------------------------------------------------------------
+
+? Confined Space
+> Is large enough and so configured that an employee can enter bodily and perform work;
+
+? Confined Space
+> Has limited or restricted means of entry or exit;
+
+? Confined Space
+> Is not designed for continuous human occupancy.
+
+? Entry
+> The act by which a person intentionally passes through an opening into a permit-required confined space.
+
+? Entry
+> Any part of the body passing through the opening is considered entry.
+
+? IDLH (Immediately Dangerous to Life or Health)
+> Any condition posing an immediate threat to the health or life of an entrant.
+
+? IDLH (Immediately Dangerous to Life or Health)
+> Causes irreversible adverse health effects.
+
+? IDLH (Immediately Dangerous to Life or Health)
+> Interferes with an individual’s ability to escape unaided from a permit space.
+
+? Entrant
+> The employee who will physically enter the confined space to perform the work.
+
+? Attendant
+> The employee who remains outside the confined space, monitors the entrant(s), guards against unauthorized entry, warns entrants of unusual conditions, and summons rescue personnel if needed.
+
+? Permit-Required Confined Space
+> A confined space that has one or more of the following characteristics:
+
+? Permit-Required Confined Space
+> Contains or has the potential to contain a hazardous atmosphere.
+
+? Permit-Required Confined Space
+> Contains a material that can engulf an entrant.
+
+? Permit-Required Confined Space
+> Has an internal configuration that could trap or asphyxiate an entrant.
+
+? Permit-Required Confined Space
+> Contains any other serious safety or health hazard.
+
+? Entry Supervisor
+> The employee responsible for coordinating entry into the confined space (team leader or foreman).
+
+? Responsible Person
+> The individual directly responsible for the work in the confined space (team leader, foreman, journeyman, or other qualified person).
+
+? Non-Permit Confined Space
+> A confined space that does not contain or have the potential to contain any hazard capable of causing death or serious physical harm.
+
+? Permit-Required Confined Space Entry {confineSpaceEntry}
+> for hazardous or potentially hazardous confined space work.
+
+? Non-Permit Confined Space Entry  {confineSpaceEntry}
+> for non-hazardous confined space work.
+
+? Contractor Confined Space Entry
+> Contractors must be informed of space hazards.
+
+? Contractor Confined Space Entry
+> Must follow their own confined space entry procedure and use their own permit forms.
+
+? Contractor Confined Space Entry
+> Must supply their own attendants and air monitors.
+
+? Contractor Confined Space Entry
+> Review entry after completion of the job.
+
+? Attendant Responsibilities
+> Monitor entrants during the job.
+
+? Attendant Responsibilities
+> May not leave post unless relieved by another qualified attendant.
+
+? Attendant Responsibilities
+> Control access to confined space and summon emergency assistance if needed.
+
+? Attendant Responsibilities
+> Keep records of air test results and personnel entry/exit.
+
+? Entrant Responsibilities
+> Ensure space is adequately ventilated and safe for entry.
+
+? Entrant Responsibilities
+> Exit space immediately upon attendant’s instruction.
+
+? Entrant Responsibilities
+> Follow all safety rules and use appropriate PPE.
+
+? Entrant Responsibilities
+> Be familiar with the work and applicable procedures.
+
+? Supervisor Responsibilities
+> Ensure adequate protection for entrants by verifying lockout/tagout and hazard isolation.
+
+? Supervisor Responsibilities
+> Support attendant’s authority in controlling access.
+
+? Supervisor Responsibilities
+> Verify all personnel have exited before closing space.
+
+? Supervisor Responsibilities
+> Ensure all personnel understand hazards and that rescue services are available before entry.
+
+? Testing and Monitoring
+> Atmosphere must be tested before entry, after 10 minutes of ventilation, and at least hourly.
+
+? Testing and Monitoring
+> Test at various levels within the confined space.
+
+? Testing and Monitoring
+> If limits are exceeded, all personnel must exit immediately.
