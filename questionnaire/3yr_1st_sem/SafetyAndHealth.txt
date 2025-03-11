@@ -5,13 +5,13 @@
 ? SCAFFOLDS
 > An elevated temporary work platform and its supporting structure used for supporting materials or employees or both.
 
-? SUPPORTED {scaffoldtype}
+? SUPPORTED {scaffold type}
 > Scaffold is hung with cord from the ceiling or top of a construction or structure.
 
-? SUSPENDED {scaffoldtype}
+? SUSPENDED {scaffold type}
 > A mobile scaffold that is suspended from ropes or cables. Also known as swinging scaffold.
 
-? AERIAL LIFTS/SCISSOR LIFTS {scaffoldtype}
+? AERIAL LIFTS/SCISSOR LIFTS {scaffold type}
 > Are essentially elevated.
 
 ? barricades
@@ -61,9 +61,6 @@
 
 ? Restraints {Supported Scaffolds}
 > Guys, ties, and braces must be installed at locations where horizontal scaffold components support both inner and outer legs.  
-
-? What are barricades?  
-> An improvised barrier erected across a street or other thoroughfare to prevent or delay the movement of opposing forces.  
 
 ? Soft barricades  
 > They are to be used to identify and protect personnel from general hazards and also those which are high risk and may pose a risk to life and health.  
@@ -516,6 +513,3 @@
 
 ? Safety Manager
 > Establishes and maintains the safety organization and oversees safety programs.
-
-? The Safety and Health Professional’s Role & Responsibility
-> Accident Investigation, Work with Emergency Response Teams, Environmental Protection, Ergonomic Analysis and Modification, Fire Protection, Hazard Recognition, Hazardous Materials Management, Health Hazard Control, Inspection/Audit, Record-keeping, Regulatory Compliance, Training.
