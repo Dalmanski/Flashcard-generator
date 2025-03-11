@@ -302,7 +302,7 @@ def playQuiz():
             inputAnswer = choices[0]
             submitChoice(inputAnswer, answerArr[currentQuestion])
         
-        userInput = input("Enter anything to go to the next question,\nor type 'e' to quit: ").strip().lower()
+        userInput = input("Enter anything to go to the next question, or type 'e' to quit: ").strip().lower()
 
         if userInput == 'e': 
             print("\nThank you for playing!\n")

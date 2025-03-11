@@ -379,3 +379,59 @@
 
 ? Testing and Monitoring
 > If limits are exceeded, all personnel must exit immediately.
+
+# BOSH Basic Concept ----------------------------------------------------------------------------------------------------------------------------
+
+? Workplace and Health
+> Work is an important component of an individual’s daily life, and a major portion of an individual’s life is spent at the “workplace”, where he or she is expected to display their commitment and sincerity in performing various tasks.
+
+? Workplace and Health
+> The environment of the workplace has an impact on the individual’s socio-psychological health, which has an impact on the overall output.
+
+? Occupational Safety & Health (OSH)
+> A discipline concerned with preserving and protecting human and facility resources in the workplace.
+
+? Occupational Safety & Health (OSH)
+> Practitioners in the field try to prevent needless death and injuries to workers.
+
+? Occupational Safety & Health (OSH)
+> It involves more than first aid activities and is far-reaching in both its scope and practices.
+
+? Annie Hamilton
+> an American toxicologist, physician, and educator, pioneered the studies on industrial diseases and hygiene and their impact on human beings.
+
+? Safety Professionals
+> Individuals who analyze the workplace for potential risks and improve safety in the facility.
+
+? Loss Prevention
+> A program designed to identify and correct potential accident problems before they result in financial loss or injury.
+
+? Loss Control
+> A program designed to minimize incident-based financial losses.
+
+? Safety Management
+> An organization-wide process designed to manage safety risks in the workplace.
+
+? Risk
+> The measure of the probability and severity of a loss event taking place.
+
+? Hazard 
+> A workplace condition or worker action that can result in injury, illness, or other organizational loss.
+
+? Industrial Hygienist
+> Monitors exposure levels and applies engineering methods for hazard control.
+
+? Risk Manager
+> Responsible for insurance programs and minimizing losses from fire, accidents, and other hazards.
+
+? Safety Professional
+> An individual with specialized knowledge and skills who has achieved professional status in the safety field.
+
+? Safety Engineer
+> Applies scientific principles and methods to workplace environments to ensure safety.
+
+? Safety Manager
+> Establishes and maintains the safety organization and oversees safety programs.
+
+? The Safety and Health Professional’s Role & Responsibility
+> Accident Investigation, Work with Emergency Response Teams, Environmental Protection, Ergonomic Analysis and Modification, Fire Protection, Hazard Recognition, Hazardous Materials Management, Health Hazard Control, Inspection/Audit, Record-keeping, Regulatory Compliance, Training.
