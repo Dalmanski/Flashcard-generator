@@ -17,6 +17,90 @@
 ? barricades
 > An improvised barrier erected across a street orother thoroughfare to prevent or delay the movement of opposing forces.
 
+? Falls from elevation  
+> Can be caused by slipping, unsafe access, and lack of fall protection.  
+
+? Struck by  
+> From falling tools and debris.  
+
+? Electrocution  
+> From overhead power lines.  
+
+? Scaffold collapse  
+> Often caused by instability or overloading.  
+
+? Bad planking  
+> May give way to materials or occupant load.  
+
+? Along the front edge {Type of Guardrail} 
+> Of platform not more than 14 inches from the work. For lathing and plastering, a gap of 18 inches is permitted.  
+
+? Top rails {Type of Guardrail}  
+> Should be no less than 38 and no more than 45 inches tall.  
+
+? Midrails {Type of Guardrail} 
+> Should be placed halfway between top rail and platform. For construction work, midrails may not be spaced more than 19 inches apart.  
+
+? Toeboards {Type of Guardrail} 
+> Must be 3-1/2 inches high. Open spacing between the toe board and platform cannot exceed 14 inches.  
+
+? Appropriate Construction {Essential Elements of Safe Scaffold Construction}  
+> To control the risk of a scaffold falling or collapsing.  
+
+? Proper Access {Essential Elements of Safe Scaffold Construction} 
+> Direct access to or from another surface. Ramps and walkways 6 feet above lower levels must have guardrails.  
+
+? Scaffold Platform Construction  
+> Platforms must be fully planked.  
+
+? Foundation {Supported Scaffolds}
+> Scaffold poles, legs, posts, frames, and uprights must be on base plates and mud sills or other firm foundations.  
+
+? Supports {Supported Scaffolds}
+> Platforms supported by legs, outrigger beams, brackets, poles, uprights, posts, and frames.  
+
+? Restraints {Supported Scaffolds}
+> Guys, ties, and braces must be installed at locations where horizontal scaffold components support both inner and outer legs.  
+
+? What are barricades?  
+> An improvised barrier erected across a street or other thoroughfare to prevent or delay the movement of opposing forces.  
+
+? Soft barricades  
+> They are to be used to identify and protect personnel from general hazards and also those which are high risk and may pose a risk to life and health.  
+
+? Solid barricades  
+> The purpose of a solid barricade is to provide a physical barrier capable of performing the same function as a permanent guardrail.  
+
+? Caution Barricades {Method of Barricading}
+> Tape shall be erected to inform personnel of an uncontrolled hazard within the barricaded area.  
+
+? Restricted Access Barricades {Method of Barricading}
+> Shall be erected to prevent unauthorized personnel from accessing the barricaded area.  
+
+? Electrical Work Barricades {Method of Barricading}
+> Is to be erected to prevent access to electrical hazards.  
+
+? High Voltage Testing Barricades {Method of Barricading}
+> Is to be erected around the item under test to provide a minimum safe approach distance.  
+
+? Safety Requirement for lights {Method of Barricading}
+> Barricades are installed on roadways and will remain in place during hours of darkness.  
+
+? Removal of Barricades  
+> Tapes and barricades shall be removed once they are no longer required.  
+
+? Construction Work Areas  
+> For work which is part of a construction activity, including where a principal contractor is appointed, “Danger-Construction work area” signs shall be used.  
+
+? Manager {Responsibilities}
+> The Manager Operations shall ensure that this procedure is implemented and maintained throughout the operations.  
+
+? Coordinators & Supervisors {Responsibilities}
+> Shall ensure the maintenance of the barricade in accordance with the procedure and sufficiency of the suppliers.  
+
+? Employees and Contractors {Responsibilities}
+> Shall ensure that they do not access a barricaded area unless the conditions are met and that they monitor and maintain the condition of barricades in their work areas.  
+
 # Hazard Analysis ------------------------------------------------------------------------------------------------------------------------------------
 
 ? hazard  
