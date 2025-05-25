@@ -1,34 +1,75 @@
 ! firstItemSymb = $, lastItemSymb = %,capitalize = True
 
+# Lesson 5
+
 $ A ___________ is a digital sequential circuit and here it is a 4 bit counter, which simply means it can count from 0 to 15 and vice versa based upon the direction of counting (up/down).
 %counter
 
 $ A ___________ is an asynchronous counter in which the preceding flop's output clocks all the flops except the first.
 %ripple counter
 
+$ _________ means all the elements of the circuits do not have a common clock. 
+%Asynchronous
+
 $ A ___________ is a digital circuit with a series of flip flops connected in a feedback manner.
+%ring counter
+
+$ ___________ is composed of Shift Registers. The data pattern will re-circulate as long as clock pulses are applied.
 %ring counter
 
 $ The ___________ starts incrementing from 4'b0000 to 4'h1111 and come back to 4'b0000.
 %4-bit counter
 
+$ ___________ are sequential logic devices that follow a predetermined sequence of counting states triggered by an external clock (CLK) signal. 
+%counters
+
 $ The number of states or counting sequences through which a particular counter advances before returning to its original first state is called the ___________.
 %modulus (MOD)
 
-$ ___________, or MOD counters, are defined based on the number of states that the counter will sequence before returning to its original value.
+$ is the number of states the counter counts and is the dividing number of the counter.
+%modulus (MOD)
+
+$ ___________ are defined based on the number of states that the counter will sequence before returning to its original value.
 %Modulus Counters
 
 $ A ___________ is a digital circuit with a series of flip flops connected in a feedback manner.
 %Johnson counter
 
+$ is a counter that counts 2N states if the number of bits is N.
+%Johnson counter
+
+$ passes blocks of four logic "0" and then four logic "1" thereby producing an 8-bit pattern.
+%4-bit Johnson ring counter
+
+$ can also be used to divide the clock signal frequency by varying their feedback connections, and divide-by-3 or divide-by-5 outputs are also available.
+%Standard 2, 3 or 4-stage Johnson Ring Counters
+
+$ such as the commonly available CD4017, is generally used as a synchronous decade counter/divider circuit.
+%standard 5-stage Johnson counter
+
+$ can be used to produce four individual outputs that are each 90 degrees out-of-phase for each other to produce a 4-phase timing signal.
+%Quadrature Oscillator or Generator
+
 $ ___________ is a kind of binary number system where only one bit will change at a time.
 %Gray code
+
+$is also useful in design and verification in the VLSI domain.
+%Gray counter
 
 $ In ___________, the number of changes in different coordinate positions is as close as possible.
 %balanced Gray codes
 
+$ is uniform or uniformly balanced if its transition counts are all equal.
+%gray code
+
+$ can also be exponentially balanced if all of their transition counts are adjacent powers of two, and such codes exist for every power of two.
+%gray code
+
 $ One such type of Gray code is the ___________, also known as a non-Boolean Gray code.
 %n-ary Gray code
+
+$ may be constructed recursively, as the BRGC, or may be constructed iteratively.
+%(n, k)-Gray code
 
 $ ___________ are useful in interconnection networks theory, especially for minimizing dilation for linear arrays of processors.
 %Monotonic codes
@@ -45,14 +86,24 @@ $ The ___________ is a cyclical list of P unique binary encodings of length n su
 $ ___________ are used in communication to minimize the number of bit errors in quadrature amplitude modulation adjacent points in the constellation.
 %Two-dimensional Gray codes
 
+# Lesson 6
+
 $ ___________ is used to recognize patterns.
 %Finite state machine
 
-$ ___________ stands for Deterministic Finite Automata.
+$ ___________ can be define as finite set of states multiplied by finite set of input symbol. 
+%Transition function
+
+$ ___________ refers to the uniqueness of the computation.
 %DFA
 
-$ ___________ refer to the Non Deterministic Finite Automata, it is used to transit the any number of states for a particular input.
+$ ___________ it is used to transit the any number of states for a particular input.
 %NDFA
+
+$ accepts the NULL move that means it can change state without reading the symbols.
+%NDFA
+
+# Lesson 7
 
 $ A ___________ is meant to do some processing on the input and return a single value.
 %function
@@ -60,98 +111,26 @@ $ A ___________ is meant to do some processing on the input and return a single 
 $ In contrast, a ___________ is more general and can calculate multiple result values and return them using output and inout type arguments.
 %task
 
+$ can contain time-consuming simulation elements such as @, posedge, and others. 
+%task
+
+$ are used in all programming languages, generally known as procedures or subroutines.
+%task
+
+$ is passed to the task, the processing is done, and the result returned.
+%data
+
+$ A _________ must be specifically called with a statement. It cannot be used within an expression as a function can.
+%task
+
+$ The keyword ___________ will make the reentrant task.
+%automatic
+
+$ Tasks that are declared outside all modules are called ___________.
+%global tasks
+
 $ The ___________ should have at least one input argument and cannot have output or inout arguments.
 %function
 
 $ ___________ can have zero or more arguments of any type.
 %task
-
-$ A ___________ can return only a single value.
-%function
-
-$ It cannot return a value but can achieve the same effect using output arguments. This describes a ___________.
-%task
-
-$ The ___________ value will be evaluated at every positive (rising) edge of the clock (“clk“) cycle.
-%count
-
-$ The Counter will be set to Zero when ___________ input is at logic high.
-%reset
-
-$ The counter will be loaded with “data” input when the ___________ signal is at logic high.
-%load
-
-$ The counter will count up when the ___________ signal is logic high, otherwise count down.
-%up_down
-
-$ Asynchronous means all the elements of the circuits do not have a common ___________.
-%clock
-
-$ If the pattern is 1000, it will generate 0100, 0010, 0001, 1000, etc. This behavior is characteristic of a ___________.
-%Ring Counter
-
-$ The rollover happens when the most significant bit of the final addition gets ___________.
-%discarded
-
-$ An ___________ is where the design is reset when the reset pin's value is 0.
-%active-low reset
-
-$ The number of states the counter counts and is the dividing number of the counter is called ___________.
-%modulus
-
-$ A ___________ counter will require the "N" number of flip-flops connected to count a single data bit while providing 2^n different output states.
-%Mod-N
-
-$ The ___________ counter's main advantage is that it only needs half the number of flip-flops compared to the standard ring counter.
-%Johnson
-
-$ A ___________ ring counter passes blocks of four logic "0" and then four logic "1" thereby producing an 8-bit pattern.
-%4-bit Johnson
-
-$ ___________ can also be used to detect or recognize various patterns or number values within a set of data.
-%Ring counters
-
-$ Standard 2, 3 or 4-stage Johnson Ring Counters can also be used to ___________ the clock signal frequency.
-%divide
-
-$ A ___________ can be used as a 3-phase, 120-degree phase shift square wave generator.
-%3-stage Johnson Ring Counter
-
-$ A 4-bit binary Gray code can represent the set of actors currently on stage in ___________.
-%Beckett-Gray code
-
-$ Tasks can include time-consuming simulation elements such as ___________, posedge, and others.
-%@ (event control)
-
-$ The variables declared within the task are ___________ to that task.
-%local
-
-$ The keyword ___________ will make the reentrant task.
-%automatic
-
-$ A task must be specifically called with a ___________.
-%statement
-
-$ A function cannot have ___________ or output or inout declarations.
-%non-blocking assignments
-
-$ A function cannot contain any ___________ such as #, @, wait, posedge, and negedge.
-%time-controlled statements
-
-$ A function should have at least one ___________.
-%input argument
-
-$ A function can only be used in ___________ and not in time-delayed procedural blocks.
-%expressions
-
-$ Functions must contain a statement that assigns the return value to the ___________.
-%implicit function name register
-
-$ The returned type or range declaration followed by a function identifier and semicolon should appear after the ___________ keyword.
-%function
-
-$ The function definition will implicitly create an internal variable of the same name as that of the ___________.
-%function
-
-$ Tasks that are declared outside all modules are called ___________.
-%global tasks
