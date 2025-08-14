@@ -1,0 +1,62 @@
+> The ______ format is usually used to store data. 
+~ BCD 
+> A source program is usually in ______. 
+~ High Level Programming Language
+> The small extremely fast, RAM’s are called as ______. 
+~ Cache
+> The ALU makes use of ______ to store the intermediate results. 
+~ Accumulators
+> Bus structure is usually used to connect I/O devices. 
+~ Single
+> The control unit controls other units by generating ______. 
+~ Timing Signals
+> To reduce the memory access time we generally make use of ______. 
+~ Cache's
+> ______ is generally used to increase the apparent size of physical memory. 
+~ Virtual Memory
+> The time delay between two successive initiations of memory operation. 
+~ Memory Cycle Time
+> ______ are used to overcome the difference in data transfer speeds of various devices. 
+~ Buffer Registers
+> ANSI stands for ______. 
+~ American National Standards Institute
+> The decoded instruction is stored in ______. 
+~ Instruction Register (IR)
+> The Instruction -> Add LOCA, R0 does  
+~ Adds the values of both LOCA and R0 and stores it in R0
+> Which registers can interact with the secondary storage? 
+~ Memory Access Register (MAR)
+> During the execution of a program which gets initialized first? 
+~ Program Counter (PC)
+> Which of the register/s of the processor is/are connected to Memory Bus? 
+~ MAR
+> ISP stands for ______. 
+~ Instruction Set Processor.
+> The internal components of the processor are ______. 
+~ Processor Bus
+> During the execution of the instructions, a copy of the instructions is placed in the ______. 
+~ Cache
+> Two processors A and B have clock frequencies of 700 MHz and 900 MHz respectively.  
+Suppose A can execute an instruction with an average of 3 steps and B an average of 5 steps.  
+For the same instruction, which processor is faster?  
+~ Processor A
+> The technique of fetching the decoding of a different instruction during the execution of another instruction is called ______.  
+~ Pipe Lining
+> The clock rate of the processor can be improved by ______.  
+~ Improving the IC technology of the logic circuits, Reducing the amount of processing done in one step, By using the overclocking method
+> An optimizing compiler does ______.  
+~ Takes advantage of the type of processor and reduces its process time
+> The ultimate goal of a compiler is to ______.  
+~ Reduce the clock cycles for a programming task
+> SPEC stands for ______.  
+~ System Performance Evaluation Corporation
+> When performing a looping operation, the instruction gets stored in the ______.  
+~ Cache
+> If a processor clock is rated as 1250 million cycles per second, then its clock period is ______.  
+~ 8 * 10-10 sec
+> If the instruction, Add, R1, R2, R3 is executed in a system that is pipe-lined, then the value of S is (where S is a term of the Basic performance equation).  
+~ ∼1
+> CISC stands for ______.  
+~ Complex Instruction Set Computer
+> During the transfer of data between the processor and memory we use ______.  
+~ Registers
