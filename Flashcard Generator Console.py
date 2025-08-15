@@ -2,12 +2,11 @@ import os
 import re
 import random
 from difflib import SequenceMatcher
-import ast # For use ast.literal_eval(), safer method than eval(). Convert string to boolean
+import ast  # For use ast.literal_eval(), safer method than eval(). Convert string to boolean
 
-# Global variables
 answerSet = "choices"
-theme = ""
-switchItems = False 
+theme = "default"
+switchItems = False
 sameTypeChoices = False
 capitalize = False
 caseSenseAns = False
@@ -25,12 +24,12 @@ def clrScr():
 def setTheme():
     global theme
     if theme == "amber_text_on_black":
-        print(end="\033[38;2;255;165;0m") # orange amber text
-        print(end="\033[40m") # black bg
+        print(end="\033[38;2;255;165;0m")  # orange amber text
+        print(end="\033[40m")  # black bg
     elif theme == "white_text_on_black":
-        print(end="\033[37m") # white text
-        print(end="\033[40m") # black bg
-    elif theme == "default" or theme == "none" or theme == "":
+        print(end="\033[37m")  # white text
+        print(end="\033[40m")  # black bg
+    elif theme in ["default", "none", ""]:
         print(end="\033[0m")
 
 def textColor(color):
@@ -82,7 +81,7 @@ def processConfigLine(line):
 def loadQuestions():
     global switchItems, capitalize
     global firstItemSymb, lastItemSymb, globalSetSymb, commentSymb
-    
+
     def find_txt_files(folder):
         txt_files = []
         for entry in os.listdir(folder):
@@ -94,7 +93,7 @@ def loadQuestions():
         return txt_files
 
     folderPath = "questionnaire"
-    files = find_txt_files(folderPath) 
+    files = find_txt_files(folderPath)
     print("\nAvailable files:\n")
 
     if not files:
@@ -107,7 +106,7 @@ def loadQuestions():
 
     while True:
         user_input = input(f"\nSelect a file to load (1-{len(files)}): ").strip().lower()
-     
+
         try:
             fileChoice = int(user_input) - 1
             if 0 <= fileChoice < len(files):
@@ -116,7 +115,7 @@ def loadQuestions():
             else:
                 print("Invalid choice. Please try again.")
         except ValueError:
-            print("Please enter a valid number or 'back'.")
+            print("Please enter a valid number.")
 
     try:
         with open(selectedFile, "r", encoding='utf-8', errors='replace') as file:
@@ -131,13 +130,12 @@ def loadQuestions():
     questions = []
     answers = []
     question = ""
-    answer = ""
 
     for lineNumber, line in enumerate(lines, start=1):
         line = line.strip()
         if line.startswith(commentSymb) or line == "":
             continue
-        
+
         if line.startswith(globalSetSymb):
             try:
                 processConfigLine(line)
@@ -154,10 +152,10 @@ def loadQuestions():
             question = line[1:].strip()
         elif line.startswith(lastItemSymb):
             answer = line[1:].strip()
-            if question: 
+            if question:
                 if capitalize:
                     question = question.capitalize()
-                    if not answerSet == "input":
+                    if answerSet != "identification":
                         answer = answer.capitalize()
                 questions.append(question)
                 answers.append(answer)
@@ -165,25 +163,18 @@ def loadQuestions():
             else:
                 print(f"Error: Answer found at line {lineNumber} without a matching question.")
 
-    if not (line.startswith(firstItemSymb) or line.startswith(lastItemSymb) or 
-        line.startswith(globalSetSymb) or line.startswith(commentSymb)) and line != '':
-        print(f"Syntax error: Invalid symbol at line {lineNumber}: {line}")
-        return [], [] 
-    
     if len(questions) != len(answers):
         print(f"Error: Uneven number of questions and answers.")
-        print(f"Please check if there's question and answer at the same time")
         return [], []
-    
+
     if switchItems:
         questions, answers = answers, questions
-    
+
     combined = list(zip(questions, answers))
-    
     if not combined:
         print("Error: No valid question-answer pairs found.")
         return [], []
-    
+
     random.shuffle(combined)
     questions[:], answers[:] = zip(*combined)
     clrScr()
@@ -196,8 +187,8 @@ def isAnswerClose(inputAnswer, actualAnswer):
 def submitChoice(inputAnswer, correctAnswer):
     global trimEndLastItem, score
     length = len(correctAnswer)
-    correctAnswer = correctAnswer[:length-trimEndLastItem]
-    inputAnswer = inputAnswer[:length-trimEndLastItem]
+    correctAnswer = correctAnswer[:length - trimEndLastItem]
+    inputAnswer = inputAnswer[:length - trimEndLastItem]
 
     if caseSenseAns:
         correctAnswer = correctAnswer.lower()
@@ -214,7 +205,7 @@ def submitChoice(inputAnswer, correctAnswer):
         textColor("orange")
         print(f"\nSo close...")
         setTheme()
-        print(f"The accurate answer is:\n{correctAnswer}\n") 
+        print(f"The accurate answer is:\n{correctAnswer}\n")
         score += 1
     else:
         textColor("red")
@@ -226,99 +217,56 @@ def submitChoice(inputAnswer, correctAnswer):
         setTheme()
 
 def presentChoices(correctAnswer, allAnswers):
-    global trimEndLastItem, sameTypeChoices
-    allAnswersCopy = allAnswers[:]  
-    allAnswersCopy.remove(correctAnswer)  
-
-    categoryChoices = re.findall(r'\{(.*?)\}', correctAnswer)
-    if categoryChoices:
-        category = categoryChoices[0]
-        allAnswersCopy = [ans for ans in allAnswersCopy if f'{{{category}}}' in ans]
-        correctAnswer = correctAnswer.replace(f'{{{category}}}', "").strip()
-        allAnswersCopy = [ans.replace(f'{{{category}}}', "").strip() for ans in allAnswersCopy]
-    else:
-        allAnswersCopy = [ans for ans in allAnswersCopy if not re.search(r'\{.*?\}', ans)]
-    
-    allAnswersCopy = [re.sub(r'\{.*?\}', '', ans).strip() for ans in allAnswersCopy]
-
-    if sameTypeChoices:
-        if correctAnswer.isdigit():
-            allAnswersCopy = [ans for ans in allAnswersCopy if ans.isdigit()]
-        else:
-            allAnswersCopy = [ans for ans in allAnswersCopy if not ans.isdigit()]
-
-    uniqueChoices = {correctAnswer}
-    max_choices = min(4, len(allAnswersCopy) + 1)
-
-    while len(uniqueChoices) < max_choices:
-        incorrectChoice = random.choice(allAnswersCopy)
-        uniqueChoices.add(incorrectChoice) 
-
-    choices = list(uniqueChoices)
-    random.shuffle(choices)
-
-    if answerSet == "choices":
-        print("\nChoices:")
-        choiceLabels = ['a', 'b', 'c', 'd'][:len(choices)]
-        for i, choice in enumerate(choices):
-            length = len(choice)
-            print(f"{choiceLabels[i]}) {choice[:length-trimEndLastItem]}")
-        return choices, choiceLabels
-    elif answerSet == "input":
+    if answerSet == "identification":
         userInput = input("\nType your answer: ").strip()
         return [userInput], []
+    elif answerSet == "flashcard":
+        input("\nPress Enter to reveal the answer...")
+        print(f"\nAnswer: ", end="")
+        textColor("green")
+        print(f"{correctAnswer}\n")
+        setTheme()
+        return [], []
 
 def playQuiz():
     questionArr, answerArr = loadQuestions()
     setTheme()
 
     if not questionArr:
-        print("Unable to start the quiz due to syntax errors.\n")
+        print("Unable to start the quiz.\n")
         return
-    
+
     currentQuestion = 0
-    labelMap = {'1': 'a', '2': 'b', '3': 'c', '4': 'd'}
 
     while currentQuestion < len(questionArr):
-        print(f"Score: {score}/{len(questionArr)}\n")
-        print(f"{currentQuestion + 1}) {questionArr[currentQuestion]}")
-        choices, choiceLabels = presentChoices(answerArr[currentQuestion], answerArr)
+        if not answerSet == "flashcard":
+            print(f"Score: {score}/{len(questionArr)}")
+        print(f"\n{currentQuestion + 1}) {questionArr[currentQuestion]}")
+        choices, _ = presentChoices(answerArr[currentQuestion], answerArr)
 
-        if answerSet == "choices":
-            while True: 
-                inputAnswer = input("\nChoose the correct answer\n(a-d or 1-4): ").lower().strip()
-
-                if inputAnswer in labelMap:
-                    inputAnswer = labelMap[inputAnswer]
-
-                if inputAnswer in choiceLabels:
-                    choiceIndex = choiceLabels.index(inputAnswer)
-                    submitChoice(choices[choiceIndex], answerArr[currentQuestion])
-                    break  
-                else:
-                    print("Invalid choice. Please enter a number between 1 and 4 or a letter between a and d.")
-        
-        elif answerSet == "input":
+        if answerSet == "identification":
             inputAnswer = choices[0]
             submitChoice(inputAnswer, answerArr[currentQuestion])
-        
-        userInput = input("Enter anything to go to the next question, or type 'e' to quit: ").strip().lower()
 
-        if userInput == 'e': 
+        elif answerSet == "flashcard":
+            pass
+
+        userInput = input("Enter anything to go to the next question, or type 'e' to quit: ").strip().lower()
+        if userInput == 'e':
             print("\nThank you for playing!\n")
-            return 
-        
+            return
+
         clrScr()
         currentQuestion += 1
 
     print(f"\nEnd of questions!")
-    print(f"Your final score is {score}/{len(questionArr)}!\n")
-
+    if not answerSet == "flashcard":
+        print(f"Your final score is {score}/{len(questionArr)}!")
 
 # Main
 while True:
     clrScr()
     playQuiz()
-    restart = input("Do you want to play again? (y/n): ").strip().lower()
+    restart = input("\nDo you want to play again? (y/n): ").strip().lower()
     if restart != 'y':
         break
