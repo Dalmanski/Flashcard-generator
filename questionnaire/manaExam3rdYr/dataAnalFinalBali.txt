@@ -1,4 +1,4 @@
-! answerSymb = ?, capitalize = True
+! firstItemSymb = ?, lastItemSymb = '>', capitalize = True
 
 # Lesson 5
 
