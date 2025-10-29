@@ -14,7 +14,7 @@ GREEN = '\033[92m'
 RED = '\033[91m'
 YELLOW = '\033[93m'
 RESET = '\033[0m'
-SEPARATOR = "\n============================================================\n"
+SEPARATOR = "\n===========================\n"
 
 def list_txt_files_recursive(folder):
     if not folder.exists() or not folder.is_dir():
