@@ -1,0 +1,976 @@
+G1 - Relevant Tools, Standards, and/or Engineering Constraints
+
+1. What is an embedded system?
+   a) A general-purpose computer
+   b) A system for gaming only
+   c) A specialized computer for specific tasks ✔
+   d) A type of supercomputer
+
+2. What do embedded systems integrate?
+   a) Only hardware
+   b) Only software
+   c) Hardware and software ✔
+   d) Internet and databases
+
+3. Why is reliability important in embedded systems?
+   a) To reduce electricity bills
+   b) Because shutdowns can be unsafe or costly ✔
+   c) To make the system look modern
+   d) To reduce memory use
+
+4. What type of user interface do embedded systems usually have?
+   a) Full desktop GUI
+   b) Limited or none ✔
+   c) Voice-controlled
+   d) Virtual reality
+
+5. What kind of response do embedded systems provide?
+   a) Slow response
+   b) Scheduled response
+   c) Real-time response ✔
+   d) No response
+
+6. What is one restraint of embedded systems?
+   a) They are always multi-purpose
+   b) They are application-specific ✔
+   c) They can run any OS
+   d) They have unlimited storage
+
+7. Which of these is a common constraint of embedded systems?
+   a) Huge memory
+   b) Size and power ✔
+   c) High internet speed
+   d) Graphics quality
+
+8. What component performs operations in hardware?
+   a) Printer
+   b) Microprocessor or microcontroller ✔
+   c) Power supply
+   d) Hard disk
+
+9. Which of the following is a hardware element in embedded systems?
+   a) Operating system
+   b) Cloud server
+   c) I/O interfaces ✔
+   d) Web browser
+
+10. What does the software in embedded systems do?
+    a) Displays animations
+    b) Instructs the system to perform tasks ✔
+    c) Stores files permanently
+    d) Manages WiFi signals
+
+11. What is Keil MDK used for?
+    a) Video editing
+    b) Developing embedded apps for ARM Cortex-M ✔
+    c) Running games
+    d) Creating websites
+
+12. What does IAR Embedded Workbench support?
+    a) Automated workflows with scripting ✔
+    b) Virtual reality gaming
+    c) Cloud data storage
+    d) Video playback
+
+13. What is ESP-IDF mainly for?
+    a) ESP32 app development ✔
+    b) Car engine monitoring only
+    c) Photo editing
+    d) Web server hosting
+
+14. What does KiCAD help design?
+    a) Websites
+    b) Printed Circuit Boards (PCBs) ✔
+    c) Mobile apps
+    d) Databases
+
+15. Which tool is used for custom IC design?
+    a) MS Excel
+    b) Cadence Virtuoso ✔
+    c) Google Docs
+    d) Arduino IDE
+
+16. Name one FPGA design tool.
+    a) Photoshop
+    b) Synopsys Synplify ✔
+    c) Unity
+    d) MySQL
+
+17. What is PC-Lint used for?
+    a) Debugging hardware
+    b) Checking C/C++ code for issues ✔
+    c) Drawing PCB schematics
+    d) Powering the CPU
+
+18. What type of testing does VectorCAST perform?
+    a) Network speed testing
+    b) Graphics quality testing
+    c) Unit, integration, and system testing ✔
+    d) Cloud storage testing
+
+19. What is Vector CANoe mainly used for?
+    a) Managing files
+    b) Simulation and testing of CAN networks ✔
+    c) Designing IC layouts
+    d) Editing images
+
+20. Which standard is for avionics software safety?
+    a) ISO 26262
+    b) EN 50128
+    c) DO-178C ✔
+    d) ISO/IEC 12207
+
+G2 - Instruction Set Architecture
+
+1. What does ISA stand for in computer architecture?
+   a) Integrated System Access
+   b) Instruction Set Architecture ✔
+   c) Internal Storage Allocation
+   d) Input System Algorithm
+
+2. What is the role of an ISA?
+   a) To store only high-level code
+   b) To connect hardware with power supply
+   c) To serve as the interface between software and hardware ✔
+   d) To replace the operating system
+
+3. Which are the two main storage locations in ISA?
+   a) Cache and CPU
+   b) Registers and Memory ✔
+   c) ALU and Control Unit
+   d) Hard disk and Cache
+
+4. What does the Program Counter (PC) do?
+   a) Stores program results
+   b) Holds the address of the next instruction ✔
+   c) Counts the number of executed programs
+   d) Acts as a temporary storage
+
+5. In the language analogy, what does a “sentence” correspond to?
+   a) Program
+   b) Operation
+   c) Instruction ✔
+   d) Data item
+
+6. Why do we need a compiler?
+   a) To design hardware
+   b) To increase memory size
+   c) To execute machine code directly
+   d) To translate high-level code into machine code ✔
+
+7. Which is the correct order of the instruction execution cycle?
+   a) Fetch → Decode → Read → Execute → Write → Update ✔
+   b) Decode → Fetch → Execute → Write → Read → Update
+   c) Execute → Write → Fetch → Decode → Read → Update
+   d) Read → Fetch → Decode → Write → Execute → Update
+
+8. Which is an example of translating high-level code into assembly?
+   a) High-level: sum++; → Assembly: MUL R1, sum
+   b) High-level: sum = sum + array[i]; → Assembly: LOAD R1, sum; LOAD R2, array[i]; ADD R1, R2; STORE R1, sum ✔
+   c) High-level: if (x>y) → Assembly: POP A; PUSH B
+   d) High-level: printf("Hello") → Assembly: ADD R1, R2
+
+9. Why is a computer called a finite state machine?
+   a) It can run infinitely
+   b) It does not follow order
+   c) It only works with infinite memory
+   d) It processes in steps, changing states each time ✔
+
+10. What ensures sequential execution in a CPU?
+    a) ALU
+    b) Program Counter ✔
+    c) Compiler
+    d) Registers
+
+11. What is the key characteristic of Stack Architecture?
+    a) Uses only registers
+    b) Uses cache memory
+    c) Uses stack for pushing and popping operands ✔
+    d) Uses parallel processing
+
+12. Which is the correct stack instruction for C = A + B?
+    a) LOAD A; ADD B; STORE C
+    b) PUSH A; PUSH B; ADD; POP C ✔
+    c) LOAD R1, A; ADD R1, B; STORE R1, C
+    d) MOVE A, B; ADD; STORE
+
+13. In accumulator architecture, where is the result stored?
+    a) General register
+    b) Cache
+    c) Accumulator ✔
+    d) Memory
+
+14. Which accumulator instruction sequence gives C = A + B?
+    a) LOAD A; ADD B; STORE C ✔
+    b) PUSH A; PUSH B; ADD; POP C
+    c) MOVE A, B; STORE C
+    d) ADD R1, R2; STORE C
+
+15. Why is register-set architecture more flexible?
+    a) Because it uses cache memory
+    b) Because it uses multiple general-purpose registers ✔
+    c) Because it stores only in accumulator
+    d) Because it removes the compiler
+
+16. What does CISC stand for?
+    a) Computer Integrated Software Control
+    b) Central Instruction Storage Controller
+    c) Complex Instruction Set Computer ✔
+    d) Combined Instruction Set Code
+
+17. Which is an advantage of CISC?
+    a) Faster decoding
+    b) Smaller program size ✔
+    c) Simpler design
+    d) Few instructions
+
+18. Which is a disadvantage of CISC?
+    a) Complex decoding ✔
+    b) Large program size
+    c) Few addressing modes
+    d) Only LOAD/STORE memory access
+
+19. What does RISC stand for?
+    a) Reduced Instruction Set Computer ✔
+    b) Random Instruction Set Controller
+    c) Registered Instruction Storage Circuit
+    d) Regular Instruction System Code
+
+20. How do CISC and RISC differ?
+    a) CISC uses few instructions; RISC uses many
+    b) CISC is simpler; RISC is more complex
+    c) CISC uses many complex instructions; RISC uses fewer, simpler ones ✔
+    d) CISC only uses registers; RISC only uses memory
+
+G3 - Measuring Performance
+
+1. What is the definition of response time in computer performance?
+   a) Total amount of work done in given time
+   b) Time between start and completion of a task ✔
+   c) Average number of cycles per instruction
+   d) Number of floating-point operations per second
+
+2. Which unit represents one billion operations?
+   a) Mega (10^6)
+   b) Kilo (10^3)
+   c) Giga (10^9) ✔
+   d) Tera (10^12)
+
+3. Which of the following represents 2^30 bytes?
+   a) KB
+   b) MB
+   c) GB ✔
+   d) TB
+
+4. CPU time is computed as:
+   a) Instruction count × CPI × Clock cycle time ✔
+   b) Instruction count ÷ CPI × Clock cycle time
+   c) Clock rate × CPI ÷ Instruction count
+   d) Clock cycle time ÷ Instruction count
+
+5. CPI stands for:
+   a) Cycles Per Instruction ✔
+   b) Clock Per Interval
+   c) Cycle Program Instruction
+   d) Computed Processing Index
+
+6. The time taken by the operating system to run a program is:
+   a) Elapsed time
+   b) User CPU time
+   c) System CPU time ✔
+   d) Benchmark time
+
+7. In comparing computers C1 and C2, which factor makes C1 faster when both execute N instructions?
+   a) Larger clock cycle time
+   b) Higher CPI
+   c) Lower product of CPI and cycle time ✔
+   d) Instruction count
+
+8. MIPS is defined as:
+   a) Instruction count ÷ Execution time × 10^6 ✔
+   b) CPU time ÷ Instruction count × 10^6
+   c) Execution time ÷ Instruction count × 10^6
+   d) Clock rate ÷ CPI
+
+9. Synthetic benchmarks are:
+   a) Programs written in assembly
+   b) Artificial programs emulating typical workloads ✔
+   c) Benchmarks that use only floating-point operations
+   d) Benchmarks created only for graphics
+
+10. MFLOPS measures:
+    a) Integer operations per second
+    b) Memory operations per second
+    c) Floating point operations per second ✔
+    d) Cache hits per second
+
+11. A program executes 10 million instructions on a 1GHz processor with an average CPI of 2. What is CPU time?
+    a) 0.01 s
+    b) 0.02 s ✔
+    c) 0.03 s
+    d) 0.04 s
+
+12. If Computer A executes a program in 5 seconds and Computer B executes the same in 8 seconds, what is the speedup of A over B?
+    a) 1.2
+    b) 1.4
+    c) 1.6 ✔
+    d) 1.8
+
+13. Code I has 5M instructions, 10M cycles; Code II has 6M instructions, 9M cycles. Which is more efficient and why?
+    a) Code I, fewer instructions
+    b) Code II, fewer cycles and lower CPI ✔
+    c) Code I, higher CPI
+    d) Neither
+
+14. If a program’s execution time is 100s, with 80s spent on multiplication, what is the minimum possible execution time if multiplication is infinitely sped up?
+    a) 0 s
+    b) 20 s ✔
+    c) 50 s
+    d) 80 s
+
+15. A computer with α=0.9 (non-memory fraction) and infinite processors achieves what maximum speedup (shared memory, infinite bandwidth)?
+    a) 5
+    b) 8
+    c) 10 ✔
+    d) 12
+
+16. Amdahl’s Law states speedup is limited by:
+    a) Instruction set size
+    b) Fraction of execution time that cannot be improved ✔
+    c) Clock rate
+    d) Benchmark type
+
+17. Which benchmark suite was standardized to measure integer and floating-point performance?
+    a) SPEC CPU2000 ✔
+    b) LINPACK
+    c) Whetstone
+    d) Dhrystone
+
+18. Energy efficiency in SPEC benchmarks is defined as:
+    a) Execution time ÷ Power
+    b) Power × Execution time
+    c) 1 ÷ (Execution time × Power) ✔
+    d) Program units ÷ Joule
+
+19. Increasing CPI, instruction count, or clock rate will generally:
+    a) Increase performance
+    b) Decrease performance ✔
+    c) Keep performance unchanged
+    d) Only affect memory
+
+20. Which is NOT a method of improving performance?
+    a) Increasing clock rate
+    b) Compiler optimization
+    c) Reducing CPI
+    d) Increasing code size ✔
+
+G4 - Computer Arithmetic
+
+1. What is Computer Arithmetic primarily concerned with?
+   a) Data storage management
+   b) Designing digital systems for arithmetic operations ✔
+   c) Creating operating systems
+   d) Optimizing graphics performance
+
+2. Which of the following is NOT a fundamental arithmetic operation in computer arithmetic?
+   a) Addition
+   b) Subtraction
+   c) Exponentiation ✔
+   d) Compilation
+
+3. Which statement best describes binary numbers?
+   a) Numbers based on base 8
+   b) Numbers that only consist of digits 0 and 1 ✔
+   c) Numbers that use decimal values
+   d) Numbers that use hexadecimal representation
+
+4. What is the leftmost bit in sign-and-magnitude, 1's complement, and 2's complement representation used for?
+   a) Indicating overflow
+   b) Representing the sign of a number ✔
+   c) Storing fractional values
+   d) Indicating a floating-point exponent
+
+5. Which of the following indicates a positive number in binary representation?
+   a) Leftmost bit is 1
+   b) Leftmost bit is 0 ✔
+   c) Both A and B
+   d) None of the above
+
+6. Which type of overflow occurs when adding two positive numbers produces a negative result?
+   a) Binary overflow
+   b) Floating-point underflow
+   c) Arithmetic overflow ✔
+   d) Sign overflow
+
+7. Which algorithm is commonly used for signed multiplication in computer arithmetic?
+   a) Descartes algorithm
+   b) Booth algorithm ✔
+   c) Floyd-Warshall algorithm
+   d) Karnaugh algorithm
+
+8. What are the two main features of Booth's algorithm?
+   a) Handles floating-point and integer operations
+   b) Uniform handling of positive/negative numbers and fewer additions ✔
+   c) Only works with unsigned numbers and requires no additions
+   d) Requires manual handling of 1s and 0s
+
+9. What is the mantissa in floating-point representation?
+   a) The sign of the number
+   b) The exponent value
+   c) The fractional part of the number ✔
+   d) The overflow bit
+
+10. Which of the following can cause FP Overflow?
+    a) Exponent becomes too large ✔
+    b) Fraction becomes zero
+    c) Sign bit becomes negative
+    d) All of the above
+
+Problem-Solving Questions
+11. Perform the binary addition: 1011 + 1101
+a) 10100
+b) 11000 ✔
+c) 10110
+d) 10010
+
+12. Perform the binary subtraction: 1110 - 1011
+    a) 0011 ✔
+    b) 0101
+    c) 0001
+    d) 0010
+
+13. Which of the following results in an overflow?
+    a) +2 + +3
+    b) -3 + -4
+    c) +3 + -3
+    d) Both A & B ✔
+
+14. Convert the decimal number 13 into binary.
+    a) 1101 ✔
+    b) 01101
+    c) 1011
+    d) 01101
+
+15. Which binary representation of -5 is correct in 2's complement (5-bit)?
+    a) 10101
+    b) 11011 ✔
+    c) 11101
+    d) 10011
+
+16. Which representation method requires complementing all bits for negative numbers?
+    a) Sign-and-Magnitude
+    b) 1's Complement ✔
+    c) 2's Complement
+    d) Floating-Point
+
+17. What is the primary purpose of the exponent in floating-point representation?
+    a) To indicate the number's sign
+    b) To determine scaling (magnitude) of the number ✔
+    c) To store the fractional value
+    d) To indicate overflow
+
+18. Which statement about FP Underflow is TRUE?
+    a) Occurs when exponent becomes too small (negative) ✔
+    b) Occurs when fraction becomes zero
+    c) Occurs only in integer operations
+    d) Cannot raise an exception
+
+19. Which number system is most suitable for representing on/off states in digital computers?
+    a) Decimal
+    b) Binary ✔
+    c) Octal
+    d) Hexadecimal
+
+20. Which characteristic is NOT listed as an importance of Computer Arithmetic?
+    a) Minimizes errors
+    b) Supports multiple data types
+    c) Enables complex applications
+    d) Enhances graphic rendering ✔
+
+G5 - Processor Organization
+
+1. Which unit stores programs and instructions in electronic circuits?
+   a) CPU
+   b) Storage Unit (Main Memory) ✔
+   c) ALU
+   d) Register
+
+2. The CPU consists of two main parts:
+   a) ALU and Register
+   b) Control Unit and Main Memory
+   c) Program Control Unit and ALU ✔
+   d) IR and DR
+
+3. The ALU is mainly responsible for:
+   a) Fetching instructions
+   b) Storing programs
+   c) Performing arithmetic and logic operations ✔
+   d) Controlling data transfer
+
+4. Which component is compared to the “brain” of the human being?
+   a) Main Memory
+   b) Input Devices
+   c) CPU ✔
+   d) I/O Devices
+
+5. The Program Control Unit (PCU) is responsible for:
+   a) Computations
+   b) Controlling instruction execution ✔
+   c) Register buffering
+   d) Arithmetic operations
+
+6. The first phase of the instruction cycle is:
+   a) Execution Cycle
+   b) Decode Cycle
+   c) Fetch Cycle ✔
+   d) ALU Cycle
+
+7. A signal sent by an I/O device to notify the CPU is called:
+   a) Micro-operation
+   b) Interrupt ✔
+   c) Execution Cycle
+   d) Control Signal
+
+8. Registers in the CPU are:
+   a) Slow and cheap memory
+   b) Large and external
+   c) Costly but fast memory ✔
+   d) Only for input/output
+
+9. Memory-Mapped I/O means:
+   a) I/O devices share memory addresses ✔
+   b) Each device has a separate port number
+   c) CPU uses only registers for I/O
+   d) Devices are directly connected to the ALU
+
+10. Which register holds the memory address to be read or written?
+    a) Instruction Register (IR)
+    b) Program Counter (PC)
+    c) Address Register (AR) ✔
+    d) Data Register (DR)
+
+11. Which register stores the result of ALU operations?
+    a) Accumulator (AC) ✔
+    b) Instruction Register (IR)
+    c) Data Register (DR)
+    d) Control Circuit
+
+12. CPU means :
+    a) Control Unit Processor
+    b) Central Unit Process
+    c) Control Unit Process
+    d) Central Unit Processor ✔
+
+13. Which register stores the current instruction being executed?
+    a) PC
+    b) AC
+    c) IR ✔
+    d) DR
+
+14. During the "Add Instruction," which step comes first?
+    a) AC ← AC + DR
+    b) DR ← M(AR)
+    c) IR ← OP Code of DR
+    d) AR ← PC ✔
+
+15. The ALU takes inputs mainly from:
+    a) AC and DR ✔
+    b) PC and AR
+    c) IR and Control Circuit
+    d) Memory and I/O Devices
+
+16. Which of the following is NOT a logical operation?
+    a) OR
+    b) NOT
+    c) AND
+    d) ADD ✔
+
+17. Which instruction belongs to the Program Control type?
+    a) JUMP ✔
+    b) STORE
+    c) INPUT
+    d) ADD
+
+18. Which category does the instruction "INPUT" belong to?
+    a) Logical
+    b) Program Control
+    c) Arithmetic
+    d) Input/Output ✔
+
+19. The sequence of operations in CPU execution is called:
+    a) Clock Cycle
+    b) Instruction Cycle ✔
+    c) Register Cycle
+    d) ALU Cycle
+
+20. Why should the number of CPU components be minimized?
+    a) To make the CPU faster
+    b) To reduce cost ✔
+    c) To increase storage size
+    d) To increase complexity
+
+G6 - Memory System Organization and Architectures
+
+1. From the top down, organized in a hierarchical manner, what are the types of memory?
+   a) Register memory, Cache memory, Main memory, Auxiliary memory ✔
+   b) Register memory, Main memory, Auxiliary memory
+   c) Cache memory, Main memory, Auxiliary memory
+   d) Cache memory, Main memory, Register memory
+
+2. What are the three techniques of cache memory mapping?
+   a) Direct Mapping, Associative Mapping, Set Associative Mapping ✔
+   b) Direct Mapping, Associative Mapping, Block Mapping
+   c) Set Associative Mapping, Direct Mapping, Index Mapping
+   d) Direct Mapping, Indexed Mapping, Associative Mapping
+
+3. A type of memory line in a memory structure where it identifies which memory location the CPU wants to access is called:
+   a) Address Lines ✔
+   b) Data Lines
+   c) Control Lines
+   d) Memory Lines
+
+4. A type of memory line where it carries the actual data between the CPU and memory is called:
+   a) Address Lines
+   b) Data Lines ✔
+   c) Control Lines
+   d) Memory Lines
+
+5. What are the 4 types of control lines?
+   a) Read (RD), Write (WR), Chip Select (CS), Clock / Timing signals ✔
+   b) Read (RD), Write (WR), Reset, Chip Select (CS)
+   c) Chip Select (CS), Clock / Timing signals, Data Lines, Read (RD)
+   d) Write (WR), Clock / Timing signals, Memory Select, Chip Select (CS)
+
+6. Is the method by which the CPU identifies the location of the data or instructions in memory:
+   a) Memory Addressing ✔
+   b) Data Accessing
+   c) Memory Mapping
+   d) Data Storing
+
+7. A cache memory concept where recently used or closely located data is more likely to be accessed again soon is called:
+   a) Locality of Reference ✔
+   b) Data Prefetching
+   c) Cache Optimization
+   d) Data Locality
+
+8. The memory unit that communicates directly within the CPU is:
+   a) Main Memory
+   b) Cache Memory
+   c) Registers ✔
+   d) ROM
+
+9. Types of memory architecture:
+   a) Von Neumann Architecture, Harvard Architecture ✔
+   b) Von Neumann Architecture, CISC Architecture
+   c) RISC Architecture, Harvard Architecture
+   d) Von Neumann Architecture, RISC Architecture
+
+10. A type of Endianness that stores the least significant byte (LSB) at the lowest memory address is:
+    a) Big Endian
+    b) Little Endian ✔
+    c) Mixed Endian
+    d) Bi-Endianness
+
+11. What is ROM?
+    a) Read Only Memory ✔
+    b) Random Access Memory
+    c) Reusable Object Memory
+    d) Read and Operate Memory
+
+12. What is the function of cache memory?
+    a) To store frequently accessed data for faster retrieval ✔
+    b) To store data that is never used
+    c) To manage system resources
+    d) To store the operating system
+
+13. What is the main difference between RAM and ROM?
+    a) RAM is volatile, ROM is non-volatile ✔
+    b) RAM is used for storage, ROM is used for temporary data
+    c) RAM is slower than ROM
+    d) RAM can only be written to once, while ROM can be written to multiple times
+
+14. Which of the following is a characteristic of SRAM (Static RAM)?
+    a) Faster and more expensive than DRAM ✔
+    b) Requires periodic refreshing
+    c) Stores more data than DRAM
+    d) Slower than DRAM
+
+15. What is the main characteristic of DRAM (Dynamic RAM)?
+    a) It requires constant refreshing to retain data ✔
+    b) It is faster than SRAM
+    c) It is used exclusively for cache memory
+    d) It is non-volatile
+
+16. Which type of memory is used to store data on a long-term basis in most computers?
+    a) Main Memory
+    b) Cache Memory
+    c) Auxiliary Memory ✔
+    d) Register Memory
+
+17. What does the term "locality of reference" refer to in cache memory?
+    a) The principle that instructions and data that are used together are located near each other ✔
+    b) The principle that data is stored in the most geographically efficient location
+    c) The method by which the CPU accesses memory locations randomly
+    d) The way memory is structured in a computer system
+
+18. Which of the following is an example of auxiliary memory?
+    a) Hard Disk ✔
+    b) Register
+    c) Cache
+    d) Main Memory
+
+19. Which of the following best describes the Von Neumann architecture?
+    a) A single memory space for both data and instructions ✔
+    b) A separate memory space for data and instructions
+    c) A memory hierarchy with multiple levels of cache
+    d) A system that only uses registers
+
+20. In which situation would you expect the "Little Endian" format to be used?
+    a) When storing the most significant byte first
+    b) When the least significant byte is stored first ✔
+    c) In a system with only one byte of memory
+    d) In systems that do not use endianness
+
+G7 - Input/Output Interfacing and Communication
+
+1. Which of the following is the primary function of an I/O interface?
+   a) Execute arithmetic operations
+   b) Convert between CPU and peripheral signals ✔
+   c) Increase CPU clock speed
+   d) Store data permanently
+
+2. In memory-mapped I/O, I/O devices:
+   a) Have a separate address space from memory
+   b) Share the same address space as memory ✔
+   c) Do not require addressing
+   d) Can only communicate serially
+
+3. Which I/O method requires the CPU to constantly check device status?
+   a) Interrupt-driven I/O
+   b) DMA
+   c) Programmed I/O (Polling) ✔
+   d) Serial Communication
+
+4. What is the main disadvantage of programmed I/O?
+   a) Devices cannot signal completion
+   b) It wastes CPU time ✔
+   c) It requires DMA controller
+   d) It is more expensive than DMA
+
+5. Which of the following allows data transfer without CPU intervention?
+   a) Programmed I/O
+   b) Interrupt-driven I/O
+   c) Direct Memory Access (DMA) ✔
+   d) Serial communication
+
+6. In interrupt-driven I/O, the CPU:
+   a) Polls devices continuously
+   b) Is halted permanently until input arrives
+   c) Executes normal instructions until interrupted by device ✔
+   d) Transfers data directly to memory
+
+7. Which of the following is an example of serial communication?
+   a) PCI bus
+   b) Parallel port
+   c) System memory bus
+   d) USB ✔
+
+8. The control bus is responsible for:
+   a) Storing data temporarily
+   b) Transferring data between memory and CPU
+   c) Sending signals like Read, Write, and Interrupt ✔
+   d) Holding device addresses
+
+9. Which bus carries the actual data in I/O transfers?
+   a) Data bus ✔
+   b) Control bus
+   c) Address bus
+   d) Serial bus
+
+10. Which of the following is an advantage of DMA?
+    a) CPU is fully engaged during transfer
+    b) Eliminates the need for I/O interfaces
+    c) Faster transfers with minimal CPU involvement ✔
+    d) Replaces memory
+
+11. The technique of using the same instructions to access memory and I/O devices is called:
+    a) Programmed I/O
+    b) Memory-mapped I/O ✔
+    c) Port-mapped I/O
+    d) DMA transfer
+
+12. Which of the following I/O addressing methods requires special instructions like IN and OUT?
+    a) Memory-mapped I/O
+    b) Interrupt-driven I/O
+    c) Isolated I/O (Port-mapped) ✔
+    d) DMA
+
+13. In asynchronous data transfer, synchronization is achieved using:
+    a) A shared clock signal
+    b) Handshaking signals ✔
+    c) Instruction pipelining
+    d) Address decoding
+
+14. Which of the following is a real-world example of interrupt-driven I/O?
+    a) CPU fetching instructions
+    b) Keyboard input ✔
+    c) Disk-to-memory transfer using DMA
+    d) Cache memory access
+
+15. Which data transfer mode is best suited for high-speed disk transfers?
+    a) Polling
+    b) Interrupt-driven I/O
+    c) Programmed I/O
+    d) Direct Memory Access (DMA) ✔
+
+16. Which of the following is an example of parallel communication?
+    a) RS-232
+    b) USB
+    c) Printer (old parallel port) ✔
+    d) I²C bus
+
+17. The CPU sends a command to the DMA controller. What happens next?
+    a) DMA controller transfers data directly between memory and I/O device ✔
+    b) CPU polls the device until completion
+    c) CPU executes an interrupt service routine
+    d) Data is stored permanently in cache
+
+18. Which signal in handshaking indicates that data is available for transfer?
+    a) ACK (Acknowledge)
+    b) STROBE or READY ✔
+    c) CLOCK
+    d) RESET
+
+19. Which bus standard is widely used for connecting graphics cards?
+    a) USB
+    b) PCI Express (PCIe) ✔
+    c) I²C
+    d) RS-232
+
+20. Which of the following correctly pairs the communication type and example?
+    a) Synchronous – UART
+    b) Asynchronous – DDR RAM
+    c) Serial – USB ✔
+    d) Parallel – SATA
+
+G8 - Peripheral Subsystems
+
+1. Which of the following is considered a peripheral subsystem?
+   a) CPU
+   b) Main Memory
+   c) Printer ✔
+   d) ALU
+
+2. Which category of peripherals does a microphone belong to?
+   a) Output device
+   b) Input device ✔
+   c) Storage device
+   d) Communication device
+
+3. A solid-state drive (SSD) is an example of:
+   a) Input device
+   b) Output device
+   c) Storage device ✔
+   d) Communication device
+
+4. Which of the following is a communication device?
+   a) Hard Disk Drive
+   b) Scanner
+   c) Bluetooth Adapter ✔
+   d) Monitor
+
+5. What is the main role of an I/O interface?
+   a) Increase CPU speed
+   b) Translate signals between CPU and peripherals ✔
+   c) Store data permanently
+   d) Replace the operating system
+
+6. In memory-mapped I/O, device registers appear:
+   a) In a separate I/O address space
+   b) In the same address space as main memory ✔
+   c) Only in cache memory
+   d) On the control bus
+
+7. What is a disadvantage of memory-mapped I/O?
+   a) Requires special instructions
+   b) Slower than isolated I/O
+   c) Reduces available memory address space ✔
+   d) Cannot be used with DMA
+
+8. Which register indicates whether a device is ready, busy, or in error state?
+   a) Data Register
+   b) Status Register ✔
+   c) Control Register
+   d) Address Register
+
+9. Handshaking in peripheral communication ensures:
+   a) Faster bus speed
+   b) Synchronization between CPU and device ✔
+   c) Reduced memory usage
+   d) Lower power consumption
+
+10. Which technique uses a buffer to manage speed differences between CPU and peripherals?
+    a) Handshaking
+    b) Polling
+    c) Buffering ✔
+    d) DMA
+
+11. Programmed I/O (Polling) is disadvantageous because:
+    a) It requires extra hardware
+    b) It wastes CPU time waiting ✔
+    c) It is too complex
+    d) It requires DMA controllers
+
+12. Which I/O method allows the CPU to continue other tasks until a device signals it?
+    a) Programmed I/O
+    b) Polling
+    c) Interrupt-driven I/O ✔
+    d) Buffering
+
+13. Which I/O method transfers data directly between device and memory without CPU intervention?
+    a) Interrupt-driven I/O
+    b) Buffering
+    c) Programmed I/O
+    d) Direct Memory Access (DMA) ✔
+
+14. What is a disadvantage of DMA?
+    a) Requires CPU to move every byte
+    b) Needs additional hardware and bus arbitration ✔
+    c) Increases CPU waiting time
+    d) Cannot be used for high-speed devices
+
+15. Which bus carries actual data between CPU, memory, and peripherals?
+    a) Address bus
+    b) Data bus ✔
+    c) Control bus
+    d) Power bus
+
+16. Which bus carries the memory or I/O location the CPU wants to access?
+    a) Address bus ✔
+    b) Data bus
+    c) Control bus
+    d) System bus
+
+17. Which bus carries signals like read/write, clock, and interrupt requests?
+    a) Data bus
+    b) Address bus
+    c) Control bus ✔
+    d) Buffer bus
+
+18. USB, PCI Express, and SATA are examples of:
+    a) Storage devices
+    b) Standard bus interfaces ✔
+    c) Peripheral controllers
+    d) Communication registers
+
+19. Bus bandwidth is calculated as:
+    a) Address width × clock frequency
+    b) Bus width × clock frequency ✔
+    c) Data register size × device speed
+    d) Number of devices × bus speed
+
+20. Which of the following is an emerging trend in peripherals?
+    a) CRT Monitors
+    b) Impact Printers
+    c) IoT Devices ✔
+    d) Floppy Disks

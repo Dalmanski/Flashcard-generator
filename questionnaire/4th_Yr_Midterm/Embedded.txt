@@ -1,0 +1,1375 @@
+G1 - Relevant Tools, Standards, and/or Engineering Constraints
+
+1. What is an embedded system?
+   a) A general-purpose computer
+   b) A system for gaming only
+   c) A specialized computer for specific tasks ✔
+   d) A type of supercomputer
+
+2. What do embedded systems integrate?
+   a) Only hardware
+   b) Only software
+   c) Hardware and software ✔
+   d) Internet and databases
+
+3. Why is reliability important in embedded systems?
+   a) To reduce electricity bills
+   b) Because shutdowns can be unsafe or costly ✔
+   c) To make the system look modern
+   d) To reduce memory use
+
+4. What type of user interface do embedded systems usually have?
+   a) Full desktop GUI
+   b) Limited or none ✔
+   c) Voice-controlled
+   d) Virtual reality
+
+5. What kind of response do embedded systems provide?
+   a) Slow response
+   b) Scheduled response
+   c) Real-time response ✔
+   d) No response
+
+6. What is one restraint of embedded systems?
+   a) They are always multi-purpose
+   b) They are application-specific ✔
+   c) They can run any OS
+   d) They have unlimited storage
+
+7. Which of these is a common constraint of embedded systems?
+   a) Huge memory
+   b) Size and power ✔
+   c) High internet speed
+   d) Graphics quality
+
+8. What component performs operations in hardware?
+   a) Printer
+   b) Microprocessor or microcontroller ✔
+   c) Power supply
+   d) Hard disk
+
+9. Which of the following is a hardware element in embedded systems?
+   a) Operating system
+   b) Cloud server
+   c) I/O interfaces ✔
+   d) Web browser
+
+10. What does the software in embedded systems do?
+    a) Displays animations
+    b) Instructs the system to perform tasks ✔
+    c) Stores files permanently
+    d) Manages WiFi signals
+
+11. What is Keil MDK used for?
+    a) Video editing
+    b) Developing embedded apps for ARM Cortex-M ✔
+    c) Running games
+    d) Creating websites
+
+12. What does IAR Embedded Workbench support?
+    a) Automated workflows with scripting ✔
+    b) Virtual reality gaming
+    c) Cloud data storage
+    d) Video playback
+
+13. What is ESP-IDF mainly for?
+    a) ESP32 app development ✔
+    b) Car engine monitoring only
+    c) Photo editing
+    d) Web server hosting
+
+14. What does KiCAD help design?
+    a) Websites
+    b) Printed Circuit Boards (PCBs) ✔
+    c) Mobile apps
+    d) Databases
+
+15. Which tool is used for custom IC design?
+    a) MS Excel
+    b) Cadence Virtuoso ✔
+    c) Google Docs
+    d) Arduino IDE
+
+16. Name one FPGA design tool.
+    a) Photoshop
+    b) Synopsys Synplify ✔
+    c) Unity
+    d) MySQL
+
+17. What is PC-Lint used for?
+    a) Debugging hardware
+    b) Checking C/C++ code for issues ✔
+    c) Drawing PCB schematics
+    d) Powering the CPU
+
+18. What type of testing does VectorCAST perform?
+    a) Network speed testing
+    b) Graphics quality testing
+    c) Unit, integration, and system testing ✔
+    d) Cloud storage testing
+
+19. What is Vector CANoe mainly used for?
+    a) Managing files
+    b) Simulation and testing of CAN networks ✔
+    c) Designing IC layouts
+    d) Editing images
+
+20. Which standard is for avionics software safety?
+    a) ISO 26262
+    b) EN 50128
+    c) DO-178C ✔
+    d) ISO/IEC 12207
+
+---
+
+G2 - Characteristics of Embedded Systems
+
+1. What is the primary purpose of an embedded system?
+   a) Perform multiple general tasks
+   b) Perform a specific function ✔
+   c) Store large amounts of data
+   d) Connect computers to the internet
+
+2. Which characteristic ensures that an embedded system responds quickly in time-critical applications?
+   a) Cost Sensitivity
+   b) Real-Time Operation ✔
+   c) Compact Size
+   d) Resource Constraints
+
+3. What is a key advantage of tailoring hardware and software in embedded systems?
+   a) Reduced internet usage
+   b) Increased gaming performance
+   c) Increased efficiency and reliability ✔
+   d) Better multitasking
+
+4. What is meant by deterministic behavior in embedded systems?
+   a) Random response times
+   b) Predictable response times ✔
+   c) High storage capacity
+   d) Infinite processing speed
+
+5. Why are embedded systems designed with limited memory and processing power?
+   a) To make them larger
+   b) To increase their cost
+   c) To optimize for low cost and efficiency ✔
+   d) To improve internet speed
+
+6. Which application requires high reliability of embedded systems?
+   a) Video games
+   b) Social media platforms
+   c) Medical devices ✔
+   d) Photo editing apps
+
+7. What does miniaturization in embedded systems achieve?
+   a) Slower system performance
+   b) Larger physical size
+   c) Fits within device size constraints ✔
+   d) Reduces cost but increases size
+
+8. What is firmware in an embedded system?
+   a) Cloud-based software
+   b) Specialized software stored in ROM or flash memory ✔
+   c) Hardware replacement code
+   d) A type of antivirus
+
+9. What type of code is commonly used in real-time embedded systems for critical performance?
+   a) Java
+   b) HTML
+   c) C or Assembly ✔
+   d) Python
+
+10. Which feature makes embedded systems suitable for portable devices like remotes?
+    a) High power consumption
+    b) Power efficiency ✔
+    c) Excessive hardware complexity
+    d) High maintenance requirements
+
+11. Which of the following best describes consistency in embedded systems?
+    a) Changing behavior based on input
+    b) Stable performance over time ✔
+    c) Inability to process data
+    d) Unpredictable output
+
+12. What is the advantage of integrating components on a single chip?
+    a) Increases system size
+    b) Reduces space and complexity ✔
+    c) Limits connectivity options
+    d) Makes systems slower
+
+13. Which coding standard is commonly used in automotive embedded systems?
+    a) MISRA ✔
+    b) HTML
+    c) CSS
+    d) Bootstrap
+
+14. Which of the following allows embedded systems to interact with the physical environment?
+    a) Web browsers
+    b) Sensor and actuator interfaces ✔
+    c) Video editing software
+    d) Multimedia players
+
+15. Which feature enables embedded systems to integrate with IoT systems?
+    a) Network Connectivity ✔
+    b) Random Memory Allocation
+    c) High storage memory
+    d) Limited hardware interfaces
+
+16. Why are embedded systems designed to be cost-sensitive?
+    a) To reduce reliability
+    b) To remain competitive in the market ✔
+    c) To slow down production
+    d) To limit connectivity features
+
+17. What characteristic ensures that embedded systems in automotive safety systems respond instantly?
+    a) Cost Sensitivity
+    b) Real-Time Operation ✔
+    c) Compact Size
+    d) Miniaturization
+
+18. Which technology advancement enables the miniaturization of embedded systems?
+    a) Fiber optics
+    b) Moore’s Law and deep submicron technology ✔
+    c) Solar panel technology
+    d) Wi-Fi standards
+
+19. Why must embedded software be efficient?
+    a) To consume more energy
+    b) To match resource-constrained environments ✔
+    c) To use random code styles
+    d) To make development more complex
+
+20. Which protocol is commonly used for power-efficient communication in embedded systems?
+    a) Wi-Fi and Bluetooth ✔
+    b) HTTP and HTTPS
+    c) SQL databases
+    d) Email servers
+
+---
+
+G3 - Basic Software Techniques of Embedded Applications
+
+1. What is an embedded system?
+   a) A computer system with a dedicated function combining hardware and software ✔
+   b) A general-purpose computer system
+   c) A gaming console only
+   d) A smartphone application
+
+2. Which of the following is NOT a common place to find embedded systems?
+   a) Appliances
+   b) Medical devices
+   c) Libraries ✔
+   d) Defense systems
+
+3. Key requirements of embedded systems include:
+   a) High cost and complexity
+   b) Unlimited storage
+   c) Large memory usage
+   d) Efficiency, Reliability, Real-Time Performance ✔
+
+4. Which everyday appliance typically uses embedded systems?
+   a) Washing machines
+   b) All of the above ✔
+   c) Televisions
+   d) Smartphones
+
+5. What is the purpose of a toolchain in embedded development?
+   a) To play games on microcontrollers
+   b) To store data permanently
+   c) To design user interfaces only
+   d) To prepare and transform software into machine code for embedded devices ✔
+
+6. Which of these is an example of a text editor or IDE?
+   a) Excel
+   b) Blender
+   c) Photoshop
+   d) Geany ✔
+
+7. What does a compiler do in embedded systems?
+   a) Converts C/C++ code into machine instructions ✔
+   b) Writes hardware schematics
+   c) Converts assembly to binary
+   d) Draws circuit diagrams
+
+8. Assemblers are mainly used for:
+   a) Drawing electrical diagrams
+   b) Compiling C++ code
+   c) Translating assembly code into binary ✔
+   d) Testing user interfaces
+
+9. What is the role of a linker in embedded systems?
+   a) Debugging the system
+   b) Editing user interface graphics
+   c) Combining object files into a single program image ✔
+   d) Translating C code into binary
+
+10. Debuggers in embedded systems allow developers to:
+    a) Run programs step by step and inspect registers/memory ✔
+    b) Design websites
+    c) Play audio files
+    d) Convert code to binary
+
+11. Which tool simulates or emulates embedded systems?
+    a) Compiler
+    b) Excel
+    c) Assembler
+    d) QEMU ✔
+
+12. Structured programming means:
+    a) Writing all code in one function
+    b) Using only assembly language
+    c) Breaking programs into smaller modules for readability and reuse ✔
+    d) Avoiding debugging processes
+
+13. In memory management, why is static allocation preferred in embedded systems?
+    a) It provides unlimited memory
+    b) It avoids crashes and fragmentation ✔
+    c) It allows flexible allocation only
+    d) It is faster but risky
+
+14. What is an interrupt service routine (ISR)?
+    a) A debugging process
+    b) A function that handles urgent events by pausing the CPU’s current task ✔
+    c) A memory management technique
+    d) A routine for testing LEDs
+
+15. What is the difference between polling and interrupts?
+    a) Polling wastes CPU time, interrupts are efficient and real-time ✔
+    b) Polling is efficient, interrupts are wasteful
+    c) Both are equally efficient
+    d) Polling is faster than interrupts
+
+16. What is the use of timers in embedded systems?
+    a) For storing variables
+    b) For graphical rendering
+    c) For writing code
+    d) For delays or periodic tasks ✔
+
+17. What does a watchdog timer do?
+    a) Resets the system if it becomes stuck ✔
+    b) Optimizes memory usage
+    c) Controls LED blinking
+    d) Monitors internet speed
+
+18. State machines are useful because:
+    a) They replace interrupts
+    b) They increase memory usage
+    c) They are only used in calculators
+    d) They make programs easier to design by organizing behavior into states ✔
+
+19. Which is an example of reliability practice in embedded systems?
+    a) Skipping testing phases
+    b) Avoiding comments in code
+    c) Using Git for version control ✔
+    d) Writing all code in main()
+
+20. Why are coding standards like MISRA-C important?
+    a) They increase debugging errors
+    b) They ensure safe, readable, and maintainable code ✔
+    c) They are used for video editing
+    d) They remove the need for documentation
+
+---
+
+G4 - Parallel Input and Output
+
+1. What is a key characteristic of parallel communication?
+   a) It sends data signals one at a time over a single wire.
+   b) It sends several data signals simultaneously over a transmission link. ✔
+   c) It is limited to very long-distance data transfers.
+   d) It is slower than serial communication.
+
+2. According to the document, what is one of the main disadvantages of a long cable length in parallel communication?
+   a) Reduced data transfer speed.
+   b) Higher power consumption.
+   c) Increased chances of cross-talk. ✔
+   d) The need for a separate power source.
+
+3. The speed of data exchange in parallel communication is determined by the multiplication of the number of parallel paths and what other factor?
+   a) The length of the cable.
+   b) The number of bits processed at a unit time. ✔
+   c) The voltage of the signal.
+   d) The type of transmission link used.
+
+4. In the context of Parallel I/O (PIO), what tool is used to specify the number of bits and the direction of data transfer when implementing a Nios II-based system?
+   a) Altera’s Qsys tool. ✔
+   b) The GPIO register.
+   c) The Memory Mapper.
+   d) The Altera Data Transfer tool.
+
+5. What is the purpose of a tristate buffer gate when building a parallel input port?
+   a) To increase the speed of data transfer.
+   b) To convert a serial signal to a parallel signal.
+   c) To connect an external pin to a data bus line. ✔
+   d) To provide a high voltage signal to the I/O port.
+
+6. In a parallel output port, a CPU’s “Read” operation is indicated by what kind of signal on the Read/Write line?
+   a) A low signal.
+   b) A negative voltage.
+   c) A high signal. ✔
+   d) A multiplexed signal.
+
+7. When using the Parallel Data Output function, what action turns on an LED connected to an I/O pin?
+   a) Writing a ‘0’ to the I/O port register.
+   b) Writing a ‘1’ to the I/O port register. ✔
+   c) Setting the pin to a “Low” voltage.
+   d) Enabling the GPIO clock.
+
+8. What is the function of the MODER register in GPIO?
+   a) To read the pin states.
+   b) To write data to the pins.
+   c) To set the pin mode (input, output, analog, or alternate). ✔
+   d) To enable the GPIO clock.
+
+9. Based on the document, what is the key difference between an input function and an output function?
+   a) Input functions read voltage values, while output functions write voltage values. ✔
+   b) Input functions use switches, while output functions use LEDs.
+   c) Input functions work with high voltage, while output functions work with low voltage.
+   d) Input functions are for parallel ports, and output functions are for serial ports.
+
+10. In a keypad arranged in a row-column matrix, which part is typically configured as the outputs?
+    a) The columns.
+    b) The rows. ✔
+    c) Both rows and columns.
+    d) The pull-up resistors.
+
+11. What is the logic value read from an I/O port register when a “High” voltage is applied to the pin?
+    a) ‘0’
+    b) ‘1’ ✔
+    c) A garbage value
+    d) A negative value
+
+12. To use GPIO pins, what is the first initialization step that must be done?
+    a) Set pin properties in OTYPER, OSPEEDR, and PUPDR.
+    b) Configure pin mode in GPIOx_MODER. ✔
+    c) Enable the GPIO clock in RCC_AHB1ENR.
+    d) Write initial output values to ODR or BSRR.
+
+13. According to the document, what is the primary benefit of a Parallel Input/Output (PIO) core?
+    a) It is more flexible than serial I/O.
+    b) It allows the CPU to transfer multiple bits of data simultaneously. ✔
+    c) It uses less power than serial I/O.
+    d) It can only transfer data in one direction.
+
+14. The STM32F407 microcontroller can have up to how many GPIO pins?
+    a) 16
+    b) 32
+    c) 144 ✔
+    d) 512
+
+15. What is the role of the IDR (Input Data Register) in GPIO?
+    a) It sets the pin mode.
+    b) It reads the pin states. ✔
+    c) It writes data to the pins.
+    d) It resets the pins to a low state.
+
+True or False
+
+1. The configuration of a parallel port on a PC is easier compared to its serial counterpart. True 🆔
+2. Cross-talk is an interference between cable wires that can lead to the successful exchange of readable data. False 🆔
+3. The Parallel I/O (PIO) core transfers data in either input or output directions, but not both. False 🆔
+4. A “Read” operation is considered a “High” signal on the Read/Write line, while a “Write” is “Low.” True 🆔
+5. When a switch is pressed and negative logic is used, the CPU reads a “High” voltage (3.3V) from the IDR register. False 🆔
+
+---
+
+G5 - Asynchronous and Synchronous Serial Communication
+
+1. How is serial communication different from parallel communication?
+   a) Sends multiple bits at once
+   b) Sends one bit at a time ✔
+   c) Requires no wires
+   d) Uses only wireless signals
+
+2. What are the two main types of serial communication?
+   a) Wired and Wireless
+   b) USB and Ethernet
+   c) Asynchronous and Synchronous ✔
+   d) Digital and Analog
+
+3. Asynchronous communication works without a:
+   a) Start bit
+   b) Shared clock ✔
+   c) Stop bit
+   d) Data line
+
+4. Which bit marks the start of data in asynchronous communication?
+   a) Stop bit
+   b) Parity bit
+   c) Start bit ✔
+   d) Clock bit
+
+5. What is the purpose of the stop bit in asynchronous communication?
+   a) Begin data transfer
+   b) End a data byte ✔
+   c) Detect errors
+   d) Match baud rate
+
+6. Which hardware is commonly used for asynchronous communication?
+   a) USB
+   b) UART ✔
+   c) Ethernet
+   d) SPI
+
+7. What is one advantage of asynchronous communication?
+   a) Faster speed
+   b) Simple and low cost ✔
+   c) Needs fewer start bits
+   d) Supports multiple devices
+
+8. What is a disadvantage of asynchronous communication?
+   a) Needs more wires
+   b) Clock synchronization
+   c) Slower speed ✔
+   d) Supports multiple devices
+
+9. Synchronous communication requires a:
+   a) Start bit
+   b) Shared clock ✔
+   c) Stop bit
+   d) Parity bit
+
+10. Which is an example of synchronous communication?
+    a) COM Port
+    b) Arduino Serial Monitor
+    c) SPI ✔
+    d) Debugging with UART
+
+11. Why is synchronous communication faster?
+    a) No clock is needed
+    b) Uses more stop bits
+    c) Continuous data flow without start/stop bits ✔
+    d) Uses wireless signals
+
+12. What is one disadvantage of synchronous communication?
+    a) High speed
+    b) Needs more wiring ✔
+    c) Fewer errors
+    d) Simple hardware
+
+13. Which protocol is not synchronous?
+    a) SPI
+    b) I²C
+    c) USB
+    d) UART ✔
+
+14. In asynchronous communication, devices must agree on the same:
+    a) Voltage
+    b) Clock wire
+    c) Baud rate ✔
+    d) Protocol
+
+15. Which communication is best for high-speed networks like Ethernet?
+    a) Asynchronous
+    b) Synchronous ✔
+    c) Analog
+    d) Wireless
+
+16. What is the difference in clock signal use between asynchronous and synchronous communication?
+    a) Both use a shared clock
+    b) Asynchronous uses none, synchronous uses a shared clock ✔
+    c) Asynchronous uses a start bit instead, synchronous uses none
+    d) Both use stop bits as clock references
+
+17. What are the three framing components in asynchronous communication?
+    a) Start bit, data bits, stop bit ✔
+    b) Start bit, clock bit, parity bit
+    c) Data bits, clock signal, stop bit
+    d) Start bit, parity bit, clock bit
+
+18. Which of the following is both an advantage and a disadvantage of asynchronous communication?
+    a) Complex/High speed
+    b) Simple/Slow ✔
+    c) Reliable/Expensive
+    d) Secure/Difficult
+
+19. Which of the following are examples of synchronous protocols?
+    a) UART and USB
+    b) SPI and I²C ✔
+    c) COM Port and Debugging
+    d) Ethernet and UART
+
+20. What is a common use for asynchronous communication?
+    a) High-speed networking
+    b) Microcontroller debugging ✔
+    c) Internet browsing
+    d) Wireless data transfer
+
+---
+
+G6 - Periodic Interrupts, Waveform Generation, Time Measurement
+
+1. What is an embedded system?
+   a) A general-purpose computer
+   b) A system designed for one specific function ✔
+   c) A type of game console
+   d) A web application
+
+2. Why are timing functions important in embedded systems?
+   a) For random number generation
+   b) For synchronization and control ✔
+   c) To reduce system cost
+   d) To eliminate memory usage
+
+3. What is an interrupt?
+   a) A program loop
+   b) A signal that temporarily halts CPU to handle an event ✔
+   c) A hardware reset
+   d) A memory overflow
+
+4. How is polling different from interrupts?
+   a) Polling checks repeatedly, interrupts trigger automatically ✔
+   b) Polling is faster
+   c) Interrupts waste more CPU cycles
+   d) They are the same
+
+5. Which component is used in microcontrollers to generate periodic interrupts?
+   a) ADC
+   b) Timer/Counter modules ✔
+   c) UART
+   d) GPIO
+
+6. Which of the following is an application of periodic interrupts?
+   a) Real-Time Clock functions ✔
+   b) Game graphics rendering
+   c) Power supply regulation
+   d) File storage
+
+7. Sampling in data acquisition systems is achieved through:
+   a) Random loops
+   b) Periodic interrupts ✔
+   c) Voltage regulators
+   d) EEPROM
+
+8. Which signal type has only HIGH and LOW levels?
+   a) Analog
+   b) Digital ✔
+   c) Mixed
+   d) Variable
+
+9. Which technique is commonly used for motor speed control?
+   a) Direct Digital Synthesis
+   b) Frequency Division
+   c) Input Capture
+   d) Pulse Width Modulation (PWM) ✔
+
+10. What does Direct Digital Synthesis (DDS) generate?
+    a) Random signals
+    b) Precise digital waveforms ✔
+    c) PWM signals only
+    d) Noise signals
+
+11. Lookup tables are used to generate:
+    a) Fixed memory addresses
+    b) Predefined waveforms like sine or triangle ✔
+    c) Interrupt vectors
+    d) Digital counters
+
+12. Which is NOT an application of waveform generation?
+    a) Audio tone generation
+    b) Motor control
+    c) Communication systems
+    d) Data compression ✔
+
+13. Why is time measurement important in embedded systems?
+    a) For calculating delays and synchronization ✔
+    b) To reduce voltage
+    c) For memory storage
+    d) To design GUIs
+
+14. Which microcontroller unit is used to capture event timing?
+    a) ADC
+    b) Capture/Compare unit ✔
+    c) UART
+    d) EEPROM
+
+15. Measuring the interval between two events is called:
+    a) Frequency measurement
+    b) Period measurement
+    c) Time interval measurement ✔
+    d) Voltage detection
+
+16. Ultrasonic sensors use time measurement to determine:
+    a) Temperature
+    b) Distance ✔
+    c) Voltage
+    d) Pressure
+
+17. RPM sensing in motors is an application of:
+    a) Frequency measurement ✔
+    b) Lookup tables
+    c) PWM
+    d) EEPROM storage
+
+18. Which example shows integration of interrupts, waveform generation, and timing?
+    a) Function generator ✔
+    b) Database system
+    c) Operating system GUI
+    d) File compression software
+
+19. A key challenge in embedded timing systems is:
+    a) High internet speed
+    b) Interrupt latency ✔
+    c) Unlimited memory access
+    d) Free software updates
+
+20. Future improvements in embedded timing may include:
+    a) RTOS and FPGA-based control ✔
+    b) Faster hard drives
+    c) Web browsers
+    d) Social media integration
+
+---
+
+G7 - Data Acquisition, Control, Sensors, and Actuators
+
+1. Is the process of sampling signals that measure real-world physical conditions and converting the resulting samples into digital numeric values that can be manipulated by a computer.
+   a) Sensor
+   b) Data Acquisition ✔
+   c) Control Unit
+   d) Actuators
+
+2. Is a transducer device that converts energy from one form to another for any measurement or control purpose.
+   a) Sensor ✔
+   b) Data Acquisition
+   c) Control Unit
+   d) Actuators
+
+3. It acts as an output device.
+   a) Sensor
+   b) Data Acquisition
+   c) Control Unit
+   d) Actuators ✔
+
+4. It manages the operation of a microcontroller, coordinating input and output, data processing, and communication with other devices.
+   a) Sensor
+   b) Data Acquisition
+   c) Control Unit ✔
+   d) Actuators
+
+5. Ensures that digital data can be effectively transferred between the system’s external devices and components.
+   a) Digital-to-Analog Converter
+   b) Transmission / Signal Conditioning ✔
+   c) Analog-to-Digital Converter
+   d) Computers
+
+6. Its primary role is to collect and process the data received from the DAQ hardware for further analysis.
+   a) Digital-to-Analog Converter
+   b) Transmission / Signal Conditioning
+   c) Analog-to-Digital Converter
+   d) Computers ✔
+
+7. Employs filter circuits to separate noise from the actual signal and amplification circuits to boost weak signals.
+   a) Digital-to-Analog Converter
+   b) Transmission / Signal Conditioning ✔
+   c) Analog-to-Digital Converter
+   d) Computers
+
+8. Which signals are among the most frequently used with DAQ systems.
+   a) Power Signals
+   b) Voltage Signals ✔
+   c) Current Signals
+   d) Thermocouples
+
+9. It is commonly employed for signal transmission in noisy environments due to its reduced sensitivity to background noise.
+   a) Power Signals
+   b) Voltage Signals
+   c) Current Signals ✔
+   d) Thermocouples
+
+10. An electrical power supply signal that can be monitored by using a current-sensing resistor.
+    a) Power Signals ✔
+    b) Voltage Signals
+    c) Current Signals
+    d) Thermocouples
+
+11. It generates a low-voltage signal, usually in the millivolt range. THERMOCOUPLES🆔
+
+12. It is a specialized method for resistance measurement. STRAIN GAUGE BRIDGES🆔
+
+13. Measurements are taken using a current source along with a standard voltage input. RESISTANCE🆔
+
+14. Are interpreted as logic signals, being detected as either on (1) or off (2). DIGITAL SIGNALS🆔
+
+15. Converts signals to corresponding physical action (motion). ACTUATORS🆔
+
+16. Are essential components of embedded systems, allowing them to interact with and perceive the physical world. SENSORS AND ACTUATORS🆔
+
+17. They interact with the subject either directly or indirectly, or as defined in other words, contact or non-contact. SENSORS/TRANSDUCERS🆔
+
+18. Is the process of enhancing and optimizing these signals to ensure accurate measurement and reliable data acquisition. SIGNAL CONDITIONING🆔
+
+19. Transforms environmental data into discrete levels that a processor can interpret. ANALOG-TO-DIGITAL CONVERTERS🆔
+
+20. Serves as the final component in a data acquisition (DAQ) system. COMPUTERS🆔
+
+---
+
+G8 - Implementation Strategies for Complex Embedded Systems
+
+1. What is the main goal of implementation strategies in embedded systems?
+   a) To simplify hardware installation
+   b) To ensure efficient integration of hardware and software components ✔
+   c) To increase the physical size of the system
+   d) To enhance color display and user interface
+
+2. In complex systems, implementation strategies are critical for meeting which requirements?
+   a) Gaming quality and user comfort
+   b) Timing, reliability, and efficiency ✔
+   c) Marketing and design appeal
+   d) Visual and audio quality
+
+3. What can happen if implementation strategies are not properly defined?
+   a) Faster completion of the project
+   b) Reduced project costs
+   c) Delays, failures, or poor performance ✔
+   d) Improved power management
+
+4. Which design principle divides a system into smaller, testable units?
+   a) Centralized design
+   b) Modular design ✔
+   c) Sequential design
+   d) Dynamic design
+
+5. What is the main advantage of modular design?
+   a) Increases complexity
+   b) Makes testing, upgrading, or reuse easier ✔
+   c) Reduces code readability
+   d) Limits system scalability
+
+6. What does hardware–software co-design focus on?
+   a) Designing hardware first and software later
+   b) Balancing performance and cost through task allocation ✔
+   c) Making the system hardware-only
+   d) Avoiding interaction between components
+
+7. In implementation approaches, what is the purpose of using the right processor and peripherals?
+   a) To reduce software dependency
+   b) To match system requirements and enhance performance ✔
+   c) To eliminate embedded code
+   d) To simplify user interface design
+
+8. What is the main function of a Real-Time Operating System (RTOS)?
+   a) To handle tasks with strict timing requirements ✔
+   b) To store backup data
+   c) To compress system files
+   d) To increase display resolution
+
+9. Which of the following is a common communication protocol used in embedded systems?
+   a) HTTP
+   b) SPI ✔
+   c) FTP
+   d) DNS
+
+10. What do standard protocols like I²C, SPI, and CAN ensure?
+    a) Fast internet connectivity
+    b) Reliable data exchange between components ✔
+    c) Hardware replacement support
+    d) Easier software debugging
+
+11. Why is optimization important in embedded systems?
+    a) To reduce battery efficiency
+    b) To improve system performance and energy efficiency ✔
+    c) To make the software larger
+    d) To simplify documentation
+
+12. What is one technique developers use to improve responsiveness?
+    a) Disabling multitasking
+    b) Using scheduling and hardware acceleration ✔
+    c) Adding redundant software
+    d) Increasing manual control
+
+13. What type of testing validates system correctness and reliability?
+    a) User testing
+    b) Prototyping and simulation ✔
+    c) Marketing analysis
+    d) System benchmarking only
+
+14. Which tool helps trace errors during debugging?
+    a) Text editor
+    b) Emulator or analyzer ✔
+    c) Compiler
+    d) File manager
+
+15. What does Hardware-in-the-Loop (HIL) testing evaluate?
+    a) Theoretical algorithm performance
+    b) System behavior under real-world conditions ✔
+    c) Memory usage
+    d) Code length
+
+16. What is one method to ensure reliability in embedded systems?
+    a) Using redundancy and watchdog timers ✔
+    b) Increasing display size
+    c) Removing safety protocols
+    d) Overclocking processors
+
+17. Why must embedded systems comply with industry standards?
+    a) To improve advertisement appeal
+    b) To ensure safe and dependable operation ✔
+    c) To speed up manufacturing
+    d) To lower market costs
+
+18. What maintenance strategy keeps embedded systems up to date?
+    a) Replacing hardware annually
+    b) Firmware updates and lifecycle management ✔
+    c) Ignoring system feedback
+    d) Disconnecting unused components
+
+19. What does the conclusion emphasize about implementation strategies?
+    a) They reduce the need for testing
+    b) They provide a roadmap for managing complexity ✔
+    c) They increase the cost of system development
+    d) They focus only on hardware aspects
+
+20. Which future trends are expected to shape embedded systems development?
+    a) AI integration and edge computing ✔
+    b) Virtual reality and gaming engines
+    c) Blockchain and 3D graphics
+    d) Cloud storage and printing devices
+
+---
+
+G9 - Techniques for Lower-Power Operation
+
+1. What is the goal of low-power design in embedded systems?
+   a) To increase cost of devices
+   b) To maximize performance at all costs
+   c) To create energy-efficient products that save power ✔
+   d) To reduce circuit complexity
+
+2. Why is low power consumption important in embedded systems?
+   a) To increase device size
+   b) To extend battery life and reduce costs ✔
+   c) To improve color display quality
+   d) To avoid using sleep modes
+
+3. What are the two main sources of power consumption in embedded systems?
+   a) Voltage and Current
+   b) Static and Dynamic power ✔
+   c) Input and Output signals
+   d) RAM and ROM usage
+
+4. What is the purpose of sleep modes in embedded systems?
+   a) To speed up processors
+   b) To reduce idle power consumption ✔
+   c) To store more data
+   d) To increase clock frequency
+
+5. What is clock gating?
+   a) Cutting power to unused blocks
+   b) Disabling the clock to idle blocks ✔
+   c) Reducing chip size
+   d) Increasing frequency
+
+6. What is power gating?
+   a) Turning off power supply to inactive blocks ✔
+   b) Lowering the chip frequency
+   c) Increasing memory storage
+   d) Isolating clock signals
+
+7. What is frequency gating?
+   a) Using one high-frequency clock for all blocks
+   b) Reducing the chip size
+   c) Providing different clock signals depending on block needs ✔
+   d) Stopping power to RAM
+
+8. How does multivoltage design save power?
+   a) By using the highest voltage for all blocks
+   b) By partitioning chip into voltage islands based on needs ✔
+   c) By reducing clock speed for all blocks
+   d) By turning all blocks off at once
+
+9. What is voltage scaling?
+   a) Adjusting voltage based on system performance needs ✔
+   b) Increasing voltage to maximum
+   c) Cutting off idle circuits completely
+   d) Lowering resistance in circuits
+
+10. Why is lowering supply voltage the most effective power reduction technique?
+    a) Because it increases memory efficiency
+    b) Because power is proportional to the square of supply voltage ✔
+    c) Because it reduces chip size
+    d) Because it simplifies programming
+
+11. What are multi-Vt libraries used for?
+    a) To reduce chip manufacturing cost
+    b) To trade off between performance and leakage power ✔
+    c) To reduce RAM usage
+    d) To increase clock frequency
+
+12. Which tool helps simulate and predict design behavior for low-power ICs?
+    a) Microsoft Excel
+    b) Ansys RedHawk-SC ✔
+    c) Arduino IDE
+    d) AutoCAD
+
+13. What happens when voltage margins become too tight?
+    a) System runs faster
+    b) Voltage drop validation becomes critical ✔
+    c) Power consumption increases automatically
+    d) Device shuts down permanently
+
+14. Why are low voltages more susceptible to dynamic voltage drop (DVD)?
+    a) Because transistors stop working
+    b) Because path timing becomes sensitive to voltage fluctuations ✔
+    c) Because memory increases automatically
+    d) Because resistance decreases
+
+15. Which standard helps manage signal integrity in multivoltage regions?
+    a) USB
+    b) UPF (Unified Power Format) ✔
+    c) HTTP
+    d) Wi-Fi standard
+
+16. What challenge occurs when switching a power-gated block back on?
+    a) Higher memory storage
+    b) Transition issues (electrical and logical) ✔
+    c) Faster processor speed
+    d) Reduced frequency loss
+
+17. Why is clock gating more effective near the root of a clock distribution network?
+    a) Because it reduces chip size
+    b) Because it saves more power ✔
+    c) Because it increases leakage
+    d) Because it simplifies programming
+
+18. What are the main benefits of low-power design?
+    a) Larger devices and more memory
+    b) Energy efficiency, longer battery life, and better performance ✔
+    c) Higher cost and faster wear
+    d) Increased heat dissipation
+
+19. How does Test-Driven Development (TDD) help in low-power design?
+    a) By improving code quality and reducing debugging ✔
+    b) By lowering chip voltage
+    c) By reducing static power
+    d) By decreasing leakage
+
+20. Which best summarizes low-power design?
+    a) Using maximum voltage for all devices
+    b) Combining techniques to optimize power without losing performance ✔
+    c) Increasing transistor switching frequency
+    d) Reducing memory storage capacity
+
+---
+
+G10 - Mobile and Networked Embedded Systems
+
+1. What best defines an embedded system?
+   a) A general-purpose computer for office work
+   b) A combination of hardware and software designed for a specific task ✔
+   c) A system that runs only games and media
+   d) A device used only for networking
+
+2. Which of the following is an example of a mobile embedded system?
+   a) Washing machine
+   b) Smartwatch ✔
+   c) ATM machine
+   d) Traffic light controller
+
+3. What is the main characteristic of a networked embedded system?
+   a) It can only be used offline
+   b) It can communicate and share data with other devices ✔
+   c) It operates without software
+   d) It is larger than a mobile device
+
+4. Which of the following is a core component of an embedded system?
+   a) Microcontroller ✔
+   b) Keyboard
+   c) Router
+   d) Printer
+
+5. Embedded systems are typically designed to perform:
+   a) Multiple random functions
+   b) A specific dedicated function ✔
+   c) Cloud-based analytics
+   d) Operating system updates
+
+6. Which of the following technologies is commonly used in networked embedded systems?
+   a) Bluetooth and Wi-Fi ✔
+   b) Flash drives
+   c) Projectors
+   d) USB cables only
+
+7. What is a key challenge in designing mobile embedded systems?
+   a) Large storage space
+   b) Power and energy constraints ✔
+   c) Complex user interfaces
+   d) Lack of connectivity
+
+8. The firmware in an embedded system refers to:
+   a) The device’s outer casing
+   b) The permanent software controlling the hardware ✔
+   c) The removable battery
+   d) The communication antenna
+
+9. Which of the following layers handles data exchange in a networked embedded system?
+   a) Hardware layer
+   b) Application layer
+   c) Communication layer ✔
+   d) Operating layer
+
+10. Which of these devices is both mobile and networked?
+    a) Drone with GPS and 5G ✔
+    b) Desktop printer
+    c) Refrigerator without Wi-Fi
+    d) Analog thermostat
+
+11. The term RTOS stands for:
+    a) Real-Time Operating System ✔
+    b) Remote Transfer Output System
+    c) Random Task Operating Setup
+    d) Real-Time Optimization Software
+
+12. What is one advantage of networked embedded systems?
+    a) Slower data communication
+    b) Increased manual operation
+    c) Remote monitoring and control ✔
+    d) Limited scalability
+
+13. Which of the following is a disadvantage of networked embedded systems?
+    a) Improved automation
+    b) Security vulnerabilities ✔
+    c) Faster data access
+    d) Efficient communication
+
+14. What does the hardware layer include?
+    a) Sensors, actuators, and processors ✔
+    b) Databases and web servers
+    c) Mobile applications
+    d) None of the above
+
+15. Which protocol is commonly used in Internet of Things (IoT) embedded systems?
+    a) FTP
+    b) MQTT ✔
+    c) HTTP
+    d) SMTP
+
+16. What distinguishes mobile embedded systems from other embedded systems?
+    a) They are immovable
+    b) They require wired power sources
+    c) They are portable and battery-powered ✔
+    d) They cannot connect to networks
+
+17. Which of the following is an example of a networked embedded system?
+    a) Digital wristwatch with no connectivity
+    b) Smart home thermostat connected via Wi-Fi ✔
+    c) Basic calculator
+    d) Microwave oven
+
+18. Which future trend enhances speed and low latency in networked embedded systems?
+    a) 5G and Edge Computing ✔
+    b) Analog circuits
+    c) CRT displays
+    d) Magnetic tape storage
+
+19. Why is security a major concern in networked embedded systems?
+    a) They contain only hardware components
+    b) They often communicate sensitive data over networks ✔
+    c) They do not use the internet
+    d) They have no user interface
+
+20. The combination of computing, mobility, and connectivity in devices mainly defines:
+    a) General-purpose computers
+    b) Mobile and Networked Embedded Systems ✔
+    c) Mechanical devices
+    d) Standalone machines
+
+---
+
+G11 - Advanced Topics on Input/Output
+
+1. What does the address bus primarily do?
+   a) Transfers data between CPU and devices
+   b) Specifies memory or I/O device location ✔
+   c) Stores interrupt priorities
+   d) Controls data flow timing
+
+2. The data bus is responsible for:
+   a) Managing interrupt priorities
+   b) Addressing system memory
+   c) Input/output data transfer to the processor ✔
+   d) Powering peripheral devices
+
+3. Which type of interrupt cannot be disabled by software?
+   a) Maskable interrupt
+   b) Software interrupt
+   c) External interrupt
+   d) Non-maskable interrupt ✔
+
+4. Interrupt controllers are used to:
+   a) Manage memory storage
+   b) Prioritize and handle hardware interrupts ✔
+   c) Translate data formats
+   d) Control voltage levels
+
+5. Direct Memory Access (DMA) allows:
+   a) The CPU to manage all memory transfers
+   b) Devices to directly read/write system memory without CPU intervention ✔
+   c) Memory to operate without buses
+   d) Faster CPU clock cycles
+
+6. Which of the following is an advantage of DMA?
+   a) Increases CPU workload
+   b) Slows down data transfer
+   c) Reduces CPU load and increases speed ✔
+   d) Requires manual data movement
+
+7. The 8259 PIC is mainly used to:
+   a) Handle input from the keyboard
+   b) Manage multiple IRQ lines through cascading ✔
+   c) Control direct memory access
+   d) Configure address buses
+
+8. The Advanced Programmable Interrupt Controller (APIC) was developed to:
+   a) Replace data buses
+   b) Support multi-core processors ✔
+   c) Simplify Arduino coding
+   d) Reduce interrupt latency only
+
+9. In Verilog, the keyword wire is used to:
+   a) Declare hardware net connections ✔
+   b) Define software loops
+   c) Initialize interrupts
+   d) Configure analog pins
+
+10. In Arduino IDE, the function pinMode() is used to:
+    a) Delay the signal
+    b) Configure pins as INPUT or OUTPUT ✔
+    c) Set the voltage level
+    d) Reset the microcontroller
+
+True or False
+11. The address bus and data bus operate independently of each other. False 🆔
+12. Only one chip can connect to the data bus at a time. True 🆔
+13. Interrupt Request Lines (IRQ) allow devices to get the CPU’s attention. True 🆔
+14. Maskable interrupts can be disabled by software. True 🆔
+15. Non-maskable interrupts are mainly used for minor background tasks. False 🆔
+16. DMA transfers always require CPU supervision. False 🆔
+17. The APIC is suitable for single-core processors only. False 🆔
+18. In Verilog, the logic value ‘Z’ stands for high impedance. True 🆔
+19. The Arduino digitalWrite() function is used to configure pin direction. False 🆔
+20. Efficient I/O management improves system performance and reduces CPU overhead. True 🆔
+
+---
+
+G12 - Computing Platforms for Embedded Systems
+
+1. What defines a computing platform?
+   a) Only hardware components of a system
+   b) The foundation combining hardware and software for applications ✔
+   c) A tool used only for network operations
+   d) The graphical interface for user interaction
+
+2. Which of the following is NOT part of a computing platform?
+   a) Operating system
+   b) Microcontroller
+   c) Network router ✔
+   d) Processor architecture
+
+3. Embedded systems are primarily designed for:
+   a) General-purpose computing
+   b) Dedicated tasks ✔
+   c) High-level programming
+   d) Network security
+
+4. Microcontrollers are best described as:
+   a) High-power chips needing external memory
+   b) Single-chip systems with CPU, memory, and peripherals ✔
+   c) Large computing platforms for AI
+   d) Standalone industrial controllers
+
+5. Which platform typically requires external memory?
+   a) MCU
+   b) MPU ✔
+   c) SoC
+   d) SBC
+
+6. A SoC (System-on-Chip) is:
+   a) A chip integrating CPU, memory, and peripherals ✔
+   b) Only a processor chip
+   c) A small circuit board without CPU
+   d) Used only for education
+
+7. Which of the following is an example of a Single Board Computer (SBC)?
+   a) STM32
+   b) Raspberry Pi ✔
+   c) TI Sitara
+   d) NXP i.MX
+
+8. System on Modules (SOMs) are:
+   a) Used only in educational kits
+   b) Compact modules meant to be integrated into carrier boards ✔
+   c) Standalone AI processors
+   d) Large industrial controllers
+
+9. Edge computing platforms are mainly designed for:
+   a) Data storage
+   b) Machine learning and AI at the network edge ✔
+   c) Simple IoT sensors
+   d) Text-based data processing
+
+10. Which factor is LEAST considered when choosing a computing platform?
+    a) Processing power
+    b) Developer’s nationality ✔
+    c) Cost
+    d) Interfaces & peripherals
+
+11. The STM32 is widely known as a:
+    a) Microprocessor
+    b) MCU family ✔
+    c) SBC
+    d) Edge AI module
+
+12. NVIDIA Jetson is primarily used in:
+    a) Robotics and computer vision ✔
+    b) Financial modeling
+    c) Web development
+    d) Networking
+
+13. Which platform is noted for affordability and educational use?
+    a) TI Sitara
+    b) Raspberry Pi ✔
+    c) NXP i.MX
+    d) STM32
+
+14. TI Sitara processors are known for:
+    a) Automotive applications
+    b) Industrial control ✔
+    c) Home appliances
+    d) Education only
+
+15. Embedded systems use diverse platforms based on:
+    a) Brand popularity
+    b) Application needs ✔
+    c) Cloud services
+    d) Random choice
+
+16. What role do development tools like IDEs and SDKs play?
+    a) Data encryption
+    b) Building and deploying embedded software ✔
+    c) Managing databases
+    d) Power management
+
+17. Which of the following platforms integrates CPU, memory, and peripherals?
+    a) SoC ✔
+    b) SBC
+    c) SOM
+    d) MPU
+
+18. The NXP i.MX platform is used mainly for:
+    a) Robotics
+    b) Industrial and automotive systems ✔
+    c) Home appliances
+    d) Low-power IoT
+
+19. System-on-Modules provide:
+    a) High voltage regulation
+    b) Scalability and flexibility ✔
+    c) Security and encryption
+    d) Display enhancement
+
+20. The right platform for an embedded system depends on:
+    a) Application requirements ✔
+    b) Software license type
+    c) Marketing trends
+    d) Developer’s preference

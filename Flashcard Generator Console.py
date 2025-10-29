@@ -5,7 +5,7 @@ from difflib import SequenceMatcher
 import ast # For use ast.literal_eval(), safer method than eval(). Convert string to boolean
 
 # Global variables
-answerSet = "identification"  # Changed default from "input" to "identification"
+answerSet = "choices"
 theme = ""
 switchItems = False 
 sameTypeChoices = False

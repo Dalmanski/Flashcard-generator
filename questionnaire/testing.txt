@@ -1,0 +1,10 @@
+
+10. An electrical power supply signal that can be monitored by using a current-sensing resistor.
+    a) Power Signals ✔
+    b) Voltage Signals
+    c) Current Signals
+    d) Thermocouples
+
+11. It generates a low-voltage signal, usually in the millivolt range. THERMOCOUPLES🆔
+
+12. It is a specialized method for resistance measurement. STRAIN GAUGE BRIDGES🆔
