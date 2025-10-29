@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import re
 import sys
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent if "__file__" in globals() else Path.cwd()
@@ -15,6 +16,9 @@ RED = '\033[91m'
 YELLOW = '\033[93m'
 RESET = '\033[0m'
 SEPARATOR = "\n===========================\n"
+
+def clear_console():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def list_txt_files_recursive(folder):
     if not folder.exists() or not folder.is_dir():
@@ -169,6 +173,7 @@ def main():
         print("Failed to read file:", e)
         sys.exit(1)
     questions = parse_questions(raw)
+    clear_console()
     if not questions:
         print("No questions parsed. Ensure numbered questions like '1. Question...' and choices like 'a) Option'.")
         sys.exit(1)
